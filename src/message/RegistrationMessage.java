@@ -1,11 +1,14 @@
 package message;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+import message.Message;
 
 public class RegistrationMessage implements RegistrationMessageInterface {
 
 	private String email;
+
 	private String pw;
 	private MESSAGETYPE messageType;
 	private byte[] msgBytes;
@@ -23,47 +26,34 @@ public class RegistrationMessage implements RegistrationMessageInterface {
 	}
 
 	private void valuesToBytes() {
-		// first entry is messageType converted to one byte
+		// calculate size of msgBytes
 		byte[] temp = new byte[1 + 1 + this.email.length() + 1 + this.pw.length() + 1];
+
+		// first entry is messageType converted to one byte
 		temp[0] = messageTypeToByte(this.messageType);
-		temp[1] = SEPARATE;
-		System.arraycopy(this.email, 0, temp, 2, this.email.length());
-		temp[2 + this.email.length()] = SEPARATE;
-		System.arraycopy(this.pw, 0, temp, 3 + this.email.length(), this.pw.length());
-		temp[3 + this.email.length() + this.pw.length()] = END;
+		
+		// add values to msgBytes
+		temp = Message.addNextValueToBytes(temp, this.email.getBytes(), 1);
+		temp = Message.addNextValueToBytes(temp, this.pw.getBytes(), 2 + this.email.length());
+		
+		temp[3 + this.email.length() + this.pw.length()] = Message.END;
 		
 		this.msgBytes = temp;
 	}
 
 	private void bytesToValues() {
-		// read first byte to identify the message type 
+		// read first byte to identify the message type
 		this.messageType = byteToMessageType(this.msgBytes[0]);
-		
-		if(this.messageType == MESSAGETYPE.REGISTRATION_REQUEST) {
-			// start after SEPARATE bit
-			List<Byte> nextToken = new ArrayList<Byte>();
-			for (int i = 2; i < this.msgBytes.length; i++) {
-				if(this.msgBytes[i] == SEPARATE) {
-					break;
-				}
-				nextToken.add(this.msgBytes[i]);
-			}
-			this.email = nextToken.toString();
-			nextToken.clear();
-			
-			for (int i = 3 + this.email.length(); i < this.msgBytes.length; i++) {
-				if(this.msgBytes[i] == END) {
-					break;
-				}
-				nextToken.add(this.msgBytes[i]);
-			}
-			this.pw = nextToken.toString();
-			
-			
+
+		// only for a request message fill values
+		if (this.messageType == MESSAGETYPE.REGISTRATION_REQUEST) {
+			// consider SEPARATE and END bytes when choosing positions			
+			this.email =  new String(Message.getNextValueFromBytes(this.msgBytes, 2));
+			this.pw =  new String(Message.getNextValueFromBytes(this.msgBytes, 3 + this.email.length()));
 		}
-		
+
 	}
-	
+
 	private byte messageTypeToByte(MESSAGETYPE messageType) {
 		byte indexByte;
 		switch (messageType) {
@@ -82,7 +72,7 @@ public class RegistrationMessage implements RegistrationMessageInterface {
 		}
 		return indexByte;
 	}
-	
+
 	private MESSAGETYPE byteToMessageType(byte msgByte) {
 		MESSAGETYPE messageType;
 		switch (msgByte) {
@@ -101,5 +91,20 @@ public class RegistrationMessage implements RegistrationMessageInterface {
 		}
 		return messageType;
 	}
-	
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getPw() {
+		return pw;
+	}
+
+	public MESSAGETYPE getMessageType() {
+		return messageType;
+	}
+
+	public byte[] getMsgBytes() {
+		return msgBytes;
+	}
 }

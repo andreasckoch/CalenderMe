@@ -8,8 +8,7 @@ public interface RegistrationMessageInterface {
 		REGISTRATION_ERROR;
 
 	}
-	public static final byte SEPARATE = (byte) 0x13;
-	public static final byte END = (byte) 0x14;
+	
 	
 	
 	
