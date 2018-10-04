@@ -38,10 +38,13 @@ public class UserTest {
 
 		String email = "test@totallynotafakemail.com";
 		String pw = "yaya1234";
+		String ip = "192.168.101.27";
+		int port = 9001;
 
 		RegistrationMessage registrationMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_REQUEST, email, pw);
 
-		Communication.sendByteStream(registrationMsg.getMsgBytes());
+		Communication communicator = new Communication(ip, port);
+		communicator.send(registrationMsg.getMsgBytes());
 
 		RegistrationMessage registrationMsgBack = new RegistrationMessage(registrationMsg.getMsgBytes());
 
