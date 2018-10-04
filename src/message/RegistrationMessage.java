@@ -1,14 +1,11 @@
 package message;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 
 import message.Message;
 
 public class RegistrationMessage implements RegistrationMessageInterface {
 
 	private String email;
-
 	private String pw;
 	private MESSAGETYPE messageType;
 	private byte[] msgBytes;

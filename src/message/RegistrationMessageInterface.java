@@ -1,6 +1,6 @@
 package message;
 
-public interface RegistrationMessageInterface {
+public interface RegistrationMessageInterface extends MessageInterface{
 	public enum MESSAGETYPE{
 		REGISTRATION_REQUEST,
 		REGISTRATION_SUCCESS, 
