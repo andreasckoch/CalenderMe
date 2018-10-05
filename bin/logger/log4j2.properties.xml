@@ -4,16 +4,16 @@
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{DEFAULT} [%t] %-5level %logger{36} %l - %msg%n"/>
         </Console>
-        <File name="CloudDB" filename="logs/client.log">
+        <File name="CalenderMe" filename="logs/calenderme.log">
             <PatternLayout pattern="%d{DEFAULT} [%t] %-5level %logger{36} %l - %msg%n"/>
         </File>
-        <File name="kvServer" filename="logs/server.log">
+        <File name="CalenderServer" filename="logs/server.log">
             <PatternLayout pattern="%d{DEFAULT} [%t] %-5level %logger{36} %l - %msg%n"/>
         </File>
-        <File name="tests" filename="logs/tests.log">
-            <PatternLayout pattern="%d{DEFAULT} [%t] %-5level %logger{36} %l - %msg%n"/>
+        <File name="TEST" filename="logs/tests.log">
+            <PatternLayout pattern="%d{DEFAULT} [%t] %-5level %logger{36} %l - %msg%n" />
         </File>
-		<File name="ecs" filename="logs/ecs.log">
+		<File name="Communication" filename="logs/communication.log">
             <PatternLayout pattern="%d{DEFAULT} [%t] %-5level %logger{36} %l - %msg%n"/>
         </File>
     </Appenders>
@@ -22,19 +22,19 @@
             <!--<AppenderRef ref="Console"/>-->
             <AppenderRef ref="CloudDB" />
         </Root>
-        <Logger name="kvServer" level="all" additivity="false">
+        <Logger name="CalenderServer" level="all" additivity="false">
             <AppenderRef ref="Console" />
             <appender-ref ref="kvServer" />
         </Logger>
-		<Logger name="CloudDB" level="off" additivity="false">
+		<Logger name="CalenderMe" level="off" additivity="false">
             <AppenderRef ref="Console" />
             <appender-ref ref="CloudDB" />
         </Logger>
-        <Logger name="tests" level="all" additivity="false">
+        <Logger name="TEST" level="all" additivity="false">
             <AppenderRef ref="Console" />
             <appender-ref ref="tests" />
         </Logger>
-		<Logger name="ecs" level="all" additivity="false">
+		<Logger name="Communicaton" level="all" additivity="false">
             <AppenderRef ref="Console" />
             <appender-ref ref="ecs" />
         </Logger>
