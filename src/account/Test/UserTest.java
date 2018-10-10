@@ -7,7 +7,7 @@ import java.util.Arrays;
 import org.hamcrest.CoreMatchers;
 import org.junit.*;
 
-import communicate.Communication;
+import common.Communication;
 import message.RegistrationMessage;
 import message.RegistrationMessageInterface;
 import message.RegistrationMessageInterface.MESSAGETYPE;

@@ -6,7 +6,7 @@ import java.io.OutputStream;
 import java.net.Socket;
 import org.apache.logging.log4j.*;
 
-import communicate.Communication;
+import common.Communication;
 import logger.Constants;
 import message.Message;
 import message.MessageInterface;
@@ -41,7 +41,7 @@ public class CalenderServerThread implements Runnable {
 					Communication communicationWorker = new Communication(clientSocket.getInetAddress().toString(), clientSocket.getPort());
 					byte[] msgBytesFromClient = communicationWorker.receive();
 					
-					// Abfrage der möglichen Befehle wie RegisterRequest oder LoginRequest
+					// Abfrage der mï¿½glichen Befehle wie RegisterRequest oder LoginRequest
 					messageDecoder = new MessageDecoder();
 					messageDecoder.processMessageType(msgBytesFromClient);
 					

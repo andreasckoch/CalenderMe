@@ -7,13 +7,13 @@ public class MessageDecoder {
 
 	private MessageInterface message;
 	private MessageInterface returnMessage;
-	private DBInteraction calenderDataBase;
+	private DBInteraction calenderDataBaseInteraction;
 
 	public MessageDecoder() {
 		
 	}
 
-	public void processMessageType(byte[] msgBytesFromClient) {
+	public MessageInterface processMessageType(byte[] msgBytesFromClient) {
 
 		switch (msgBytesFromClient[0]) {
 		case 0x00:
@@ -22,8 +22,10 @@ public class MessageDecoder {
 			message = new RegistrationMessage(msgBytesFromClient);
 		// TODO add other message types
 		}
-		calenderDataBase = new DBInteraction();
-		returnMessage = calenderDataBase.processMessage(message);
+		calenderDataBaseInteraction = new DBInteraction();
+		returnMessage = calenderDataBaseInteraction.processMessage(message);
+		
+		return returnMessage;
 	}
 
 }
