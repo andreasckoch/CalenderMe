@@ -1,5 +1,8 @@
 package server;
 
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+
 import message.MessageInterface;
 
 public class DBInteraction {
@@ -9,7 +12,7 @@ public class DBInteraction {
 	}
 	
 	public MessageInterface processMessage(MessageInterface message) {
-		// TODO Auto-generated method stub
+		MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://localhost:27017"));
 		return null;
 	}
 	
