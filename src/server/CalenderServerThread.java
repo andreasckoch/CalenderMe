@@ -8,7 +8,6 @@ import org.apache.logging.log4j.*;
 
 import common.Communication;
 import logger.Constants;
-import message.Message;
 import message.MessageInterface;
 
 public class CalenderServerThread implements Runnable {
@@ -25,6 +24,18 @@ public class CalenderServerThread implements Runnable {
 	public CalenderServerThread(Socket client) {
 		this.clientSocket = client;
 		this.isOpen = true;
+		try {
+			output = client.getOutputStream();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			input = client.getInputStream();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 
@@ -33,17 +44,18 @@ public class CalenderServerThread implements Runnable {
 	@Override
 	public void run() {
 		try {
-			output = clientSocket.getOutputStream();
-			input = clientSocket.getInputStream();
 
 			while (isOpen) {
 				try {
-					Communication communicationWorker = new Communication(clientSocket.getInetAddress().toString(), clientSocket.getPort());
+					//TODO remove sysout
+					System.out.println(clientSocket.getInetAddress().getHostAddress());
+					Communication communicationWorker = new Communication(clientSocket.getInetAddress().getHostAddress(), clientSocket.getPort());
 					byte[] msgBytesFromClient = communicationWorker.receive();
 					
-					// Abfrage der m�glichen Befehle wie RegisterRequest oder LoginRequest
+					// Abfrage der möglichen Befehle wie RegisterRequest oder LoginRequest
 					messageDecoder = new MessageDecoder();
-					messageDecoder.processMessageType(msgBytesFromClient);
+					MessageInterface returnMessage = messageDecoder.processMessage(msgBytesFromClient);
+					communicationWorker.send(returnMessage.getMsgBytes());
 					
 				} catch (IOException ioe) {
 					logger.error("Error! Connection lost!");
@@ -54,8 +66,6 @@ public class CalenderServerThread implements Runnable {
 				}
 			}
 
-		} catch (IOException ioe) {
-			logger.error("Error! Connection could not be established!", ioe);
 		} finally {
 			try {
 				if (clientSocket != null) {

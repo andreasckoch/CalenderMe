@@ -22,6 +22,10 @@ public class RegistrationMessage implements RegistrationMessageInterface {
 		this.bytesToValues();
 	}
 
+	public RegistrationMessage(MESSAGETYPE messageType) {
+		this.messageType = messageType;
+	}
+
 	private void valuesToBytes() {
 		// calculate size of msgBytes
 		byte[] temp = new byte[1 + 1 + this.email.length() + 1 + this.pw.length() + 1];
@@ -101,6 +105,7 @@ public class RegistrationMessage implements RegistrationMessageInterface {
 		return messageType;
 	}
 
+	@Override
 	public byte[] getMsgBytes() {
 		return msgBytes;
 	}
