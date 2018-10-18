@@ -32,7 +32,7 @@ public class ServerConnection extends Thread {
 	}
 
 	/**
-	 * Initializes and starts the server. Loops until the server should be closed.
+	 * Initializes and starts the server. Loops until the server should be closed and creates a new thread for each client.
 	 */
 	public void run() {
 		logger.debug("CalenderServer Thread " + Thread.currentThread().getId() + " started");
@@ -40,6 +40,8 @@ public class ServerConnection extends Thread {
 			while (running) {
 				try {
 					Socket client = serverSocket.accept();
+					System.out.println("ServerSocket: " + serverSocket.getLocalPort());
+					System.out.println("ClientSocket: " + client.getLocalPort());
 					CalenderServerThread connection = new CalenderServerThread(client);
 					new Thread(connection).start();
 					logger.info(

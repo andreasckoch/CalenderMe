@@ -48,8 +48,8 @@ public class CalenderServerThread implements Runnable {
 			while (isOpen) {
 				try {
 					//TODO remove sysout
-					System.out.println(clientSocket.getInetAddress().getHostAddress());
-					Communication communicationWorker = new Communication(clientSocket.getInetAddress().getHostAddress(), clientSocket.getPort());
+					System.out.println("ClientSocket adress " + clientSocket.getInetAddress().getHostAddress() + " and port " + clientSocket.getLocalPort());
+					Communication communicationWorker = new Communication(clientSocket.getInetAddress().getHostAddress(), clientSocket.getLocalPort());
 					byte[] msgBytesFromClient = communicationWorker.receive();
 					
 					// Abfrage der möglichen Befehle wie RegisterRequest oder LoginRequest
@@ -72,7 +72,7 @@ public class CalenderServerThread implements Runnable {
 					input.close();
 					output.close();
 					clientSocket.close();
-					logger.info("Disconnected from Client on port " + clientSocket.getPort());
+					logger.info("Disconnected from Client on port " + clientSocket.getPort() + " on thread " + Thread.currentThread().getId());
 				}
 			} catch (IOException ioe) {
 				logger.error("Error! Unable to tear down connection!", ioe);

@@ -27,15 +27,6 @@ public class Communication {
 	public Communication(String ip, int port) {
 		this.ip = ip;
 		this.port = port;
-		try {
-			createSocket();
-		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
 	public Communication(Socket clientSocket) throws IOException {

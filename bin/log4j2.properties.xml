@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{DEFAULT} [%t] %-5level %logger{36} %l - %msg%n"/>
+        </Console>
+        <File name="CalenderMe" filename="logs/calenderme.log">
+            <PatternLayout pattern="%d{DEFAULT} [%t] %-5level %logger{36} %l - %msg%n"/>
+        </File>
+        <File name="CalenderServer" filename="logs/server.log">
+            <PatternLayout pattern="%d{DEFAULT} [%t] %-5level %logger{36} %l - %msg%n"/>
+        </File>
+        <File name="TEST" filename="logs/tests.log">
+            <PatternLayout pattern="%d{DEFAULT} [%t] %-5level %logger{36} %l - %msg%n" />
+        </File>
+		<File name="Communication" filename="logs/communication.log">
+            <PatternLayout pattern="%d{DEFAULT} [%t] %-5level %logger{36} %l - %msg%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <!--<AppenderRef ref="Console"/>-->
+            <AppenderRef ref="CloudDB" />
+        </Root>
+        <Logger name="CalenderServer" level="all" additivity="false">
+            <AppenderRef ref="Console" />
+            <appender-ref ref="kvServer" />
+        </Logger>
+		<Logger name="CalenderMe" level="off" additivity="false">
+            <AppenderRef ref="Console" />
+            <appender-ref ref="CloudDB" />
+        </Logger>
+        <Logger name="TEST" level="all" additivity="false">
+            <AppenderRef ref="Console" />
+            <appender-ref ref="tests" />
+        </Logger>
+		<Logger name="Communicaton" level="all" additivity="false">
+            <AppenderRef ref="Console" />
+            <appender-ref ref="ecs" />
+        </Logger>
+    </Loggers>
+</Configuration>

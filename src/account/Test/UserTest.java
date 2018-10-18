@@ -2,6 +2,8 @@ package account.Test;
 
 import static org.junit.Assert.assertThat;
 
+import java.io.IOException;
+
 import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
@@ -37,7 +39,7 @@ public class UserTest {
 		String email = "test@totallynotafakemail.com";
 		String pw = "yaya1234";
 		String ip = "localhost";
-		int port = 9001;
+		int port = 50000;
 
 		RegistrationMessage registrationMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_REQUEST, email, pw);
 		System.out.println(registrationMsg.getMessageType());
@@ -45,16 +47,32 @@ public class UserTest {
 		System.out.println(registrationMsg.getPw());
 		System.out.println(registrationMsg.getMsgBytes());		
 
-		ServerConnection server = new ServerConnection(port);
-		wait(500);
+		(new Thread() {
+			@Override
+				public void run() {
+				ServerConnection server = new ServerConnection(port);
+			}
+		}).start();
 		
-		Communication communicator = new Communication(ip, port);
-		communicator.send(registrationMsg.getMsgBytes());
+		(new Thread() {
+			@Override
+			public void run() {
+				RegistrationMessage registrationMsgBack = null;
+				try {
+					Communication communicator = new Communication(ip, port);
+					communicator.createSocket();
+					communicator.send(registrationMsg.getMsgBytes());
+					registrationMsgBack = new RegistrationMessage(communicator.receive());
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				assert (registrationMsgBack.getMessageType().equals(MESSAGETYPE.REGISTRATION_SUCCESS));
+				assert (registrationMsgBack.getEmail().equals(email));
+				assert (registrationMsgBack.getPw().equals(pw));
+			}
+	
+		}).start();
 
-		RegistrationMessage registrationMsgBack = new RegistrationMessage(communicator.receive());
-
-		//assert (registrationMsgBack.getEmail().equals(email));
-		//assert (registrationMsgBack.getPw().equals(pw));
-		assert (registrationMsgBack.getMessageType().equals(MESSAGETYPE.REGISTRATION_SUCCESS));
 	}
 }

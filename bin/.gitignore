@@ -1,5 +1,6 @@
 /account/
+/client/
 /common/
-/logger/
-/log4j2.properties.xml
+/message/
 /server/
+/start/
