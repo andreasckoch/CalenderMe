@@ -76,11 +76,9 @@ public class Communication {
 			
 			// read next char from byte stream
 			nextChar = (char) input.read();
-			
-			if (nextChar != Message.END) {
-				msg = msg + nextChar;
-			}
+			msg = msg + nextChar;
 		}
+		
 		logger.info("Received message.");
 		return msg.getBytes();
 	}
@@ -89,7 +87,7 @@ public class Communication {
 		this.clientSocket = new Socket(ip, port);
 		output = clientSocket.getOutputStream();
 		input = clientSocket.getInputStream();
-		logger.info("Socket was created.");			
+		System.out.println("Client Socket was created.");
 		isConnection = true;
 	}
 

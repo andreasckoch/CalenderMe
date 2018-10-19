@@ -48,8 +48,8 @@ public class CalenderServerThread implements Runnable {
 			while (isOpen) {
 				try {
 					//TODO remove sysout
-					System.out.println("ClientSocket adress " + clientSocket.getInetAddress().getHostAddress() + " and port " + clientSocket.getLocalPort());
-					Communication communicationWorker = new Communication(clientSocket.getInetAddress().getHostAddress(), clientSocket.getLocalPort());
+					System.out.println("ClientSocket adress " + clientSocket.getInetAddress().getHostAddress() + " and port " + clientSocket.getPort());
+					Communication communicationWorker = new Communication(clientSocket);
 					byte[] msgBytesFromClient = communicationWorker.receive();
 					
 					// Abfrage der möglichen Befehle wie RegisterRequest oder LoginRequest

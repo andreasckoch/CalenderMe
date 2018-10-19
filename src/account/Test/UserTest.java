@@ -28,6 +28,11 @@ public class UserTest {
 
 		RegistrationMessage registrationMsgBack = new RegistrationMessage(registrationMsg.getMsgBytes());
 
+		System.out.println(registrationMsgBack.getMessageType());
+		System.out.println(registrationMsgBack.getEmail());
+		System.out.println(registrationMsgBack.getPw());
+		System.out.println(registrationMsgBack.getMsgBytes());
+		
 		assertThat(registrationMsgBack.getEmail(), is(email));
 		assertThat(registrationMsgBack.getPw(), is(pw));
 		assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.REGISTRATION_REQUEST));
@@ -55,7 +60,7 @@ public class UserTest {
 			}
 		}.start();
 
-		wait(500);
+		wait(2000);
 		
 		new Thread() {
 			@Override
@@ -67,6 +72,7 @@ public class UserTest {
 					communicator.createSocket();
 					communicator.send(registrationMsg.getMsgBytes());
 					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					System.out.println("Message relayed!");
 					System.out.println(registrationMsgBack.getMessageType());
 					System.out.println(registrationMsgBack.getEmail());
 					System.out.println(registrationMsgBack.getPw());
@@ -85,6 +91,8 @@ public class UserTest {
 			}
 
 		}.start();
+		
+		wait(1000);
 
 	}
 }

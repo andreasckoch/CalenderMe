@@ -41,7 +41,7 @@ public class ServerConnection extends Thread {
 				try {
 					Socket client = serverSocket.accept();
 					System.out.println("ServerSocket: " + serverSocket.getLocalPort());
-					System.out.println("ClientSocket: " + client.getLocalPort());
+					System.out.println("ClientSocket: " + client.getPort());
 					CalenderServerThread connection = new CalenderServerThread(client);
 					new Thread(connection).start();
 					logger.info(
