@@ -27,13 +27,11 @@ public class CalenderServerThread implements Runnable {
 		try {
 			output = client.getOutputStream();
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		try {
 			input = client.getInputStream();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -47,8 +45,6 @@ public class CalenderServerThread implements Runnable {
 
 			while (isOpen) {
 				try {
-					//TODO remove sysout
-					System.out.println("ClientSocket adress " + clientSocket.getInetAddress().getHostAddress() + " and port " + clientSocket.getPort());
 					Communication communicationWorker = new Communication(clientSocket);
 					byte[] msgBytesFromClient = communicationWorker.receive();
 					
@@ -61,7 +57,6 @@ public class CalenderServerThread implements Runnable {
 					logger.error("Error! Connection lost!");
 					isOpen = false;
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}

@@ -40,8 +40,6 @@ public class ServerConnection extends Thread {
 			while (running) {
 				try {
 					Socket client = serverSocket.accept();
-					System.out.println("ServerSocket: " + serverSocket.getLocalPort());
-					System.out.println("ClientSocket: " + client.getPort());
 					CalenderServerThread connection = new CalenderServerThread(client);
 					new Thread(connection).start();
 					logger.info(
@@ -53,7 +51,6 @@ public class ServerConnection extends Thread {
 				}
 			}
 		}
-		System.out.println("Number of active threads from the given thread: " + Thread.activeCount());
 		logger.debug("CalenderServer Thread " + Thread.currentThread().getId() + " stopped");
 		System.exit(0);
 	}

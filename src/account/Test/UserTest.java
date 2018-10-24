@@ -1,15 +1,13 @@
 package account.Test;
 
-import static org.junit.Assert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
-
-import java.io.IOException;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
 import common.Communication;
 import message.RegistrationMessage;
-import message.RegistrationMessageInterface.MESSAGETYPE;
+import message.MessageInterface.MESSAGETYPE;
 import server.ServerConnection;
 
 public class UserTest {
@@ -27,11 +25,6 @@ public class UserTest {
 		assertThat(registrationMsg.getMsgBytes(), is(msgBytes));
 
 		RegistrationMessage registrationMsgBack = new RegistrationMessage(registrationMsg.getMsgBytes());
-
-		System.out.println(registrationMsgBack.getMessageType());
-		System.out.println(registrationMsgBack.getEmail());
-		System.out.println(registrationMsgBack.getPw());
-		System.out.println(registrationMsgBack.getMsgBytes());
 		
 		assertThat(registrationMsgBack.getEmail(), is(email));
 		assertThat(registrationMsgBack.getPw(), is(pw));
@@ -47,15 +40,11 @@ public class UserTest {
 		int port = 50000;
 
 		RegistrationMessage registrationMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_REQUEST, email, pw);
-		System.out.println(registrationMsg.getMessageType());
-		System.out.println(registrationMsg.getEmail());
-		System.out.println(registrationMsg.getPw());
-		System.out.println(registrationMsg.getMsgBytes());
 
 		new Thread() {
 			@Override
 			public void run() {
-				System.out.println("Server started in thread " + Thread.currentThread().getId());
+				@SuppressWarnings("unused")
 				ServerConnection server = new ServerConnection(port);
 			}
 		}.start();
@@ -65,34 +54,44 @@ public class UserTest {
 		new Thread() {
 			@Override
 			public void run() {
-				System.out.println("Client started in thread " + Thread.currentThread().getId());
 				RegistrationMessage registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
 					communicator.send(registrationMsg.getMsgBytes());
 					registrationMsgBack = new RegistrationMessage(communicator.receive());
-					System.out.println("Message relayed!");
-					System.out.println(registrationMsgBack.getMessageType());
-					System.out.println(registrationMsgBack.getEmail());
-					System.out.println(registrationMsgBack.getPw());
-					System.out.println(registrationMsgBack.getMsgBytes());
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					System.out.println("Error in thread " + Thread.currentThread().getId());
 					e.printStackTrace();
 				}
 
-
-				System.out.println("Asserting in thread " + Thread.currentThread().getId());
-				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.REGISTRATION_SUCCESS));
-				assertThat(registrationMsgBack.getEmail(), is(email));
-				assertThat(registrationMsgBack.getPw(), is(pw));
+				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
+				assert(registrationMsgBack.getEmail() ==  null);
+				assert(registrationMsgBack.getPw() == null);
 			}
-
 		}.start();
 		
-		wait(1000);
+		wait(1500);
+		
+		RegistrationMessage registrationDeleteMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_DELETE_REQUEST, email, pw);
+		
+		new Thread() {
+			@Override
+			public void run() {
+				RegistrationMessage registrationMsgBack = null;
+				try {
+					Communication communicator = new Communication(ip, port);
+					communicator.createSocket();
+					communicator.send(registrationDeleteMsg.getMsgBytes());
+					registrationMsgBack = new RegistrationMessage(communicator.receive());
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 
+				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
+				assert(registrationMsgBack.getEmail() ==  null);
+				assert(registrationMsgBack.getPw() == null);
+			}
+		}.start();
+		
 	}
 }

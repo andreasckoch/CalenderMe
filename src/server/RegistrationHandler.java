@@ -1,14 +1,14 @@
 package server;
 
-import static com.mongodb.client.model.Filters.*;
+import static com.mongodb.client.model.Filters.eq;
 
 import org.bson.Document;
 
 import com.mongodb.client.MongoCollection;
 
 import message.MessageInterface;
+import message.MessageInterface.MESSAGETYPE;
 import message.RegistrationMessage;
-import message.RegistrationMessageInterface.MESSAGETYPE;
 
 public class RegistrationHandler extends Handler {
 
@@ -20,18 +20,33 @@ public class RegistrationHandler extends Handler {
 	}
 
 	public MessageInterface process() {
+		
+		MongoCollection<Document> login = database.getCollection("login");
+		
 		if (this.message.getMessageType() == MESSAGETYPE.REGISTRATION_REQUEST) {
-			MongoCollection<Document> login = database.getCollection("login");
 
-			if (login.find(eq("email", message.getEmail())) != null) {
+			Document emailEntry = login.find(eq("email", message.getEmail())).first();
+
+			if (emailEntry == null) {
 
 				Document document = new Document("email", message.getEmail()).append("password", message.getPw());
 				login.insertOne(document);
 
-				return new RegistrationMessage(MESSAGETYPE.REGISTRATION_SUCCESS);
+				return new RegistrationMessage(MESSAGETYPE.OPERATION_SUCCESS);
 			}
 		}
-		return new RegistrationMessage(MESSAGETYPE.REGISTRATION_FAILED);
+		if (this.message.getMessageType() == MESSAGETYPE.REGISTRATION_DELETE_REQUEST) {
+
+			Document emailEntry = login.find(eq("email", message.getEmail())).first();
+
+			if (emailEntry != null) {
+
+				login.deleteOne(eq("email", message.getEmail()));
+
+				return new RegistrationMessage(MESSAGETYPE.OPERATION_SUCCESS);
+			}
+		}
+		return new RegistrationMessage(MESSAGETYPE.OPERATION_FAILED);
 	}
 
 }

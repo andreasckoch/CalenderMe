@@ -8,7 +8,7 @@ import java.net.UnknownHostException;
 import org.apache.logging.log4j.*;
 
 import logger.Constants;
-import message.Message;
+import message.MessageHelper;
 
 
 /* Does the communication between application and server*/
@@ -72,7 +72,7 @@ public class Communication {
 		String msg = "" + nextChar;
 		
 		// check last read character for END
-		while (nextChar != Message.END) {
+		while (nextChar != MessageHelper.END) {
 			
 			// read next char from byte stream
 			nextChar = (char) input.read();
@@ -87,7 +87,6 @@ public class Communication {
 		this.clientSocket = new Socket(ip, port);
 		output = clientSocket.getOutputStream();
 		input = clientSocket.getInputStream();
-		System.out.println("Client Socket was created.");
 		isConnection = true;
 	}
 
