@@ -1,6 +1,5 @@
 package message;
 
-
 import message.MessageHelper;
 
 public class RegistrationMessage implements MessageInterface {
@@ -28,27 +27,26 @@ public class RegistrationMessage implements MessageInterface {
 	}
 
 	private void valuesToBytes() {
-		
-		if (this.messageType == MESSAGETYPE.REGISTRATION_REQUEST || this.messageType == MESSAGETYPE.REGISTRATION_DELETE_REQUEST) {
-		// calculate size of msgBytes
-		byte[] temp = new byte[1 + 1 + this.email.length() + 1 + this.pw.length() + 1];
 
-		// first entry is messageType converted to one byte
-		temp[0] = MessageHelper.messageTypeToByte(this.messageType);
-		
-		// add values to msgBytes
-		temp = MessageHelper.addNextValueToBytes(temp, this.email.getBytes(), 1);
-		temp = MessageHelper.addNextValueToBytes(temp, this.pw.getBytes(), 2 + this.email.length());
-		
-		temp[3 + this.email.length() + this.pw.length()] = MessageHelper.END;
-
-		this.msgBytes = temp;
-		}
-		else {
+		if (this.messageType == MESSAGETYPE.REGISTRATION_REQUEST
+				|| this.messageType == MESSAGETYPE.REGISTRATION_DELETE_REQUEST) {
 			// calculate size of msgBytes
-			byte[] temp = new byte[2];
+			byte[] temp = new byte[1 + 1 + this.email.length() + 1 + this.pw.length() + 1];
 
 			// first entry is messageType converted to one byte
+			temp[0] = MessageHelper.messageTypeToByte(this.messageType);
+
+			// add values to msgBytes
+			temp = MessageHelper.addNextValueToBytes(temp, this.email.getBytes(), 1);
+			temp = MessageHelper.addNextValueToBytes(temp, this.pw.getBytes(), 2 + this.email.length());
+
+			temp[3 + this.email.length() + this.pw.length()] = MessageHelper.END;
+
+			this.msgBytes = temp;
+		} else {
+			// size of the array is 1 for messageType + 1 for END
+			byte[] temp = new byte[2];
+
 			temp[0] = MessageHelper.messageTypeToByte(this.messageType);
 			temp[1] = MessageHelper.END;
 			this.msgBytes = temp;
@@ -60,15 +58,14 @@ public class RegistrationMessage implements MessageInterface {
 		this.messageType = MessageHelper.byteToMessageType(this.msgBytes[0]);
 
 		// only for a request message fill values
-		if (this.messageType == MESSAGETYPE.REGISTRATION_REQUEST || this.messageType == MESSAGETYPE.REGISTRATION_DELETE_REQUEST) {
-			// consider SEPARATE and END bytes when choosing positions			
-			this.email =  new String(MessageHelper.getNextValueFromBytes(this.msgBytes, 2));
-			this.pw =  new String(MessageHelper.getNextValueFromBytes(this.msgBytes, 3 + this.email.length()));
+		if (this.messageType == MESSAGETYPE.REGISTRATION_REQUEST
+				|| this.messageType == MESSAGETYPE.REGISTRATION_DELETE_REQUEST) {
+			// consider SEPARATE and END bytes when choosing positions
+			this.email = new String(MessageHelper.getNextValueFromBytes(this.msgBytes, 2));
+			this.pw = new String(MessageHelper.getNextValueFromBytes(this.msgBytes, 3 + this.email.length()));
 		}
 
 	}
-
-	
 
 	public String getEmail() {
 		return email;
