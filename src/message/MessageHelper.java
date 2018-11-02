@@ -47,6 +47,13 @@ public class MessageHelper {
 		case REGISTRATION_ERROR:
 			indexByte = 0x04;
 			break;
+		case LOGIN_REQUEST:
+			indexByte = 0x05;
+			break;
+		case LOGIN_ERROR:
+			indexByte = 0x06;
+			break;
+		case ERROR:
 		default:
 			indexByte = 0x7f;
 			break;
@@ -72,9 +79,13 @@ public class MessageHelper {
 		case 0x04:
 			messageType = MESSAGETYPE.REGISTRATION_ERROR;
 			break;
-		case 0x7f:
-			messageType = MESSAGETYPE.ERROR;
+		case 0x05:
+			messageType = MESSAGETYPE.LOGIN_REQUEST;
 			break;
+		case 0x06:
+			messageType = MESSAGETYPE.LOGIN_ERROR;
+			break;
+		case 0x7f:
 		default:
 			messageType = MESSAGETYPE.ERROR;
 			break;

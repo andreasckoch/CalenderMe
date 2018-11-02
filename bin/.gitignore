@@ -1,6 +1,3 @@
-/account/
-/client/
-/common/
-/message/
 /server/
-/start/
+/account/
+/message/

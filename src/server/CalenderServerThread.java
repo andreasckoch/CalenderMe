@@ -51,6 +51,7 @@ public class CalenderServerThread implements Runnable {
 					// Abfrage der möglichen Befehle wie RegisterRequest oder LoginRequest
 					messageDecoder = new MessageDecoder();
 					MessageInterface returnMessage = messageDecoder.processMessage(msgBytesFromClient);
+					System.out.printf("MsgBytes: ", msgBytesFromClient[0], returnMessage.getMsgBytes()[0]);
 					communicationWorker.send(returnMessage.getMsgBytes());
 					
 				} catch (IOException ioe) {

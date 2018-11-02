@@ -22,14 +22,18 @@ public class RegistrationHandler extends Handler {
 	public MessageInterface process() {
 		
 		MongoCollection<Document> login = database.getCollection("login");
+		System.out.println("In RegistrationHandler");
 		
 		if (this.message.getMessageType() == MESSAGETYPE.REGISTRATION_REQUEST) {
 
 			Document emailEntry = login.find(eq("email", message.getEmail())).first();
-
+			System.out.println("Email Entry: " + emailEntry);
+			
 			if (emailEntry == null) {
 
+				System.out.println("Create: " + emailEntry);
 				Document document = new Document("email", message.getEmail()).append("password", message.getPw());
+				//System.out.println("Create: " + document);
 				login.insertOne(document);
 
 				return new RegistrationMessage(MESSAGETYPE.OPERATION_SUCCESS);
@@ -41,8 +45,8 @@ public class RegistrationHandler extends Handler {
 
 			if (emailEntry != null) {
 
-				login.deleteOne(eq("email", message.getEmail()));
-
+				System.out.println("Delete: " + emailEntry);
+				login.deleteOne(emailEntry);
 				return new RegistrationMessage(MESSAGETYPE.OPERATION_SUCCESS);
 			}
 		}

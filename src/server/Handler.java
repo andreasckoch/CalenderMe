@@ -5,6 +5,7 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoDatabase;
 
 import common.Constants;
+import message.MessageInterface;
 
 public abstract class Handler {
 	
@@ -20,4 +21,5 @@ public abstract class Handler {
 		mongoClient.close();
 	}
 	
+	protected abstract MessageInterface process();
 }
