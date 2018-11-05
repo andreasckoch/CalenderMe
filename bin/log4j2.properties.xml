@@ -20,23 +20,23 @@
     <Loggers>
         <Root level="info">
             <!--<AppenderRef ref="Console"/>-->
-            <AppenderRef ref="CloudDB" />
+            <AppenderRef ref="CalenderMe" />
         </Root>
         <Logger name="CalenderServer" level="all" additivity="false">
             <AppenderRef ref="Console" />
-            <appender-ref ref="kvServer" />
+            <appender-ref ref="CalenderServer" />
         </Logger>
 		<Logger name="CalenderMe" level="off" additivity="false">
             <AppenderRef ref="Console" />
-            <appender-ref ref="CloudDB" />
+            <appender-ref ref="CalenderMe" />
         </Logger>
         <Logger name="TEST" level="all" additivity="false">
             <AppenderRef ref="Console" />
-            <appender-ref ref="tests" />
+            <appender-ref ref="TEST" />
         </Logger>
-		<Logger name="Communicaton" level="all" additivity="false">
+		<Logger name="Communication" level="all" additivity="false">
             <AppenderRef ref="Console" />
-            <appender-ref ref="ecs" />
+            <appender-ref ref="Communication" />
         </Logger>
     </Loggers>
 </Configuration>

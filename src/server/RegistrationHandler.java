@@ -2,15 +2,20 @@ package server;
 
 import static com.mongodb.client.model.Filters.eq;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.bson.Document;
 
 import com.mongodb.client.MongoCollection;
 
+import logger.Constants;
 import message.MessageInterface;
 import message.MessageInterface.MESSAGETYPE;
 import message.RegistrationMessage;
 
 public class RegistrationHandler extends Handler {
+	
+	private static final Logger logger = LogManager.getLogger(Constants.SERVER_NAME);
 
 	private RegistrationMessage message;
 
@@ -22,18 +27,15 @@ public class RegistrationHandler extends Handler {
 	public MessageInterface process() {
 		
 		MongoCollection<Document> login = database.getCollection("login");
-		System.out.println("In RegistrationHandler");
 		
 		if (this.message.getMessageType() == MESSAGETYPE.REGISTRATION_REQUEST) {
 
 			Document emailEntry = login.find(eq("email", message.getEmail())).first();
-			System.out.println("Email Entry: " + emailEntry);
 			
 			if (emailEntry == null) {
 
-				System.out.println("Create: " + emailEntry);
+				logger.info("Create: {}", message.getEmail());
 				Document document = new Document("email", message.getEmail()).append("password", message.getPw());
-				//System.out.println("Create: " + document);
 				login.insertOne(document);
 
 				return new RegistrationMessage(MESSAGETYPE.OPERATION_SUCCESS);
@@ -45,7 +47,7 @@ public class RegistrationHandler extends Handler {
 
 			if (emailEntry != null) {
 
-				System.out.println("Delete: " + emailEntry);
+				logger.info("Delete: {}", emailEntry);
 				login.deleteOne(emailEntry);
 				return new RegistrationMessage(MESSAGETYPE.OPERATION_SUCCESS);
 			}

@@ -1,0 +1,1189 @@
+2018-11-04 20:42:30,842 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:86) - Initialize server ...
+2018-11-04 20:42:30,847 [Thread-1] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:93) - Error! Cannot open server socket:
+2018-11-04 20:42:30,848 [Thread-1] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:95) - Port 50000 is already bound!
+2018-11-04 20:42:30,848 [Thread-1] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - Server instance started
+2018-11-04 20:42:30,848 [Thread-4] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - CalenderServer Thread 15 started
+2018-11-04 20:42:30,850 [Thread-4] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:54) - CalenderServer Thread 15 stopped
+2018-11-04 20:42:51,640 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:86) - Initialize server ...
+2018-11-04 20:42:51,647 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:89) - Server listening on port: 50000
+2018-11-04 20:42:51,648 [Thread-1] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - Server instance started
+2018-11-04 20:42:51,650 [Thread-3] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - CalenderServer Thread 15 started
+2018-11-04 20:42:51,656 [Thread-3] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:45) - Connected to localhost on port 40712
+2018-11-04 20:45:11,639 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:86) - Initialize server ...
+2018-11-04 20:45:11,644 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:89) - Server listening on port: 50000
+2018-11-04 20:45:11,644 [Thread-1] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - Server instance started
+2018-11-04 20:45:11,645 [Thread-3] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - CalenderServer Thread 14 started
+2018-11-04 20:45:11,651 [Thread-3] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:45) - Connected to localhost on port 40724
+2018-11-04 20:46:58,846 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:86) - Initialize server ...
+2018-11-04 20:46:58,851 [Thread-1] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:93) - Error! Cannot open server socket:
+2018-11-04 20:46:58,852 [Thread-1] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:95) - Port 50000 is already bound!
+2018-11-04 20:46:58,852 [Thread-1] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - Server instance started
+2018-11-04 20:46:58,853 [Thread-4] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - CalenderServer Thread 15 started
+2018-11-04 20:46:58,856 [Thread-4] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:54) - CalenderServer Thread 15 stopped
+2018-11-04 20:46:58,857 [Thread-3] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:45) - Connected to localhost on port 40734
+2018-11-04 20:47:27,239 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:86) - Initialize server ...
+2018-11-04 20:47:27,246 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:89) - Server listening on port: 50000
+2018-11-04 20:47:27,247 [Thread-1] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - Server instance started
+2018-11-04 20:47:27,247 [Thread-4] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - CalenderServer Thread 15 started
+2018-11-04 20:47:27,258 [Thread-4] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:45) - Connected to localhost on port 40744
+2018-11-04 20:47:35,418 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:86) - Initialize server ...
+2018-11-04 20:47:35,426 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:89) - Server listening on port: 50000
+2018-11-04 20:47:35,427 [Thread-1] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - Server instance started
+2018-11-04 20:47:35,427 [Thread-4] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - CalenderServer Thread 15 started
+2018-11-04 20:47:35,431 [Thread-4] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:45) - Connected to localhost on port 40754
+2018-11-04 20:57:46,744 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 20:57:46,752 [Thread-1] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-04 20:57:46,753 [Thread-1] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-04 20:57:46,753 [Thread-1] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 20:57:46,753 [Thread-4] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 15 started
+2018-11-04 20:57:46,758 [Thread-4] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:55) - @ServerConnection: ServerConnection Thread 15 stopped\n
+2018-11-04 20:57:46,760 [Thread-4] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:45) - Connected to localhost on port 40780
+2018-11-04 21:09:21,880 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:09:21,885 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 21:09:21,886 [Thread-1] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:09:21,886 [Thread-4] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 15 started
+2018-11-04 21:09:21,895 [Thread-4] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 16: processing connection to /127.0.0.1 on port 40796
+
+2018-11-04 21:09:22,507 [Thread-5] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:55) - MsgType: REGISTRATION_REQUEST
+2018-11-04 21:12:30,465 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:12:30,472 [Thread-1] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-04 21:12:30,472 [Thread-1] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-04 21:12:30,473 [Thread-1] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:12:30,473 [Thread-4] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 15 started
+2018-11-04 21:12:30,476 [Thread-4] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 21: processing connection to /127.0.0.1 on port 40814
+
+2018-11-04 21:12:30,477 [Thread-4] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:55) - @ServerConnection: ServerConnection Thread 15 stopped\n
+2018-11-04 21:12:30,527 [Thread-6] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:55) - MsgType: REGISTRATION_REQUEST
+2018-11-04 21:21:31,629 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:21:31,635 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 21:21:31,636 [Thread-1] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:21:31,639 [Thread-4] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 15 started
+2018-11-04 21:21:31,646 [Thread-4] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 16: processing connection to /127.0.0.1 on port 40828
+
+2018-11-04 21:21:31,647 [Thread-5] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-04 21:21:32,153 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 21:21:32,265 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 21:21:32,310 [Thread-5] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-04 21:25:43,096 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:25:43,102 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 21:25:43,103 [Thread-1] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:25:43,103 [Thread-4] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 15 started
+2018-11-04 21:25:43,108 [Thread-4] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 16: processing connection to /127.0.0.1 on port 40842
+
+2018-11-04 21:25:43,110 [Thread-5] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-04 21:25:43,710 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 21:25:43,810 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 21:25:43,810 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-04 21:25:43,835 [Thread-5] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-04 21:25:52,752 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:25:52,757 [Thread-1] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 21:25:52,758 [Thread-1] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:25:52,758 [Thread-4] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 15 started
+2018-11-04 21:25:52,762 [Thread-4] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 16: processing connection to /127.0.0.1 on port 40852
+
+2018-11-04 21:25:52,768 [Thread-5] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-04 21:25:53,296 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 21:25:53,408 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 21:25:53,409 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-04 21:25:53,436 [Thread-5] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-04 21:34:07,517 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:34:07,522 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-04 21:34:07,523 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-04 21:34:07,523 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:34:07,525 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 21:34:07,532 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:55) - @ServerConnection: ServerConnection Thread 12 stopped\n
+2018-11-04 21:35:50,379 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:35:50,385 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-04 21:35:50,385 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-04 21:35:50,386 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:35:50,387 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 21:35:50,394 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:55) - @ServerConnection: ServerConnection Thread 12 stopped\n
+2018-11-04 21:37:36,299 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:37:36,304 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 21:37:36,305 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:37:36,305 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 21:38:50,607 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:38:50,612 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 21:38:50,613 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:38:50,614 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 21:38:52,624 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 40940
+
+2018-11-04 21:38:52,629 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-04 21:38:53,203 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 21:38:53,304 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 21:38:53,305 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-04 21:38:53,329 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-04 21:41:37,405 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:41:37,410 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 21:41:37,410 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:41:37,411 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 21:41:39,417 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 40952
+
+2018-11-04 21:41:39,423 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-04 21:41:39,994 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 21:41:40,092 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 21:41:40,093 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-04 21:41:40,114 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-04 21:42:05,829 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:42:05,834 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 21:42:05,835 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:42:05,835 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 21:42:07,843 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 40962
+
+2018-11-04 21:42:07,848 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-04 21:42:08,514 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 21:42:08,639 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 21:42:08,639 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-04 21:42:08,661 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-04 21:42:28,188 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:42:28,194 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 21:42:28,195 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:42:28,195 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 21:42:29,203 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 40972
+
+2018-11-04 21:42:29,206 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-04 21:42:29,746 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 21:42:29,866 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 21:42:29,866 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-04 21:42:29,893 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-04 21:49:29,277 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:49:29,284 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 21:49:29,288 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:49:29,288 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 21:49:30,294 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 40996
+
+2018-11-04 21:49:30,299 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-04 21:49:30,833 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 21:49:30,954 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 21:49:30,955 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-04 21:49:30,978 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-04 21:52:25,904 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:52:25,912 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 21:52:25,913 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:52:25,922 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 21:52:26,919 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 41008
+
+2018-11-04 21:52:26,922 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-04 21:52:27,519 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 21:52:27,627 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 21:52:27,628 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-04 21:52:27,654 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-04 21:54:24,777 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:54:24,794 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-04 21:54:24,796 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-04 21:54:24,798 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:54:24,801 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 21:54:24,823 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:55) - @ServerConnection: ServerConnection Thread 12 stopped\n
+2018-11-04 21:54:52,065 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:54:52,095 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-04 21:54:52,096 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-04 21:54:52,098 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:54:52,099 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 21:54:52,115 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:55) - @ServerConnection: ServerConnection Thread 12 stopped\n
+2018-11-04 21:55:17,693 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:55:17,708 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-04 21:55:17,710 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-04 21:55:17,712 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:55:17,713 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 21:55:17,735 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:55) - @ServerConnection: ServerConnection Thread 12 stopped\n
+2018-11-04 21:56:11,927 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:56:11,942 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 21:56:11,944 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:56:11,946 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 21:56:12,977 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 41028
+
+2018-11-04 21:56:13,047 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-04 21:56:14,847 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 21:56:15,391 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 21:56:15,393 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-04 21:56:15,470 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-04 21:57:32,624 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 21:57:32,646 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 21:57:32,648 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 21:57:32,655 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 21:57:33,731 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 41038
+
+2018-11-04 21:57:33,761 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-04 21:57:36,027 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 21:57:36,514 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 21:57:36,515 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-04 21:57:36,641 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-04 22:56:37,603 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 22:56:37,608 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 22:56:37,610 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 22:56:37,612 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 22:56:38,643 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 41390
+
+2018-11-04 22:56:38,647 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-04 22:56:39,351 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 22:56:39,474 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 22:56:39,475 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-04 22:56:39,496 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-04 23:07:24,086 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 23:07:24,092 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 23:07:24,098 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 23:07:24,098 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 23:07:25,126 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 41438
+
+2018-11-04 23:07:25,134 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-04 23:07:25,688 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 23:07:25,801 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 23:07:25,802 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-04 23:07:25,831 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-04 23:15:48,014 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 23:15:48,022 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 23:15:48,023 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 23:15:48,025 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 23:15:49,045 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 41472
+
+2018-11-04 23:15:49,075 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-04 23:15:49,674 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 23:15:49,789 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 23:15:49,789 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-04 23:15:49,808 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-04 23:21:36,955 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 23:21:36,961 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 23:21:36,966 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 23:21:36,968 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 23:21:37,991 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 41510
+
+2018-11-04 23:21:38,007 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-04 23:21:38,500 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 23:21:38,610 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 23:21:38,611 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-04 23:21:38,634 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-04 23:45:11,222 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-04 23:45:11,229 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-04 23:45:11,231 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-04 23:45:11,233 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-04 23:45:12,253 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 41646
+
+2018-11-04 23:45:12,271 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:43) - MsgType: REGISTRATION_REQUEST
+2018-11-04 23:45:12,851 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-04 23:45:12,950 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-04 23:45:12,951 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-04 23:45:12,971 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-05 09:00:19,680 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 09:00:19,685 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 09:00:19,687 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 09:00:19,688 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 09:00:20,721 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 41750
+
+2018-11-05 09:00:20,761 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-05 09:00:21,142 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 09:01:39,556 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 09:01:39,561 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-05 09:01:39,562 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-05 09:01:39,563 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 09:01:39,563 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 09:01:39,570 [Thread-1] DEBUG CalenderServer server.ServerConnection.run(ServerConnection.java:55) - @ServerConnection: ServerConnection Thread 12 stopped\n
+2018-11-05 09:01:51,319 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 09:01:51,324 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 09:01:51,324 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 09:01:51,325 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 09:01:52,344 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 41886
+
+2018-11-05 09:01:52,358 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-05 09:01:52,694 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 09:01:52,776 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-05 09:01:52,776 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-05 09:01:52,799 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-05 09:04:09,525 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 09:04:09,530 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 09:04:09,531 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 09:04:09,531 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 09:04:10,552 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 41898
+
+2018-11-05 09:04:10,565 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-05 09:04:10,960 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 09:04:11,046 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-05 09:04:11,046 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-05 09:04:11,063 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-05 09:04:11,075 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - returnMessage: [127]
+2018-11-05 09:05:28,336 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 09:05:28,340 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 09:05:28,341 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 09:05:28,341 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 09:05:29,359 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 41908
+
+2018-11-05 09:05:29,374 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-05 09:05:29,708 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 09:05:29,792 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-05 09:05:29,792 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-05 09:05:29,808 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-05 09:05:29,854 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 09:05:29,893 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: Document{{_id=5bdff9c9dc6b242417e9dd1b, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 09:05:29,894 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_FAILED
+2018-11-05 09:05:29,901 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - directreturnMessage: [127]
+2018-11-05 09:05:29,902 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:48) - returnMessage: [127]
+2018-11-05 09:06:18,972 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 09:06:18,978 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 09:06:18,978 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 09:06:18,979 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 09:06:19,995 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 41924
+
+2018-11-05 09:06:20,014 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-05 09:06:20,345 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 09:06:20,418 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-05 09:06:20,418 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-05 09:06:20,436 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_SUCCESS
+2018-11-05 09:06:20,450 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:37) - returnMessage: [127]
+2018-11-05 09:06:20,459 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 09:06:20,488 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: Document{{_id=5bdff9fcdc6b24246fd46f7f, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 09:06:20,490 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: OPERATION_FAILED
+2018-11-05 09:06:20,498 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:37) - returnMessage: [127]
+2018-11-05 09:06:20,498 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - directreturnMessage: [127]
+2018-11-05 09:06:20,499 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:48) - returnMessage: [127]
+2018-11-05 09:07:03,972 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 09:07:03,977 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 09:07:03,978 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 09:07:03,978 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 09:07:04,998 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 41940
+
+2018-11-05 09:07:05,016 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-05 09:07:05,433 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 09:07:05,544 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-05 09:07:05,545 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-05 09:07:05,561 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: [0, 20]
+2018-11-05 09:07:05,573 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:37) - returnMessage: [127]
+2018-11-05 09:07:05,596 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 09:07:05,635 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: Document{{_id=5bdffa29dc6b2424c4835cf7, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 09:07:05,636 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MessageType: [1, 20]
+2018-11-05 09:07:05,661 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:37) - returnMessage: [127]
+2018-11-05 09:07:05,662 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - directreturnMessage: [127]
+2018-11-05 09:07:05,662 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:48) - returnMessage: [127]
+2018-11-05 09:08:54,362 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 09:08:54,367 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 09:08:54,370 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 09:08:54,371 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 09:08:55,390 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 41956
+
+2018-11-05 09:08:55,402 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-05 09:08:55,720 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 09:08:55,806 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-05 09:08:55,806 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-05 09:08:55,827 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MsgBytes: [0, 20]
+2018-11-05 09:08:55,852 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:34) - Default Case: [1, 20]
+2018-11-05 09:08:55,853 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:38) - returnMessage: [127]
+2018-11-05 09:08:55,863 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 09:08:55,896 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: Document{{_id=5bdffa97dc6b242516d5b0be, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 09:08:55,897 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MsgBytes: [1, 20]
+2018-11-05 09:08:55,913 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:34) - Default Case: [1, 20]
+2018-11-05 09:08:55,914 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:38) - returnMessage: [127]
+2018-11-05 09:08:55,923 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - directreturnMessage: [127]
+2018-11-05 09:08:55,924 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:48) - returnMessage: [127]
+2018-11-05 09:15:39,144 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 09:15:39,150 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 09:15:39,151 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 09:15:39,151 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 09:15:40,174 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 42104
+
+2018-11-05 09:15:40,188 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-05 09:15:40,543 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 09:15:40,614 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-05 09:15:40,615 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-05 09:15:40,636 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MsgBytes: [0, 20]
+2018-11-05 09:15:40,643 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:34) - MsgBytesFromCLient[0]: 2
+2018-11-05 09:15:40,644 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:35) - Default Case: [1, 20]
+2018-11-05 09:15:40,645 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:39) - returnMessage: [127]
+2018-11-05 09:15:40,652 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 09:15:40,679 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: Document{{_id=5bdffc2cdc6b2426a986977c, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 09:15:40,681 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MsgBytes: [1, 20]
+2018-11-05 09:15:40,688 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:34) - MsgBytesFromCLient[0]: 2
+2018-11-05 09:15:40,688 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:35) - Default Case: [1, 20]
+2018-11-05 09:15:40,689 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:39) - returnMessage: [127]
+2018-11-05 09:15:40,689 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - directreturnMessage: [127]
+2018-11-05 09:15:40,689 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:48) - returnMessage: [127]
+2018-11-05 23:03:38,080 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:03:38,085 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:03:38,087 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:03:38,087 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:03:39,121 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 42294
+
+2018-11-05 23:03:39,138 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-05 23:03:39,780 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:03:39,910 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-05 23:03:39,910 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-05 23:03:39,931 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MsgBytes: [0, 20]
+2018-11-05 23:03:39,950 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:34) - MsgBytesFromCLient[0]: 2
+2018-11-05 23:03:39,951 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:35) - Default Case: [1, 20]
+2018-11-05 23:03:39,956 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:39) - returnMessage: [127]
+2018-11-05 23:03:40,020 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:03:40,056 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: Document{{_id=5be0be3bdc6b242e730fe660, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 23:03:40,057 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MsgBytes: [1, 20]
+2018-11-05 23:03:40,069 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:34) - MsgBytesFromCLient[0]: 2
+2018-11-05 23:03:40,070 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:35) - Default Case: [1, 20]
+2018-11-05 23:03:40,071 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:39) - returnMessage: [127]
+2018-11-05 23:03:40,071 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - directreturnMessage: [127]
+2018-11-05 23:03:40,071 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:48) - returnMessage: [127]
+2018-11-05 23:05:35,487 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:05:35,495 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:05:35,502 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:05:35,502 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 15 started
+2018-11-05 23:05:36,516 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 18: processing connection to /127.0.0.1 on port 42320
+
+2018-11-05 23:05:36,535 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-05 23:05:37,681 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:05:37,885 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-05 23:05:37,886 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-05 23:06:41,732 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:28) - @MessageDecoder: MsgBytes: [0, 20]
+2018-11-05 23:06:54,066 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:34) - MsgBytesFromCLient[0]: 2
+2018-11-05 23:06:54,743 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:35) - Default Case: [1, 20]
+2018-11-05 23:06:56,134 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:39) - returnMessage: [127]
+2018-11-05 23:15:36,263 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:15:36,271 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:15:36,276 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:15:36,278 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 15 started
+2018-11-05 23:15:37,292 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 18: processing connection to /127.0.0.1 on port 42412
+
+2018-11-05 23:15:37,307 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-05 23:15:37,316 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 2
+2018-11-05 23:15:38,240 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:15:38,455 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-05 23:15:38,456 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-05 23:16:10,726 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [0, 20]
+2018-11-05 23:16:25,053 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:35) - MsgBytesFromCLient[0]: 2
+2018-11-05 23:16:26,706 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:36) - Default Case: [1, 20]
+2018-11-05 23:16:28,409 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:40) - returnMessage: [127]
+2018-11-05 23:16:31,133 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 2
+2018-11-05 23:16:31,140 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:16:31,158 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: Document{{_id=5be0c10adc6b242fca15a43b, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 23:16:37,973 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [1, 20]
+2018-11-05 23:16:37,981 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:35) - MsgBytesFromCLient[0]: 2
+2018-11-05 23:16:37,981 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:36) - Default Case: [1, 20]
+2018-11-05 23:16:37,982 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:40) - returnMessage: [127]
+2018-11-05 23:16:37,982 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - directreturnMessage: [127]
+2018-11-05 23:16:37,983 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:48) - returnMessage: [127]
+2018-11-05 23:18:26,198 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:18:26,205 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:18:26,209 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:18:26,211 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 15 started
+2018-11-05 23:18:27,223 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 18: processing connection to /127.0.0.1 on port 42480
+
+2018-11-05 23:18:27,240 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-05 23:18:27,249 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 2
+2018-11-05 23:18:28,025 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:18:28,301 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-05 23:18:28,301 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-05 23:20:26,378 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:20:26,383 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:20:26,386 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:20:26,387 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:20:27,406 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 42500
+
+2018-11-05 23:20:27,420 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_REQUEST
+2018-11-05 23:20:27,421 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 2
+2018-11-05 23:20:27,780 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:20:27,862 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: Document{{_id=5be0c1b4dc6b24307b39fb80, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 23:20:27,862 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [1, 20]
+2018-11-05 23:20:27,863 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [1, 20]
+2018-11-05 23:20:27,863 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 2
+2018-11-05 23:20:27,872 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:20:27,895 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: Document{{_id=5be0c1b4dc6b24307b39fb80, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 23:20:27,896 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [1, 20]
+2018-11-05 23:20:27,896 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [1, 20]
+2018-11-05 23:20:27,897 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - directreturnMessage: [1, 20]
+2018-11-05 23:20:27,897 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:48) - returnMessage: [1, 20]
+2018-11-05 23:20:27,948 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 20: processing connection to /127.0.0.1 on port 42510
+
+2018-11-05 23:20:28,009 [Thread-5] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:42) - MsgType: REGISTRATION_DELETE_REQUEST
+2018-11-05 23:20:28,009 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 3
+2018-11-05 23:20:28,027 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:20:28,061 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:53) - @RegistrationHandler: Delete: Document{{_id=5be0c1b4dc6b24307b39fb80, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 23:20:28,167 [Thread-5] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [0, 20]
+2018-11-05 23:20:28,168 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [0, 20]
+2018-11-05 23:20:28,168 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 3
+2018-11-05 23:20:28,189 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:20:28,247 [Thread-5] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [1, 20]
+2018-11-05 23:20:28,247 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [1, 20]
+2018-11-05 23:20:28,247 [Thread-5] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - directreturnMessage: [1, 20]
+2018-11-05 23:20:28,247 [Thread-5] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:48) - returnMessage: [0, 20]
+2018-11-05 23:22:48,280 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:22:48,285 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:22:48,286 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:22:48,286 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:22:49,301 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 42522
+
+2018-11-05 23:22:49,318 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 2
+2018-11-05 23:22:49,644 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:22:49,708 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-05 23:22:49,709 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-05 23:22:49,732 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [0, 20]
+2018-11-05 23:22:49,733 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [0, 20]
+2018-11-05 23:22:49,733 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 2
+2018-11-05 23:22:49,742 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:22:49,788 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: Document{{_id=5be0c2b9dc6b243103c74f26, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 23:22:49,789 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [1, 20]
+2018-11-05 23:22:49,789 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [1, 20]
+2018-11-05 23:22:49,792 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:46) - directreturnMessage: [1, 20]
+2018-11-05 23:22:49,792 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - returnMessage: [0, 20]
+2018-11-05 23:22:49,839 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 20: processing connection to /127.0.0.1 on port 42532
+
+2018-11-05 23:22:49,876 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 3
+2018-11-05 23:22:49,911 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:22:49,949 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:53) - @RegistrationHandler: Delete: Document{{_id=5be0c2b9dc6b243103c74f26, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 23:22:49,958 [Thread-5] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [0, 20]
+2018-11-05 23:22:49,958 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [0, 20]
+2018-11-05 23:22:49,959 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 3
+2018-11-05 23:22:49,970 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:22:50,037 [Thread-5] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [1, 20]
+2018-11-05 23:22:50,038 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [1, 20]
+2018-11-05 23:22:50,038 [Thread-5] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:46) - directreturnMessage: [1, 20]
+2018-11-05 23:22:50,038 [Thread-5] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - returnMessage: [0, 20]
+2018-11-05 23:25:05,568 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:25:05,572 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:25:05,573 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:25:05,573 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:25:06,594 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 42544
+
+2018-11-05 23:25:06,608 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 2
+2018-11-05 23:25:06,951 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:25:07,046 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-05 23:25:07,046 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-05 23:25:07,068 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [0, 20]
+2018-11-05 23:25:07,068 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [0, 20]
+2018-11-05 23:25:07,068 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 2
+2018-11-05 23:25:07,079 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:25:07,131 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: Document{{_id=5be0c343dc6b24314ef4501b, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 23:25:07,133 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [1, 20]
+2018-11-05 23:25:07,133 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [1, 20]
+2018-11-05 23:25:07,134 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - directreturnMessage: [1, 20]
+2018-11-05 23:25:07,134 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:48) - returnMessage: [0, 20]
+2018-11-05 23:25:07,170 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 20: processing connection to /127.0.0.1 on port 42554
+
+2018-11-05 23:25:07,195 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 3
+2018-11-05 23:25:07,212 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:25:07,260 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:53) - @RegistrationHandler: Delete: Document{{_id=5be0c343dc6b24314ef4501b, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 23:25:07,274 [Thread-5] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [0, 20]
+2018-11-05 23:25:07,274 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [0, 20]
+2018-11-05 23:25:07,274 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 3
+2018-11-05 23:25:07,280 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:25:07,331 [Thread-5] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [1, 20]
+2018-11-05 23:25:07,332 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [1, 20]
+2018-11-05 23:25:07,332 [Thread-5] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - directreturnMessage: [1, 20]
+2018-11-05 23:25:07,332 [Thread-5] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:48) - returnMessage: [0, 20]
+2018-11-05 23:25:40,231 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:25:40,234 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:25:40,235 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:25:40,235 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:25:41,255 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 42566
+
+2018-11-05 23:25:41,269 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 2
+2018-11-05 23:25:41,584 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:25:41,663 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-05 23:25:41,663 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-05 23:25:41,681 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [0, 20]
+2018-11-05 23:25:41,681 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [0, 20]
+2018-11-05 23:25:41,682 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 2
+2018-11-05 23:25:41,696 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:25:41,735 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: Document{{_id=5be0c365dc6b2431854deba6, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 23:25:41,736 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [1, 20]
+2018-11-05 23:25:41,736 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [1, 20]
+2018-11-05 23:25:41,737 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - directreturnMessage: [1, 20]
+2018-11-05 23:25:41,737 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:48) - returnMessage: [0, 20]
+2018-11-05 23:25:41,786 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 20: processing connection to /127.0.0.1 on port 42576
+
+2018-11-05 23:25:41,828 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 3
+2018-11-05 23:25:41,847 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:25:41,937 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:53) - @RegistrationHandler: Delete: Document{{_id=5be0c365dc6b2431854deba6, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 23:25:41,948 [Thread-5] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [0, 20]
+2018-11-05 23:25:41,949 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [0, 20]
+2018-11-05 23:25:41,950 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 3
+2018-11-05 23:25:41,962 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:25:42,010 [Thread-5] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [1, 20]
+2018-11-05 23:25:42,010 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [1, 20]
+2018-11-05 23:25:42,010 [Thread-5] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - directreturnMessage: [1, 20]
+2018-11-05 23:25:42,010 [Thread-5] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:48) - returnMessage: [0, 20]
+2018-11-05 23:32:33,526 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:32:33,531 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:32:33,531 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:32:33,531 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:32:34,547 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 15: processing connection to /127.0.0.1 on port 42594
+
+2018-11-05 23:32:34,551 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 2
+2018-11-05 23:32:34,880 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:32:34,963 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: null
+2018-11-05 23:32:34,964 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:39) - Create: null
+2018-11-05 23:32:34,983 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [0, 20]
+2018-11-05 23:32:34,983 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [0, 20]
+2018-11-05 23:32:34,984 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 2
+2018-11-05 23:32:34,987 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:32:35,022 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:35) - @RegistrationHandler: Email Entry: Document{{_id=5be0c502dc6b24321e808c57, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 23:32:35,024 [Thread-4] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [1, 20]
+2018-11-05 23:32:35,025 [Thread-4] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [1, 20]
+2018-11-05 23:32:35,025 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - directreturnMessage: [1, 20]
+2018-11-05 23:32:35,025 [Thread-4] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:48) - returnMessage: [0, 20]
+2018-11-05 23:32:35,068 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - @ServerConnection: In Thread 20: processing connection to /127.0.0.1 on port 42604
+
+2018-11-05 23:32:35,070 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 3
+2018-11-05 23:32:35,096 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:32:35,157 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:53) - @RegistrationHandler: Delete: Document{{_id=5be0c502dc6b24321e808c57, email=test@totallynotafakemail.com, password=yaya1234}}
+2018-11-05 23:32:35,170 [Thread-5] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [0, 20]
+2018-11-05 23:32:35,170 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [0, 20]
+2018-11-05 23:32:35,170 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:21) - MessageType: 3
+2018-11-05 23:32:35,178 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:30) - In RegistrationHandler
+2018-11-05 23:32:35,211 [Thread-5] INFO  CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:29) - @MessageDecoder: MsgBytes: [1, 20]
+2018-11-05 23:32:35,211 [Thread-5] DEBUG CalenderServer server.MessageDecoder.processMessage(MessageDecoder.java:43) - returnMessage: [1, 20]
+2018-11-05 23:32:35,211 [Thread-5] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:47) - directreturnMessage: [1, 20]
+2018-11-05 23:32:35,212 [Thread-5] DEBUG CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:48) - returnMessage: [0, 20]
+2018-11-05 23:38:20,235 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:38:20,240 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:38:20,240 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:38:20,241 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:38:21,259 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 15: processing connection to /127.0.0.1 on port 42620
+
+2018-11-05 23:38:21,262 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:38:21,707 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-05 23:38:21,762 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 18: processing connection to /127.0.0.1 on port 42626
+
+2018-11-05 23:38:21,764 [Thread-5] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:38:21,840 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:50) - Delete: {_id=5be0c65ddc6b2432eadf2995, email=test@totallynotafakemail.com, password=yaya1234}
+2018-11-05 23:39:24,149 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:39:24,154 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:39:24,155 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:39:24,155 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:39:25,162 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 15: processing connection to /127.0.0.1 on port 42634
+
+2018-11-05 23:39:25,166 [Thread-4] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:39:25,610 [Thread-4] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-05 23:39:25,654 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 18: processing connection to /127.0.0.1 on port 42640
+
+2018-11-05 23:39:25,659 [Thread-5] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:39:25,737 [Thread-5] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:50) - Delete: {_id=5be0c69ddc6b2433306637cb, email=test@totallynotafakemail.com, password=yaya1234}
+2018-11-05 23:47:16,852 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:47:16,856 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:47:16,857 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:47:16,857 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:47:16,887 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:47:16,888 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-05 23:47:16,889 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-05 23:47:16,889 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:47:16,889 [Thread-4] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 15 started
+2018-11-05 23:47:16,894 [Thread-4] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:55) - ServerConnection Thread 15 stopped\n
+2018-11-05 23:48:12,871 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:48:12,876 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:48:12,877 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:48:12,877 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:48:12,891 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:48:12,895 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-05 23:48:12,896 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-05 23:48:12,897 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:48:12,900 [Thread-4] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 15 started
+2018-11-05 23:48:12,903 [Thread-4] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:55) - ServerConnection Thread 15 stopped\n
+2018-11-05 23:48:44,475 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:48:44,479 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:48:44,480 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:48:44,480 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:49:04,758 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:49:04,763 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:49:04,764 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:49:04,764 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:49:39,744 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:49:39,748 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:49:39,749 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:49:39,749 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:49:41,756 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 25: processing connection to /127.0.0.1 on port 42718
+
+2018-11-05 23:49:41,759 [Thread-14] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:49:42,204 [Thread-14] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-05 23:49:42,266 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 28: processing connection to /127.0.0.1 on port 42724
+
+2018-11-05 23:49:42,269 [Thread-15] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:49:42,277 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 29: processing connection to /127.0.0.1 on port 42728
+
+2018-11-05 23:49:42,280 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 30: processing connection to /127.0.0.1 on port 42730
+
+2018-11-05 23:49:42,281 [Thread-16] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:49:42,283 [Thread-17] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:49:42,286 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 31: processing connection to /127.0.0.1 on port 42726
+
+2018-11-05 23:49:42,288 [Thread-18] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:49:42,355 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 35: processing connection to /127.0.0.1 on port 42738
+
+2018-11-05 23:49:42,377 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 40: processing connection to /127.0.0.1 on port 42740
+
+2018-11-05 23:49:42,379 [Thread-20] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:49:42,383 [Thread-19] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:49:42,388 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 41: processing connection to /127.0.0.1 on port 42742
+
+2018-11-05 23:49:42,391 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 42: processing connection to /127.0.0.1 on port 42744
+
+2018-11-05 23:49:42,393 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 43: processing connection to /127.0.0.1 on port 42746
+
+2018-11-05 23:49:42,397 [Thread-22] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:49:42,400 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 44: processing connection to /127.0.0.1 on port 42748
+
+2018-11-05 23:49:42,395 [Thread-23] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:49:42,402 [Thread-24] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:49:42,397 [Thread-21] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:49:42,537 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 58: processing connection to /127.0.0.1 on port 42790
+
+2018-11-05 23:49:42,539 [Thread-25] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:49:42,638 [Thread-25] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:50) - Delete: {_id=5be0c906dc6b243524427aab, email=test@totallynotafakemail.com, password=yaya1234}
+2018-11-05 23:50:15,053 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:50:15,058 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:50:15,059 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:50:15,061 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:50:15,074 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:50:15,079 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-05 23:50:15,080 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-05 23:50:15,081 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:50:15,081 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:50:15,085 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:55) - ServerConnection Thread 12 stopped\n
+2018-11-05 23:50:17,067 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 25: processing connection to /127.0.0.1 on port 42800
+
+2018-11-05 23:50:17,071 [Thread-14] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:17,465 [Thread-14] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-05 23:50:17,494 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 28: processing connection to /127.0.0.1 on port 42806
+
+2018-11-05 23:50:17,497 [Thread-15] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:17,503 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 29: processing connection to /127.0.0.1 on port 42808
+
+2018-11-05 23:50:17,505 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 30: processing connection to /127.0.0.1 on port 42810
+
+2018-11-05 23:50:17,508 [Thread-17] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:17,509 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 31: processing connection to /127.0.0.1 on port 42812
+
+2018-11-05 23:50:17,518 [Thread-18] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:17,519 [Thread-16] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:17,524 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 34: processing connection to /127.0.0.1 on port 42816
+
+2018-11-05 23:50:17,526 [Thread-19] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:17,533 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 35: processing connection to /127.0.0.1 on port 42814
+
+2018-11-05 23:50:17,548 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 36: processing connection to /127.0.0.1 on port 42818
+
+2018-11-05 23:50:17,550 [Thread-20] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:17,551 [Thread-21] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:17,708 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 46: processing connection to /127.0.0.1 on port 42820
+
+2018-11-05 23:50:17,710 [Thread-22] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:17,714 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 50: processing connection to /127.0.0.1 on port 42822
+
+2018-11-05 23:50:17,730 [Thread-24] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:17,721 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 51: processing connection to /127.0.0.1 on port 42824
+
+2018-11-05 23:50:17,755 [Thread-23] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:17,999 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 58: processing connection to /127.0.0.1 on port 42870
+
+2018-11-05 23:50:18,067 [Thread-25] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:18,258 [Thread-25] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:50) - Delete: {_id=5be0c929dc6b243587da0686, email=test@totallynotafakemail.com, password=yaya1234}
+2018-11-05 23:50:51,586 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:50:51,590 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:50:51,590 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:50:51,591 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:50:53,597 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 25: processing connection to /127.0.0.1 on port 42878
+
+2018-11-05 23:50:53,600 [Thread-14] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:54,005 [Thread-14] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-05 23:50:54,066 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 28: processing connection to /127.0.0.1 on port 42884
+
+2018-11-05 23:50:54,067 [Thread-15] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:54,074 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 29: processing connection to /127.0.0.1 on port 42886
+
+2018-11-05 23:50:54,077 [Thread-16] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:54,090 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 32: processing connection to /127.0.0.1 on port 42888
+
+2018-11-05 23:50:54,091 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 33: processing connection to /127.0.0.1 on port 42890
+
+2018-11-05 23:50:54,094 [Thread-17] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:54,108 [Thread-18] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:54,109 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 35: processing connection to /127.0.0.1 on port 42896
+
+2018-11-05 23:50:54,161 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 39: processing connection to /127.0.0.1 on port 42894
+
+2018-11-05 23:50:54,164 [Thread-19] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:54,165 [Thread-20] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:54,173 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 40: processing connection to /127.0.0.1 on port 42892
+
+2018-11-05 23:50:54,176 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 41: processing connection to /127.0.0.1 on port 42900
+
+2018-11-05 23:50:54,186 [Thread-21] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:54,200 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 42: processing connection to /127.0.0.1 on port 42902
+
+2018-11-05 23:50:54,210 [Thread-22] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:54,213 [Thread-23] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:54,297 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 49: processing connection to /127.0.0.1 on port 42904
+
+2018-11-05 23:50:54,299 [Thread-24] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:54,346 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 53: processing connection to /127.0.0.1 on port 42914
+
+2018-11-05 23:50:54,355 [Thread-25] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:50:54,499 [Thread-25] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:50) - Delete: {_id=5be0c94edc6b24360d8ed03c, email=test@totallynotafakemail.com, password=yaya1234}
+2018-11-05 23:50:59,807 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:50:59,810 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:50:59,811 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:50:59,811 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:51:01,818 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 25: processing connection to /127.0.0.1 on port 42956
+
+2018-11-05 23:51:01,822 [Thread-14] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:02,222 [Thread-14] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-05 23:51:02,261 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 28: processing connection to /127.0.0.1 on port 42962
+
+2018-11-05 23:51:02,263 [Thread-15] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:02,269 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 29: processing connection to /127.0.0.1 on port 42964
+
+2018-11-05 23:51:02,272 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 30: processing connection to /127.0.0.1 on port 42966
+
+2018-11-05 23:51:02,277 [Thread-17] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:02,278 [Thread-16] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:02,281 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 31: processing connection to /127.0.0.1 on port 42972
+
+2018-11-05 23:51:02,283 [Thread-18] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:02,305 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 33: processing connection to /127.0.0.1 on port 42968
+
+2018-11-05 23:51:02,314 [Thread-19] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:02,362 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 39: processing connection to /127.0.0.1 on port 42974
+
+2018-11-05 23:51:02,363 [Thread-20] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:02,369 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 40: processing connection to /127.0.0.1 on port 42976
+
+2018-11-05 23:51:02,370 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 41: processing connection to /127.0.0.1 on port 42978
+
+2018-11-05 23:51:02,372 [Thread-21] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:02,372 [Thread-22] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:02,377 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 42: processing connection to /127.0.0.1 on port 42980
+
+2018-11-05 23:51:02,391 [Thread-23] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:02,445 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 47: processing connection to /127.0.0.1 on port 42982
+
+2018-11-05 23:51:02,464 [Thread-24] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:02,557 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 55: processing connection to /127.0.0.1 on port 43010
+
+2018-11-05 23:51:02,561 [Thread-25] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:02,696 [Thread-25] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:50) - Delete: {_id=5be0c956dc6b243672ec9e0e, email=test@totallynotafakemail.com, password=yaya1234}
+2018-11-05 23:51:06,256 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:51:06,260 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:51:06,261 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:51:06,261 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:51:08,268 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 25: processing connection to /127.0.0.1 on port 43038
+
+2018-11-05 23:51:08,271 [Thread-14] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:08,649 [Thread-14] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-05 23:51:08,685 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 28: processing connection to /127.0.0.1 on port 43044
+
+2018-11-05 23:51:08,687 [Thread-15] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:08,698 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 29: processing connection to /127.0.0.1 on port 43048
+
+2018-11-05 23:51:08,699 [Thread-16] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:08,729 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 33: processing connection to /127.0.0.1 on port 43046
+
+2018-11-05 23:51:08,750 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 35: processing connection to /127.0.0.1 on port 43050
+
+2018-11-05 23:51:08,752 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 36: processing connection to /127.0.0.1 on port 43058
+
+2018-11-05 23:51:08,757 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 37: processing connection to /127.0.0.1 on port 43060
+
+2018-11-05 23:51:08,757 [Thread-17] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:08,762 [Thread-18] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:08,766 [Thread-20] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:08,769 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 38: processing connection to /127.0.0.1 on port 43064
+
+2018-11-05 23:51:08,771 [Thread-21] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:08,772 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 39: processing connection to /127.0.0.1 on port 43062
+
+2018-11-05 23:51:08,775 [Thread-22] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:08,782 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 40: processing connection to /127.0.0.1 on port 43066
+
+2018-11-05 23:51:08,783 [Thread-23] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:08,784 [Thread-19] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:08,825 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 46: processing connection to /127.0.0.1 on port 43068
+
+2018-11-05 23:51:08,827 [Thread-24] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:08,950 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 57: processing connection to /127.0.0.1 on port 43090
+
+2018-11-05 23:51:08,952 [Thread-25] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:09,120 [Thread-25] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:50) - Delete: {_id=5be0c95cdc6b2436d3632f08, email=test@totallynotafakemail.com, password=yaya1234}
+2018-11-05 23:51:16,458 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:51:16,464 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:51:16,465 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:51:16,465 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:51:18,473 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 25: processing connection to /127.0.0.1 on port 43118
+
+2018-11-05 23:51:18,476 [Thread-14] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:18,898 [Thread-14] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-05 23:51:18,940 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 28: processing connection to /127.0.0.1 on port 43124
+
+2018-11-05 23:51:18,942 [Thread-15] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:18,943 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 29: processing connection to /127.0.0.1 on port 43126
+
+2018-11-05 23:51:18,951 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 30: processing connection to /127.0.0.1 on port 43130
+
+2018-11-05 23:51:18,953 [Thread-17] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:18,950 [Thread-16] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:18,965 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 31: processing connection to /127.0.0.1 on port 43128
+
+2018-11-05 23:51:18,966 [Thread-18] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:19,035 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 37: processing connection to /127.0.0.1 on port 43134
+
+2018-11-05 23:51:19,036 [Thread-19] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:19,040 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 41: processing connection to /127.0.0.1 on port 43136
+
+2018-11-05 23:51:19,042 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 42: processing connection to /127.0.0.1 on port 43138
+
+2018-11-05 23:51:19,049 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 43: processing connection to /127.0.0.1 on port 43140
+
+2018-11-05 23:51:19,052 [Thread-22] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:19,055 [Thread-20] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:19,057 [Thread-21] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:19,073 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 44: processing connection to /127.0.0.1 on port 43142
+
+2018-11-05 23:51:19,075 [Thread-23] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:19,078 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 45: processing connection to /127.0.0.1 on port 43144
+
+2018-11-05 23:51:19,079 [Thread-24] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:19,193 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 58: processing connection to /127.0.0.1 on port 43184
+
+2018-11-05 23:51:19,204 [Thread-25] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:51:19,331 [Thread-25] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:50) - Delete: {_id=5be0c966dc6b24373614d12c, email=test@totallynotafakemail.com, password=yaya1234}
+2018-11-05 23:51:19,341 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:51:19,342 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-05 23:51:19,343 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-05 23:51:19,348 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:51:19,349 [Thread-26] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 61 started
+2018-11-05 23:51:19,350 [Thread-26] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:55) - ServerConnection Thread 61 stopped\n
+2018-11-05 23:52:24,835 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:52:24,840 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:52:24,841 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:52:24,841 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:52:26,848 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 25: processing connection to /127.0.0.1 on port 43196
+
+2018-11-05 23:52:26,851 [Thread-14] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:52:27,256 [Thread-14] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-05 23:52:27,299 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 28: processing connection to /127.0.0.1 on port 43202
+
+2018-11-05 23:52:27,306 [Thread-15] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:52:27,313 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 29: processing connection to /127.0.0.1 on port 43204
+
+2018-11-05 23:52:27,314 [Thread-16] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:52:27,321 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 30: processing connection to /127.0.0.1 on port 43206
+
+2018-11-05 23:52:27,328 [Thread-17] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:52:27,328 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 31: processing connection to /127.0.0.1 on port 43208
+
+2018-11-05 23:52:27,333 [Thread-18] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:52:27,333 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 32: processing connection to /127.0.0.1 on port 43210
+
+2018-11-05 23:52:27,336 [Thread-19] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:52:27,465 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 38: processing connection to /127.0.0.1 on port 43212
+
+2018-11-05 23:52:27,468 [Thread-20] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:52:27,473 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 43: processing connection to /127.0.0.1 on port 43214
+
+2018-11-05 23:52:27,480 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 44: processing connection to /127.0.0.1 on port 43218
+
+2018-11-05 23:52:27,482 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 45: processing connection to /127.0.0.1 on port 43220
+
+2018-11-05 23:52:27,486 [Thread-23] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:52:27,494 [Thread-22] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:52:27,494 [Thread-21] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:52:27,498 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 46: processing connection to /127.0.0.1 on port 43222
+
+2018-11-05 23:52:27,503 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 47: processing connection to /127.0.0.1 on port 43236
+
+2018-11-05 23:52:27,504 [Thread-25] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:52:27,501 [Thread-24] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:52:27,669 [Thread-25] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:50) - Delete: {_id=5be0c9abdc6b2437a1239384, email=test@totallynotafakemail.com, password=yaya1234}
+2018-11-05 23:52:27,699 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:52:27,709 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-05 23:52:27,710 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-05 23:52:27,714 [Thread-21] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-05 23:52:27,716 [Thread-23] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-05 23:52:27,719 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:52:27,720 [Thread-26] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 61 started
+2018-11-05 23:52:27,728 [Thread-26] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:55) - ServerConnection Thread 61 stopped\n
+2018-11-05 23:53:27,233 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:53:27,237 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:53:27,238 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:53:27,238 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:53:29,245 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 25: processing connection to /127.0.0.1 on port 43272
+
+2018-11-05 23:53:29,249 [Thread-14] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:53:29,650 [Thread-14] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-05 23:53:29,685 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 28: processing connection to /127.0.0.1 on port 43278
+
+2018-11-05 23:53:29,686 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 29: processing connection to /127.0.0.1 on port 43280
+
+2018-11-05 23:53:29,688 [Thread-16] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:53:29,692 [Thread-15] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:53:29,700 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 30: processing connection to /127.0.0.1 on port 43282
+
+2018-11-05 23:53:29,702 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 31: processing connection to /127.0.0.1 on port 43284
+
+2018-11-05 23:53:29,712 [Thread-17] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:53:29,714 [Thread-18] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:53:29,738 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 34: processing connection to /127.0.0.1 on port 43286
+
+2018-11-05 23:53:29,741 [Thread-19] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:53:29,775 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 41: processing connection to /127.0.0.1 on port 43288
+
+2018-11-05 23:53:29,776 [Thread-20] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:53:29,778 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 43: processing connection to /127.0.0.1 on port 43292
+
+2018-11-05 23:53:29,779 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 44: processing connection to /127.0.0.1 on port 43294
+
+2018-11-05 23:53:29,779 [Thread-21] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:53:29,779 [Thread-22] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:53:29,837 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 49: processing connection to /127.0.0.1 on port 43298
+
+2018-11-05 23:53:29,842 [Thread-23] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:53:29,905 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 54: processing connection to /127.0.0.1 on port 43300
+
+2018-11-05 23:53:29,907 [Thread-24] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:53:29,924 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 56: processing connection to /127.0.0.1 on port 43318
+
+2018-11-05 23:53:29,926 [Thread-25] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:53:30,062 [Thread-25] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:50) - Delete: {_id=5be0c9e9dc6b2438108f299c, email=test@totallynotafakemail.com, password=yaya1234}
+2018-11-05 23:53:30,077 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:53:30,078 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-05 23:53:30,079 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-05 23:53:30,080 [Thread-24] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-05 23:53:30,105 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:53:30,106 [Thread-26] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 61 started
+2018-11-05 23:53:30,107 [Thread-26] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:55) - ServerConnection Thread 61 stopped\n
+2018-11-05 23:56:34,376 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:56:34,380 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:56:34,381 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:56:34,381 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:56:36,388 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 25: processing connection to /127.0.0.1 on port 43488
+
+2018-11-05 23:56:36,392 [Thread-14] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:56:36,843 [Thread-14] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-05 23:56:36,900 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 28: processing connection to /127.0.0.1 on port 43494
+
+2018-11-05 23:56:36,911 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 29: processing connection to /127.0.0.1 on port 43496
+
+2018-11-05 23:56:36,912 [Thread-15] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:56:36,919 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 30: processing connection to /127.0.0.1 on port 43498
+
+2018-11-05 23:56:36,924 [Thread-17] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:56:36,924 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 31: processing connection to /127.0.0.1 on port 43500
+
+2018-11-05 23:56:36,921 [Thread-16] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:56:36,928 [Thread-18] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:56:36,955 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 35: processing connection to /127.0.0.1 on port 43502
+
+2018-11-05 23:56:36,979 [Thread-19] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:56:37,007 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 40: processing connection to /127.0.0.1 on port 43504
+
+2018-11-05 23:56:37,008 [Thread-20] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:56:37,029 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 41: processing connection to /127.0.0.1 on port 43506
+
+2018-11-05 23:56:37,035 [Thread-21] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:56:37,066 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 45: processing connection to /127.0.0.1 on port 43512
+
+2018-11-05 23:56:37,082 [Thread-22] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:56:37,101 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 49: processing connection to /127.0.0.1 on port 43510
+
+2018-11-05 23:56:37,103 [Thread-23] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:56:37,181 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 55: processing connection to /127.0.0.1 on port 43508
+
+2018-11-05 23:56:37,186 [Thread-24] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:56:37,327 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 58: processing connection to /127.0.0.1 on port 43560
+
+2018-11-05 23:56:37,329 [Thread-25] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:56:37,466 [Thread-25] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:50) - Delete: {_id=5be0caa4dc6b2438edaa7468, email=test@totallynotafakemail.com, password=yaya1234}
+2018-11-05 23:56:37,527 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:56:37,530 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-05 23:56:37,531 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-05 23:56:37,536 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:56:37,537 [Thread-26] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 61 started
+2018-11-05 23:56:37,538 [Thread-26] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:55) - ServerConnection Thread 61 stopped\n
+2018-11-05 23:59:09,514 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:59:09,520 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-05 23:59:09,521 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:59:09,522 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-05 23:59:10,535 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 25: processing connection to /127.0.0.1 on port 43578
+
+2018-11-05 23:59:10,538 [Thread-14] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:59:10,992 [Thread-14] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-05 23:59:11,024 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 28: processing connection to /127.0.0.1 on port 43584
+
+2018-11-05 23:59:11,027 [Thread-15] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:59:11,041 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 29: processing connection to /127.0.0.1 on port 43586
+
+2018-11-05 23:59:11,042 [Thread-16] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:59:11,058 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 32: processing connection to /127.0.0.1 on port 43588
+
+2018-11-05 23:59:11,060 [Thread-17] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:59:11,080 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 34: processing connection to /127.0.0.1 on port 43598
+
+2018-11-05 23:59:11,110 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 35: processing connection to /127.0.0.1 on port 43596
+
+2018-11-05 23:59:11,111 [Thread-18] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:59:11,111 [Thread-19] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:59:11,167 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 42: processing connection to /127.0.0.1 on port 43602
+
+2018-11-05 23:59:11,172 [Thread-20] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:59:11,182 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 43: processing connection to /127.0.0.1 on port 43604
+
+2018-11-05 23:59:11,183 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 44: processing connection to /127.0.0.1 on port 43606
+
+2018-11-05 23:59:11,197 [Thread-21] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:59:11,203 [Thread-22] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:59:11,214 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 46: processing connection to /127.0.0.1 on port 43608
+
+2018-11-05 23:59:11,216 [Thread-23] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:59:11,233 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 49: processing connection to /127.0.0.1 on port 43610
+
+2018-11-05 23:59:11,236 [Thread-24] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:59:11,404 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 58: processing connection to /127.0.0.1 on port 43654
+
+2018-11-05 23:59:11,429 [Thread-25] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-05 23:59:11,526 [Thread-25] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:50) - Delete: {_id=5be0cb3edc6b243978d57cdb, email=test@totallynotafakemail.com, password=yaya1234}
+2018-11-05 23:59:11,568 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-05 23:59:11,569 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:94) - Error! Cannot open server socket:
+2018-11-05 23:59:11,569 [main] ERROR CalenderServer server.ServerConnection.initSocket(ServerConnection.java:96) - Port 50000 is already bound!
+2018-11-05 23:59:11,589 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-05 23:59:11,590 [Thread-26] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 61 started
+2018-11-05 23:59:11,591 [Thread-26] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:55) - ServerConnection Thread 61 stopped\n
+2018-11-06 00:01:54,434 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:87) - Initialize server ...
+2018-11-06 00:01:54,440 [main] INFO  CalenderServer server.ServerConnection.initSocket(ServerConnection.java:90) - Server listening on port: 50000
+2018-11-06 00:01:54,440 [main] INFO  CalenderServer server.ServerConnection.<init>(ServerConnection.java:31) - @ServerConnection: Server instance started
+2018-11-06 00:01:54,440 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:38) - @ServerConnection: ServerConnection Thread 12 started
+2018-11-06 00:01:55,449 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 25: processing connection to /127.0.0.1 on port 43718
+
+2018-11-06 00:01:55,453 [Thread-14] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-06 00:01:55,855 [Thread-14] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-06 00:01:55,905 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 28: processing connection to /127.0.0.1 on port 43726
+
+2018-11-06 00:01:55,908 [Thread-15] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-06 00:01:55,912 [Thread-16] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-06 00:01:55,908 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 29: processing connection to /127.0.0.1 on port 43724
+
+2018-11-06 00:01:55,948 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 33: processing connection to /127.0.0.1 on port 43730
+
+2018-11-06 00:01:55,956 [Thread-17] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-06 00:01:55,996 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 37: processing connection to /127.0.0.1 on port 43732
+
+2018-11-06 00:01:55,998 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 38: processing connection to /127.0.0.1 on port 43734
+
+2018-11-06 00:01:55,998 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 39: processing connection to /127.0.0.1 on port 43738
+
+2018-11-06 00:01:55,999 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 40: processing connection to /127.0.0.1 on port 43740
+
+2018-11-06 00:01:56,000 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 41: processing connection to /127.0.0.1 on port 43736
+
+2018-11-06 00:01:56,000 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 42: processing connection to /127.0.0.1 on port 43748
+
+2018-11-06 00:01:56,024 [Thread-22] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-06 00:01:56,028 [Thread-21] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-06 00:01:56,030 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 43: processing connection to /127.0.0.1 on port 43750
+
+2018-11-06 00:01:56,031 [Thread-19] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-06 00:01:56,037 [Thread-20] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-06 00:01:56,038 [Thread-18] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-06 00:01:56,046 [Thread-23] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-06 00:01:56,072 [Thread-24] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-06 00:01:56,259 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 58: processing connection to /127.0.0.1 on port 43800
+
+2018-11-06 00:01:56,262 [Thread-25] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-06 00:01:56,381 [Thread-25] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:50) - Delete: {_id=5be0cbe3dc6b243a7bea8241, email=test@totallynotafakemail.com, password=yaya1234}
+2018-11-06 00:01:57,476 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 63: processing connection to /127.0.0.1 on port 43806
+
+2018-11-06 00:01:57,486 [Thread-28] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-06 00:01:57,579 [Thread-28] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:37) - Create: test@totallynotafakemail.com
+2018-11-06 00:01:57,651 [Thread-1] INFO  CalenderServer server.ServerConnection.run(ServerConnection.java:46) - n Thread 66: processing connection to /127.0.0.1 on port 43812
+
+2018-11-06 00:01:57,718 [Thread-29] INFO  CalenderServer server.CalenderServerThread.run(CalenderServerThread.java:45) - Received Message. Decoding..
+2018-11-06 00:01:57,850 [Thread-29] INFO  CalenderServer server.RegistrationHandler.process(RegistrationHandler.java:50) - Delete: {_id=5be0cbe5dc6b243a7bea824e, email=test@totallynotafakemail.com, password=yaya1234}

@@ -3,40 +3,40 @@ package account.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import common.Communication;
+import logger.Constants;
 import message.RegistrationMessage;
 import message.MessageInterface.MESSAGETYPE;
 import server.ServerConnection;
 
 public class UserTest {
 	
+	private static final Logger logger = LogManager.getLogger(Constants.TEST_NAME);
 	
-	private RegistrationMessage registrationMsg;
-	private String email;
-	private String pw;
-	private String ip;
-	private int port;
+	private static RegistrationMessage registrationMsg;
+	private static String email;
+	private static String pw;
+	private static String ip;
+	private static int port;
+	private static Thread server;
 
-	@Before
-	public void initialize() {
+	@BeforeClass
+	public static void initialize() {
 		email = "test@totallynotafakemail.com";
 		pw = "yaya1234";
 		ip = "localhost";
 		port = 50000;
-
+		
 		registrationMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_REQUEST, email, pw);
 		
-		new Thread() {
-			@Override
-			public void run() {
-				@SuppressWarnings("unused")
-				ServerConnection server = new ServerConnection(port);
-			}
-		}.start();
-		
+		server = new ServerConnection(port);
+				
 	}
 
 	@Test
@@ -54,20 +54,25 @@ public class UserTest {
 	}
 
 	@Test
-	public synchronized void registrationTestForServer() throws Exception {
+	public void registrationTestForServer() throws Exception {
 		
-		wait(3000);
-		
-		new Thread() {
+		Thread regThread = new Thread() {
 			@Override
 			public void run() {
+				try {
+					server.join(1000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 				RegistrationMessage registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
-					System.out.printf("registrationMsg - Email: %s, Pw: %s", registrationMsg.getEmail(), registrationMsg.getPw());
 					communicator.send(registrationMsg.getMsgBytes());
 					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -76,21 +81,28 @@ public class UserTest {
 				assert(registrationMsgBack.getEmail() ==  null);
 				assert(registrationMsgBack.getPw() == null);
 			}
-		}.start();
-		/*
-		wait(2000);
+		};
+		regThread.start();
 		
 		RegistrationMessage registrationDeleteMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_DELETE_REQUEST, email, pw);
 		
-		new Thread() {
+		Thread regDelThread = new Thread() {
 			@Override
 			public void run() {
+				try {
+					regThread.join();
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 				RegistrationMessage registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
 					communicator.send(registrationDeleteMsg.getMsgBytes());
 					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -99,25 +111,35 @@ public class UserTest {
 				assert(registrationMsgBack.getEmail() ==  null);
 				assert(registrationMsgBack.getPw() == null);
 			}
-		}.start();
+		};
 		
-		wait(1000);
-	*/
+		regDelThread.start();
+	
+		regDelThread.join();
+		logger.info("registrationTestForServer successful!");
 	}
 	
 	
 	@Test
-	public synchronized void doubleRegistrationTestForServer() throws Exception {
-
-		new Thread() {
+	public void doubleRegistrationTestForServer() throws Exception {
+		
+		Thread regThread = new Thread() {
 			@Override
 			public void run() {
+				try {
+					server.join(1000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 				RegistrationMessage registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
 					communicator.send(registrationMsg.getMsgBytes());
 					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -126,45 +148,61 @@ public class UserTest {
 				assert(registrationMsgBack.getEmail() ==  null);
 				assert(registrationMsgBack.getPw() == null);
 			}
-		}.start();
+		};
+		regThread.start();
 		
-		wait(1500);
-		
+		Thread[] threads = new Thread[10];
 		for (int i = 0; i < 10; i++) {
-			new Thread() {
+			threads[i] = new Thread() {
 				@Override
 				public void run() {
+					try {
+						regThread.join();
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					
 					RegistrationMessage registrationMsgBack = null;
 					try {
 						Communication communicator = new Communication(ip, port);
 						communicator.createSocket();
 						communicator.send(registrationMsg.getMsgBytes());
 						registrationMsgBack = new RegistrationMessage(communicator.receive());
+						communicator.closeSocket();
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
-	
+
 					assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_FAILED));
 					assert(registrationMsgBack.getEmail() ==  null);
 					assert(registrationMsgBack.getPw() == null);
 				}
-			}.start();
+			};
+			threads[i].start();
 		}
-		
-		wait(1500);
-		
 		
 		RegistrationMessage registrationDeleteMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_DELETE_REQUEST, email, pw);
 		
-		new Thread() {
+		Thread regDelThread = new Thread() {
 			@Override
 			public void run() {
+				try {
+					for (Thread thread : threads) {
+						thread.join();
+					}
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 				RegistrationMessage registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
 					communicator.send(registrationDeleteMsg.getMsgBytes());
 					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -173,8 +211,11 @@ public class UserTest {
 				assert(registrationMsgBack.getEmail() ==  null);
 				assert(registrationMsgBack.getPw() == null);
 			}
-		}.start();
+		};
 		
-		wait(1500);
+		regDelThread.start();
+	
+		regDelThread.join();
+		logger.info("doubleRegistrationTestForServer successful!");
 	}
 }

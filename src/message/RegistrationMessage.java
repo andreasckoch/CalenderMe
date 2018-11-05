@@ -1,9 +1,15 @@
 package message;
 
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import logger.Constants;
 import message.MessageHelper;
 
 public class RegistrationMessage implements MessageInterface {
+
+	private static final Logger logger = LogManager.getLogger(Constants.COMMUNICATION_NAME);
 
 	private String email = null;
 	private String pw = null;

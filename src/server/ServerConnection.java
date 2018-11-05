@@ -28,30 +28,31 @@ public class ServerConnection extends Thread {
 		running = initSocket();
 		// start run method
 		this.start();
-		logger.info("Server instance started");
+		logger.info("@ServerConnection: Server instance started");
 	}
 
 	/**
 	 * Initializes and starts the server. Loops until the server should be closed and creates a new thread for each client.
 	 */
 	public void run() {
-		logger.debug("CalenderServer Thread " + Thread.currentThread().getId() + " started");
+		logger.info("@ServerConnection: ServerConnection Thread " + Thread.currentThread().getId() + " started");
 		if (serverSocket != null) {
 			while (running) {
 				try {
 					Socket client = serverSocket.accept();
 					CalenderServerThread connection = new CalenderServerThread(client);
-					new Thread(connection).start();
+					Thread connectionThread = new Thread(connection);
+					connectionThread.start();
 					logger.info(
-							"Connected to " + client.getInetAddress().getHostName() + " on port " + client.getPort());
+							"n Thread {}: processing connection to {} on port {}\n", connectionThread.getId(), client.getInetAddress(), client.getPort());
 				} catch (IOException e) {
-					logger.error("Error! " + "Unable to establish connection.");
+					logger.error("Error! Unable to establish connection\n");
 					shutDown();
-					logger.info("Server stopped.");
+					logger.info("Server stopped\n");
 				}
 			}
 		}
-		logger.debug("CalenderServer Thread " + Thread.currentThread().getId() + " stopped");
+		logger.info("ServerConnection Thread {} stopped\\n", Thread.currentThread().getId());
 		System.exit(0);
 	}
 

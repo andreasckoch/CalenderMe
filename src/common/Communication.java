@@ -33,7 +33,6 @@ public class Communication {
 		this.clientSocket = clientSocket;
 		output = clientSocket.getOutputStream();
 		input = clientSocket.getInputStream();
-		logger.info("Socket was created.");		
 		isConnection=true;
 	}
 
@@ -47,11 +46,12 @@ public class Communication {
 		try {
 			
 			output.write(message);
+			
 			output.flush();
-			logger.info("Message was sent.");
+			logger.info("Message was sent with message type: {}", MessageHelper.byteToMessageType(message[0]));
 			
 		} catch (IOException io) {
-			logger.error("Error while sending over socket.", io);
+			logger.error("Error while sending over socket with message type: {}", MessageHelper.byteToMessageType(message[0]), io);
 		}
 	}
 
@@ -79,7 +79,7 @@ public class Communication {
 			msg = msg + nextChar;
 		}
 		
-		logger.info("Received message.");
+		logger.info("Received message with message type: {}", MessageHelper.byteToMessageType(msg.getBytes()[0]));
 		return msg.getBytes();
 	}
 
@@ -87,6 +87,7 @@ public class Communication {
 		this.clientSocket = new Socket(ip, port);
 		output = clientSocket.getOutputStream();
 		input = clientSocket.getInputStream();
+		logger.info("Socket {} on port {} was created\n", ip, port);
 		isConnection = true;
 	}
 
@@ -103,10 +104,6 @@ public class Communication {
 
 	public boolean isConnection() {
 		return isConnection;
-	}
-
-	public void setConnection(boolean isConnection) {
-		this.isConnection = isConnection;
 	}
 
 }

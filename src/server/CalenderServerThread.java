@@ -9,6 +9,7 @@ import org.apache.logging.log4j.*;
 import common.Communication;
 import logger.Constants;
 import message.MessageInterface;
+import message.MessageHelper;
 
 public class CalenderServerThread implements Runnable {
 
@@ -24,16 +25,7 @@ public class CalenderServerThread implements Runnable {
 	public CalenderServerThread(Socket client) {
 		this.clientSocket = client;
 		this.isOpen = true;
-		try {
-			output = client.getOutputStream();
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
-		try {
-			input = client.getInputStream();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		
 	}
 
 
@@ -49,11 +41,12 @@ public class CalenderServerThread implements Runnable {
 					byte[] msgBytesFromClient = communicationWorker.receive();
 					
 					// Abfrage der möglichen Befehle wie RegisterRequest oder LoginRequest
-					messageDecoder = new MessageDecoder();
-					MessageInterface returnMessage = messageDecoder.processMessage(msgBytesFromClient);
-					System.out.printf("MsgBytes: ", msgBytesFromClient[0], returnMessage.getMsgBytes()[0]);
-					communicationWorker.send(returnMessage.getMsgBytes());
-					
+					if (msgBytesFromClient != null){
+						logger.info("Received Message. Decoding..");
+						messageDecoder = new MessageDecoder();
+						MessageInterface returnMessage = messageDecoder.processMessage(msgBytesFromClient);
+						communicationWorker.send(returnMessage.getMsgBytes());
+					}
 				} catch (IOException ioe) {
 					logger.error("Error! Connection lost!");
 					isOpen = false;
