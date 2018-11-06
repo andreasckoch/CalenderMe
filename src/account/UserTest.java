@@ -1,11 +1,10 @@
-package account.Test;
+package account;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
