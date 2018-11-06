@@ -11,6 +11,7 @@ import org.junit.Test;
 import common.Communication;
 import logger.Constants;
 import message.RegistrationMessage;
+import message.LoginMessage;
 import message.MessageInterface.MESSAGETYPE;
 import server.ServerConnection;
 
@@ -19,11 +20,15 @@ public class UserTest {
 	private static final Logger logger = LogManager.getLogger(Constants.TEST_NAME);
 	
 	private static RegistrationMessage registrationMsg;
+	private static RegistrationMessage registrationDeleteMsg;
+	private static LoginMessage loginMsg;
 	private static String email;
 	private static String pw;
 	private static String ip;
 	private static int port;
 	private static Thread server;
+
+
 
 	@BeforeClass
 	public static void initialize() {
@@ -33,6 +38,9 @@ public class UserTest {
 		port = 50000;
 		
 		registrationMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_REQUEST, email, pw);
+		registrationDeleteMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_DELETE_REQUEST, email, pw);
+
+		loginMsg = new LoginMessage(MESSAGETYPE.LOGIN_REQUEST, email, pw);
 		
 		server = new ServerConnection(port);
 				
@@ -82,9 +90,7 @@ public class UserTest {
 			}
 		};
 		regThread.start();
-		
-		RegistrationMessage registrationDeleteMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_DELETE_REQUEST, email, pw);
-		
+				
 		Thread regDelThread = new Thread() {
 			@Override
 			public void run() {
@@ -181,7 +187,6 @@ public class UserTest {
 			threads[i].start();
 		}
 		
-		RegistrationMessage registrationDeleteMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_DELETE_REQUEST, email, pw);
 		
 		Thread regDelThread = new Thread() {
 			@Override
@@ -217,4 +222,98 @@ public class UserTest {
 		regDelThread.join();
 		logger.info("doubleRegistrationTestForServer successful!");
 	}
+	
+	
+	@Test
+	public void loginTestForServer() throws Exception {
+		
+		Thread regThread = new Thread() {
+			@Override
+			public void run() {
+				try {
+					server.join(1000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				RegistrationMessage registrationMsgBack = null;
+				try {
+					Communication communicator = new Communication(ip, port);
+					communicator.createSocket();
+					communicator.send(registrationMsg.getMsgBytes());
+					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.closeSocket();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
+				assert(registrationMsgBack.getEmail() ==  null);
+				assert(registrationMsgBack.getPw() == null);
+			}
+		};
+		regThread.start();
+		
+		Thread logThread = new Thread() {
+			@Override
+			public void run() {
+				try {
+					regThread.join();
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				LoginMessage loginMsgBack = null;
+				try {
+					Communication communicator = new Communication(ip, port);
+					communicator.createSocket();
+					communicator.send(loginMsg.getMsgBytes());
+					loginMsgBack = new LoginMessage(communicator.receive());
+					communicator.closeSocket();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				assertThat(loginMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
+				assert(loginMsgBack.getEmail() ==  null);
+				assert(loginMsgBack.getPw() == null);
+			}
+		};
+		logThread.start();
+				
+		Thread regDelThread = new Thread() {
+			@Override
+			public void run() {
+				try {
+					logThread.join();
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				RegistrationMessage registrationMsgBack = null;
+				try {
+					Communication communicator = new Communication(ip, port);
+					communicator.createSocket();
+					communicator.send(registrationDeleteMsg.getMsgBytes());
+					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.closeSocket();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
+				assert(registrationMsgBack.getEmail() ==  null);
+				assert(registrationMsgBack.getPw() == null);
+			}
+		};
+		
+		regDelThread.start();
+	
+		regDelThread.join();
+		logger.info("loginTestForServer successful!");
+	}
+	
 }

@@ -10,7 +10,7 @@ public class MessageDecoder {
 
 	private static final Logger logger = LogManager.getLogger(Constants.SERVER_NAME);
 
-	private MessageInterface returnMessage;
+	private Handler handler;
 
 	public MessageDecoder() {
 
@@ -22,21 +22,18 @@ public class MessageDecoder {
 		// 0x00 and 0x01 (operation success/failure) are not processed by server
 		case 0x02:
 		case 0x03:
-			RegistrationHandler registrationHandler = new RegistrationHandler(
-					new RegistrationMessage(msgBytesFromClient));
-			returnMessage = registrationHandler.process();
+			handler = new RegistrationHandler(new RegistrationMessage(msgBytesFromClient));
 			break;
 		case 0x05:
-			LoginHandler loginHandler = new LoginHandler(new LoginMessage(msgBytesFromClient));
-			returnMessage = loginHandler.process();
+			handler = new LoginHandler(new LoginMessage(msgBytesFromClient));
 			break;
 			// TODO add other message types
 		default:
-			returnMessage = new ErrorMessage();
-			break;
+			return new ErrorMessage();
+		
 		}
 
-		return returnMessage;
+		return handler.process();
 	}
 
 }

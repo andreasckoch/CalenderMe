@@ -2,15 +2,20 @@ package server;
 
 import static com.mongodb.client.model.Filters.eq;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.bson.Document;
 
 import com.mongodb.client.MongoCollection;
 
+import logger.Constants;
 import message.MessageInterface;
 import message.LoginMessage;
 import message.MessageInterface.MESSAGETYPE;
 
 public class LoginHandler extends Handler {
+	
+	private static final Logger logger = LogManager.getLogger(Constants.SERVER_NAME);
 	
 	private LoginMessage message;
 
