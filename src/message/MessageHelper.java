@@ -38,20 +38,26 @@ public class MessageHelper {
 		case OPERATION_FAILED:
 			indexByte = 0x01;
 			break;
-		case REGISTRATION_REQUEST:
+		case REGISTRATION:
 			indexByte = 0x02;
 			break;
-		case REGISTRATION_DELETE_REQUEST:
+		case REGISTRATION_DELETE:
 			indexByte = 0x03;
 			break;
-		case REGISTRATION_ERROR:
+		case REGISTRATION_MODIFICATION_EMAIL:
 			indexByte = 0x04;
 			break;
-		case LOGIN_REQUEST:
+		case REGISTRATION_MODIFICATION_PW:
 			indexByte = 0x05;
 			break;
-		case LOGIN_ERROR:
+		case REGISTRATION_ERROR:
 			indexByte = 0x06;
+			break;
+		case LOGIN:
+			indexByte = 0x07;
+			break;
+		case LOGIN_ERROR:
+			indexByte = 0x08;
 			break;
 		case ERROR:
 		default:
@@ -71,18 +77,24 @@ public class MessageHelper {
 			messageType = MESSAGETYPE.OPERATION_FAILED;
 			break;
 		case 0x02:
-			messageType = MESSAGETYPE.REGISTRATION_REQUEST;
+			messageType = MESSAGETYPE.REGISTRATION;
 			break;
 		case 0x03:
-			messageType = MESSAGETYPE.REGISTRATION_DELETE_REQUEST;
+			messageType = MESSAGETYPE.REGISTRATION_DELETE;
 			break;
 		case 0x04:
-			messageType = MESSAGETYPE.REGISTRATION_ERROR;
+			messageType = MESSAGETYPE.REGISTRATION_MODIFICATION_EMAIL;
 			break;
 		case 0x05:
-			messageType = MESSAGETYPE.LOGIN_REQUEST;
+			messageType = MESSAGETYPE.REGISTRATION_MODIFICATION_PW;
 			break;
 		case 0x06:
+			messageType = MESSAGETYPE.REGISTRATION_ERROR;
+			break;
+		case 0x07:
+			messageType = MESSAGETYPE.LOGIN;
+			break;
+		case 0x08:
 			messageType = MESSAGETYPE.LOGIN_ERROR;
 			break;
 		case 0x7f:

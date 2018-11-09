@@ -1,7 +1,5 @@
 package message;
 
-import message.MessageInterface.MESSAGETYPE;
-
 public class LoginMessage implements MessageInterface{
 
 	private String email = null;
@@ -28,7 +26,7 @@ public class LoginMessage implements MessageInterface{
 
 	private void valuesToBytes() {
 		
-		if (this.messageType == MESSAGETYPE.LOGIN_REQUEST) {
+		if (this.messageType == MESSAGETYPE.LOGIN) {
 		// calculate size of msgBytes
 		byte[] temp = new byte[1 + 1 + this.email.length() + 1 + this.pw.length() + 1];
 
@@ -59,7 +57,7 @@ public class LoginMessage implements MessageInterface{
 		this.messageType = MessageHelper.byteToMessageType(this.msgBytes[0]);
 
 		// only for a request message fill values
-		if (this.messageType == MESSAGETYPE.LOGIN_REQUEST) {
+		if (this.messageType == MESSAGETYPE.LOGIN) {
 			// consider SEPARATE and END bytes when choosing positions			
 			this.email =  new String(MessageHelper.getNextValueFromBytes(this.msgBytes, 2));
 			this.pw =  new String(MessageHelper.getNextValueFromBytes(this.msgBytes, 3 + this.email.length()));

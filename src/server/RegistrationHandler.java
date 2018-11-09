@@ -8,13 +8,12 @@ import org.bson.Document;
 
 import com.mongodb.client.MongoCollection;
 
-import logger.Constants;
+import common.Constants;
 import message.MessageInterface;
 import message.MessageInterface.MESSAGETYPE;
 import message.RegistrationMessage;
 
 public class RegistrationHandler extends Handler {
-	
 	private static final Logger logger = LogManager.getLogger(Constants.SERVER_NAME);
 
 	private RegistrationMessage message;
@@ -25,13 +24,13 @@ public class RegistrationHandler extends Handler {
 	}
 
 	public MessageInterface process() {
-		
-		MongoCollection<Document> login = database.getCollection("login");
-		
-		if (this.message.getMessageType() == MESSAGETYPE.REGISTRATION_REQUEST) {
+
+		MongoCollection<Document> login = database.getCollection(Constants.LOGIN_COLLECTION);
+
+		if (this.message.getMessageType() == MESSAGETYPE.REGISTRATION) {
 
 			Document emailEntry = login.find(eq("email", message.getEmail())).first();
-			
+
 			if (emailEntry == null) {
 
 				logger.info("Create: {}", message.getEmail());
@@ -41,7 +40,7 @@ public class RegistrationHandler extends Handler {
 				return new RegistrationMessage(MESSAGETYPE.OPERATION_SUCCESS);
 			}
 		}
-		if (this.message.getMessageType() == MESSAGETYPE.REGISTRATION_DELETE_REQUEST) {
+		if (this.message.getMessageType() == MESSAGETYPE.REGISTRATION_DELETE) {
 
 			Document emailEntry = login.find(eq("email", message.getEmail())).first();
 
@@ -50,6 +49,38 @@ public class RegistrationHandler extends Handler {
 				logger.info("Delete: {}", emailEntry);
 				login.deleteOne(emailEntry);
 				return new RegistrationMessage(MESSAGETYPE.OPERATION_SUCCESS);
+			}
+		}
+		
+		if (this.message.getMessageType() == MESSAGETYPE.REGISTRATION_MODIFICATION_EMAIL) {
+
+			Document emailEntry = login.find(eq("email", message.getEmail())).first();
+			logger.debug("Email entry before replace: {}, {}, {}", emailEntry.get("_id"), emailEntry.get("email"), emailEntry.get("password"));
+
+			if (emailEntry != null) {
+				if (emailEntry.get("password").equals(message.getPw())) {
+					
+					emailEntry.replace("email", message.getEmail(), message.getChangedField());
+					login.replaceOne(eq("email", message.getEmail()), emailEntry);
+					
+					return new RegistrationMessage(MESSAGETYPE.OPERATION_SUCCESS);
+				}
+			}
+		}
+
+		if (this.message.getMessageType() == MESSAGETYPE.REGISTRATION_MODIFICATION_PW) {
+
+			Document emailEntry = login.find(eq("email", message.getEmail())).first(); 
+	
+			if (emailEntry != null) {
+
+				if (emailEntry.get("password").equals(message.getPw())) {
+					
+					emailEntry.replace("password", message.getPw(), message.getChangedField());
+					login.replaceOne(eq("email", message.getEmail()), emailEntry);
+					
+					return new RegistrationMessage(MESSAGETYPE.OPERATION_SUCCESS);
+				}
 			}
 		}
 		return new RegistrationMessage(MESSAGETYPE.OPERATION_FAILED);

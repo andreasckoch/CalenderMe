@@ -7,7 +7,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import org.apache.logging.log4j.*;
 
-import logger.Constants;
+import common.Constants;
 import message.MessageHelper;
 
 

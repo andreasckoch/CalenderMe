@@ -7,9 +7,8 @@ import java.net.Socket;
 import org.apache.logging.log4j.*;
 
 import common.Communication;
-import logger.Constants;
+import common.Constants;
 import message.MessageInterface;
-import message.MessageHelper;
 
 public class CalenderServerThread implements Runnable {
 

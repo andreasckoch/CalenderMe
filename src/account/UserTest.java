@@ -9,7 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import common.Communication;
-import logger.Constants;
+import common.Constants;
 import message.RegistrationMessage;
 import message.LoginMessage;
 import message.MessageInterface.MESSAGETYPE;
@@ -21,26 +21,46 @@ public class UserTest {
 	
 	private static RegistrationMessage registrationMsg;
 	private static RegistrationMessage registrationDeleteMsg;
+	private static RegistrationMessage registrationEmailModificationMsg;
+	private static RegistrationMessage registrationPwModificationMsg;
+	private static RegistrationMessage registrationDeleteModdedMsg;
 	private static LoginMessage loginMsg;
+	private static LoginMessage loginFailMsg;
 	private static String email;
+	private static String fakeemail;
 	private static String pw;
+	private static String fakepw;
 	private static String ip;
 	private static int port;
 	private static Thread server;
 
 
 
+
+
+
+
+
+
+
 	@BeforeClass
 	public static void initialize() {
 		email = "test@totallynotafakemail.com";
+		fakeemail = "test@definitelyafakeemail.com";
 		pw = "yaya1234";
+		fakepw = "nene4321";
 		ip = "localhost";
 		port = 50000;
 		
-		registrationMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_REQUEST, email, pw);
-		registrationDeleteMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_DELETE_REQUEST, email, pw);
+		registrationMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION, email, pw);
+		registrationDeleteMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_DELETE, email, pw);
+		registrationEmailModificationMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_MODIFICATION_EMAIL, email, pw, fakeemail);
+		registrationPwModificationMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_MODIFICATION_PW, fakeemail, pw, fakepw);
+		registrationDeleteModdedMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_DELETE, fakeemail, fakepw);
 
-		loginMsg = new LoginMessage(MESSAGETYPE.LOGIN_REQUEST, email, pw);
+		
+		loginMsg = new LoginMessage(MESSAGETYPE.LOGIN, email, pw);
+		loginFailMsg = new LoginMessage(MESSAGETYPE.LOGIN, email, fakepw);
 		
 		server = new ServerConnection(port);
 				
@@ -57,7 +77,7 @@ public class UserTest {
 		
 		assertThat(registrationMsgBack.getEmail(), is(email));
 		assertThat(registrationMsgBack.getPw(), is(pw));
-		assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.REGISTRATION_REQUEST));
+		assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.REGISTRATION));
 	}
 
 	@Test
@@ -225,6 +245,126 @@ public class UserTest {
 	
 	
 	@Test
+	public void registrationDataModificationTestForServer() throws Exception {
+		
+		Thread regThread = new Thread() {
+			@Override
+			public void run() {
+				try {
+					server.join(1000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				RegistrationMessage registrationMsgBack = null;
+				try {
+					Communication communicator = new Communication(ip, port);
+					communicator.createSocket();
+					communicator.send(registrationMsg.getMsgBytes());
+					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.closeSocket();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
+				assert(registrationMsgBack.getEmail() ==  null);
+				assert(registrationMsgBack.getPw() == null);
+			}
+		};
+		regThread.start();
+		
+		Thread emailModThread = new Thread() {
+			@Override
+			public void run() {
+				try {
+					regThread.join();
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				RegistrationMessage registrationMsgBack = null;
+				try {
+					Communication communicator = new Communication(ip, port);
+					communicator.createSocket();
+					communicator.send(registrationEmailModificationMsg.getMsgBytes());
+					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.closeSocket();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
+				assert(registrationMsgBack.getEmail() ==  null);
+				assert(registrationMsgBack.getPw() == null);
+			}
+		};
+		emailModThread.start();
+		
+		Thread pwModThread = new Thread() {
+			@Override
+			public void run() {
+				try {
+					emailModThread.join();
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				RegistrationMessage registrationMsgBack = null;
+				try {
+					Communication communicator = new Communication(ip, port);
+					communicator.createSocket();
+					communicator.send(registrationPwModificationMsg.getMsgBytes());
+					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.closeSocket();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
+				assert(registrationMsgBack.getEmail() ==  null);
+				assert(registrationMsgBack.getPw() == null);
+			}
+		};
+		pwModThread.start();
+				
+		Thread regDelThread = new Thread() {
+			@Override
+			public void run() {
+				try {
+					pwModThread.join();
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				RegistrationMessage registrationMsgBack = null;
+				try {
+					Communication communicator = new Communication(ip, port);
+					communicator.createSocket();
+					communicator.send(registrationDeleteModdedMsg.getMsgBytes());
+					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.closeSocket();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
+				assert(registrationMsgBack.getEmail() ==  null);
+				assert(registrationMsgBack.getPw() == null);
+			}
+		};
+		
+		regDelThread.start();
+	
+		regDelThread.join();
+		logger.info("registrationDataModificationTestForServer successful!");
+	}
+	
+	@Test
 	public void loginTestForServer() throws Exception {
 		
 		Thread regThread = new Thread() {
@@ -255,11 +395,39 @@ public class UserTest {
 		};
 		regThread.start();
 		
-		Thread logThread = new Thread() {
+		Thread logFailThread = new Thread() {
 			@Override
 			public void run() {
 				try {
 					regThread.join();
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				LoginMessage loginMsgBack = null;
+				try {
+					Communication communicator = new Communication(ip, port);
+					communicator.createSocket();
+					communicator.send(loginFailMsg.getMsgBytes());
+					loginMsgBack = new LoginMessage(communicator.receive());
+					communicator.closeSocket();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+				assertThat(loginMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_FAILED));
+				assert(loginMsgBack.getEmail() ==  null);
+				assert(loginMsgBack.getPw() == null);
+			}
+		};
+		logFailThread.start();
+		
+		Thread logThread = new Thread() {
+			@Override
+			public void run() {
+				try {
+					logFailThread.join();
 				} catch (InterruptedException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();

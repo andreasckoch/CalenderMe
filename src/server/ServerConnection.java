@@ -7,7 +7,7 @@ import java.net.Socket;
 
 import org.apache.logging.log4j.*;
 
-import logger.Constants;
+import common.Constants;
 
 public class ServerConnection extends Thread {
 
@@ -44,7 +44,7 @@ public class ServerConnection extends Thread {
 					Thread connectionThread = new Thread(connection);
 					connectionThread.start();
 					logger.info(
-							"n Thread {}: processing connection to {} on port {}\n", connectionThread.getId(), client.getInetAddress(), client.getPort());
+							"Thread {}: processing connection to {} on port {}\n", connectionThread.getId(), client.getInetAddress(), client.getPort());
 				} catch (IOException e) {
 					logger.error("Error! Unable to establish connection\n");
 					shutDown();
@@ -52,7 +52,7 @@ public class ServerConnection extends Thread {
 				}
 			}
 		}
-		logger.info("ServerConnection Thread {} stopped\\n", Thread.currentThread().getId());
+		logger.info("ServerConnection Thread {} stopped\n", Thread.currentThread().getId());
 		System.exit(0);
 	}
 
