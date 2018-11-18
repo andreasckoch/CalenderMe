@@ -30,6 +30,9 @@ public class MessageDecoder {
 		case LOGIN:
 			handler = new LoginHandler(new LoginMessage(msgBytesFromClient));
 			break;
+		case PROFILE_UPDATE_PRIVATE:
+		case PROFILE_UPDATE_PUBLIC:
+			handler = new ProfileHandler(new ProfileMessage(msgBytesFromClient));
 		default:
 			return new ErrorMessage();
 		}

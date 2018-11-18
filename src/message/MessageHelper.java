@@ -6,29 +6,29 @@ public class MessageHelper {
 
 	public static final byte SEPARATE = (byte) 0x13;
 	public static final byte END = (byte) 0x14;
-	
-	public static byte[] getNextValueFromBytes(byte[] msgBytes, int startPosition){
-		
-		int endPosition=0;
+
+	public static byte[] getNextValueFromBytes(byte[] msgBytes, int startPosition) {
+
+		int endPosition = 0;
 		for (int i = startPosition; i < msgBytes.length; i++) {
-			if(msgBytes[i] == SEPARATE || msgBytes[i] == END) {
-				endPosition=i-1;
+			if (msgBytes[i] == SEPARATE || msgBytes[i] == END) {
+				endPosition = i - 1;
 				break;
 			}
 		}
-		
-		byte[] value= new byte[endPosition-startPosition +1];
+
+		byte[] value = new byte[endPosition - startPosition + 1];
 		System.arraycopy(msgBytes, startPosition, value, 0, value.length);
-		
+
 		return value;
 	}
-	
+
 	public static byte[] addNextValueToBytes(byte[] msgBytesTemp, byte[] value, int position) {
 		msgBytesTemp[position] = SEPARATE;
-		System.arraycopy(value, 0, msgBytesTemp, position + 1, value.length);		
+		System.arraycopy(value, 0, msgBytesTemp, position + 1, value.length);
 		return msgBytesTemp;
 	}
-	
+
 	public static byte messageTypeToByte(MESSAGETYPE messageType) {
 		byte indexByte;
 		switch (messageType) {
@@ -58,6 +58,15 @@ public class MessageHelper {
 			break;
 		case LOGIN_ERROR:
 			indexByte = 0x08;
+			break;
+		case PROFILE_UPDATE_PUBLIC:
+			indexByte = 0x09;
+			break;
+		case PROFILE_UPDATE_PRIVATE:
+			indexByte = 0x10;
+			break;
+		case PROFILE_UPDATE_ERROR:
+			indexByte = 0x11;
 			break;
 		case ERROR:
 		default:
@@ -96,6 +105,15 @@ public class MessageHelper {
 			break;
 		case 0x08:
 			messageType = MESSAGETYPE.LOGIN_ERROR;
+			break;
+		case 0x09:
+			messageType = MESSAGETYPE.PROFILE_UPDATE_PUBLIC;
+			break;
+		case 0x10:
+			messageType = MESSAGETYPE.PROFILE_UPDATE_PRIVATE;
+			break;
+		case 0x11:
+			messageType = MESSAGETYPE.PROFILE_UPDATE_ERROR;
 			break;
 		case 0x7f:
 		default:
