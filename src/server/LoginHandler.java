@@ -5,6 +5,7 @@ import static com.mongodb.client.model.Filters.eq;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.bson.Document;
+import org.bson.types.ObjectId;
 
 import com.mongodb.client.MongoCollection;
 
@@ -28,14 +29,18 @@ public class LoginHandler extends Handler {
 	public MessageInterface process() {
 
 		MongoCollection<Document> login = database.getCollection(common.Constants.LOGIN_COLLECTION);
+		MongoCollection<Document> user = database.getCollection(common.Constants.USER_COLLECTION);
 
 		if (this.message.getMessageType() == MESSAGETYPE.LOGIN) {
 
-			Document emailEntry = login.find(eq("email", message.getEmail())).first();
+			Document emailEntry = user.find(eq("email", message.getEmail())).first();
 
 			if (emailEntry != null) {
-
-				if (emailEntry.get("password").equals(message.getPw())) {
+				
+				ObjectId loginID = (ObjectId) emailEntry.get("loginID");
+				Document loginEntry = login.find(eq("_id", loginID)).first();
+				
+				if (loginEntry.get("password").equals(message.getPw())) {
 					return new LoginMessage(MESSAGETYPE.OPERATION_SUCCESS);
 				}
 			}

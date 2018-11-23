@@ -15,6 +15,6 @@ public class Constants {
 	public final static String DATABASE = "calenderDB";
 	public final static String USER_COLLECTION = "user";
 	public final static String LOGIN_COLLECTION = "login";
-	public final static String PROFIL_COLLECTION = "profil";
+	public final static String PROFILE_COLLECTION = "profile";
 
 }
