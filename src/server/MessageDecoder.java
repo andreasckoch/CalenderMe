@@ -33,6 +33,7 @@ public class MessageDecoder {
 		case PROFILE_UPDATE_PRIVATE:
 		case PROFILE_UPDATE_PUBLIC:
 			handler = new ProfileHandler(new ProfileMessage(msgBytesFromClient));
+			break;
 		default:
 			return new ErrorMessage();
 		}

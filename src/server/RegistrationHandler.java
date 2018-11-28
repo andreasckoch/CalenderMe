@@ -33,7 +33,6 @@ public class RegistrationHandler extends Handler {
 
 			if (emailEntry == null) {
 
-				logger.info("Create: {}", message.getEmail());
 				Document document = new Document("email", message.getEmail()).append("password", message.getPw());
 				login.insertOne(document);
 

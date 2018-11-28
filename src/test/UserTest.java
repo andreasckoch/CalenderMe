@@ -1,4 +1,4 @@
-package account;
+package test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -33,14 +33,6 @@ public class UserTest {
 	private static String ip;
 	private static int port;
 	private static Thread server;
-
-
-
-
-
-
-
-
 
 
 	@BeforeClass

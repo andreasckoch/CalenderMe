@@ -1,5 +1,7 @@
-/server/
 /account/
+/client/
 /common/
-/logger/
 /message/
+/server/
+/start/
+/test/
