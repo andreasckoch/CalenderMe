@@ -1,4 +1,4 @@
-package test;
+package server.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -10,22 +10,20 @@ import org.junit.Test;
 
 import common.Communication;
 import common.Constants;
-import message.RegistrationMessage;
-import message.LoginMessage;
-import message.MessageInterface.MESSAGETYPE;
+import proto.CalenderMessagesProto.*;
 import server.ServerConnection;
 
-public class UserTest {
+public class RegistrationLoginTest {
 	
 	private static final Logger logger = LogManager.getLogger(Constants.TEST_NAME);
 	
-	private static RegistrationMessage registrationMsg;
-	private static RegistrationMessage registrationDeleteMsg;
-	private static RegistrationMessage registrationEmailModificationMsg;
-	private static RegistrationMessage registrationPwModificationMsg;
-	private static RegistrationMessage registrationDeleteModdedMsg;
-	private static LoginMessage loginMsg;
-	private static LoginMessage loginFailMsg;
+	private static Basic registrationMsg;
+	private static Basic registrationDeleteMsg;
+	private static Basic registrationEmailModificationMsg;
+	private static Basic registrationPwModificationMsg;
+	private static Basic registrationDeleteModdedMsg;
+	private static Basic loginMsg;
+	private static Basic loginFailMsg;
 	private static String email;
 	private static String fakeemail;
 	private static String pw;
@@ -35,6 +33,14 @@ public class UserTest {
 	private static Thread server;
 
 
+
+
+
+
+
+
+
+
 	@BeforeClass
 	public static void initialize() {
 		email = "test@totallynotafakemail.com";
@@ -42,34 +48,74 @@ public class UserTest {
 		pw = "yaya1234";
 		fakepw = "nene4321";
 		ip = "localhost";
-		port = 50000;
+		port = 0;
 		
-		registrationMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION, email, pw);
-		registrationDeleteMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_DELETE, email, pw);
-		registrationEmailModificationMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_MODIFICATION_EMAIL, email, pw, fakeemail);
-		registrationPwModificationMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_MODIFICATION_PW, fakeemail, pw, fakepw);
-		registrationDeleteModdedMsg = new RegistrationMessage(MESSAGETYPE.REGISTRATION_DELETE, fakeemail, fakepw);
+		registrationMsg = Basic.newBuilder().setType(Basic.MessageType.REGISTRATION)
+								.setRegistration(
+										Registration.newBuilder()
+										.setEmail(email)
+										.setPassword(pw).build()
+										).build();
+		registrationDeleteMsg = Basic.newBuilder().setType(Basic.MessageType.REGISTRATION)
+								.setRegistration(
+										Registration.newBuilder()
+										.setEmail(email)
+										.setPassword(pw)
+										.setDeleteAccount(true).build()
+										).build();
+		registrationEmailModificationMsg = Basic.newBuilder().setType(Basic.MessageType.REGISTRATION)
+								.setRegistration(
+										Registration.newBuilder()
+										.setEmail(email)
+										.setPassword(pw)
+										.setChangeEmail(true)
+										.setChangedField(fakeemail).build()
+										).build();
+		registrationPwModificationMsg = Basic.newBuilder().setType(Basic.MessageType.REGISTRATION)
+								.setRegistration(
+										Registration.newBuilder()
+										.setEmail(email)
+										.setPassword(pw)
+										.setChangePassword(true)
+										.setChangedField(fakepw).build()
+										).build();
+		registrationDeleteModdedMsg = Basic.newBuilder().setType(Basic.MessageType.REGISTRATION)
+								.setRegistration(
+										Registration.newBuilder()
+										.setEmail(fakeemail)
+										.setPassword(fakepw)
+										.setDeleteAccount(true)
+										).build();
 
 		
-		loginMsg = new LoginMessage(MESSAGETYPE.LOGIN, email, pw);
-		loginFailMsg = new LoginMessage(MESSAGETYPE.LOGIN, email, fakepw);
-		
-		server = new ServerConnection(port);
+		loginMsg = Basic.newBuilder().setType(Basic.MessageType.REGISTRATION)
+								.setLogin(
+										Login.newBuilder()
+										.setEmail(email)
+										.setPassword(pw).build()
+										).build();
+		loginFailMsg = Basic.newBuilder().setType(Basic.MessageType.REGISTRATION)
+								.setLogin(
+										Login.newBuilder()
+										.setEmail(email)
+										.setPassword(fakepw).build()
+										).build();		
+		server = new ServerConnection(port);			
+		port = ((ServerConnection) server).getPort();
 				
-	}
-
+	}	
+	
+	
 	@Test
 	public void registrationMessageCreationTest() throws Exception {
 
-		byte[] msgBytes = new byte[] { 2, 19, 116, 101, 115, 116, 64, 116, 111, 116, 97, 108, 108, 121, 110, 111, 116,
-				97, 102, 97, 107, 101, 109, 97, 105, 108, 46, 99, 111, 109, 19, 121, 97, 121, 97, 49, 50, 51, 52, 20 };
-		assertThat(registrationMsg.getMsgBytes(), is(msgBytes));
+		byte[] msgBytes = registrationMsg.toByteArray();
 
-		RegistrationMessage registrationMsgBack = new RegistrationMessage(registrationMsg.getMsgBytes());
+		Basic registrationMsgBack = Basic.parseFrom(msgBytes);
 		
-		assertThat(registrationMsgBack.getEmail(), is(email));
-		assertThat(registrationMsgBack.getPw(), is(pw));
-		assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.REGISTRATION));
+		assertThat(registrationMsgBack.getRegistration().getEmail(), is(email));
+		assertThat(registrationMsgBack.getRegistration().getPassword(), is(pw));
+		assertThat(registrationMsgBack.getType(), is(Basic.MessageType.REGISTRATION));
 	}
 
 	@Test
@@ -85,20 +131,18 @@ public class UserTest {
 					e1.printStackTrace();
 				}
 				
-				RegistrationMessage registrationMsgBack = null;
+				Basic registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
-					communicator.send(registrationMsg.getMsgBytes());
-					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.send(registrationMsg);
+					registrationMsgBack = communicator.receive();
 					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 
-				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
-				assert(registrationMsgBack.getEmail() ==  null);
-				assert(registrationMsgBack.getPw() == null);
+				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
 			}
 		};
 		regThread.start();
@@ -113,20 +157,18 @@ public class UserTest {
 					e1.printStackTrace();
 				}
 				
-				RegistrationMessage registrationMsgBack = null;
+				Basic registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
-					communicator.send(registrationDeleteMsg.getMsgBytes());
-					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.send(registrationDeleteMsg);
+					registrationMsgBack = communicator.receive();
 					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 
-				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
-				assert(registrationMsgBack.getEmail() ==  null);
-				assert(registrationMsgBack.getPw() == null);
+				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
 			}
 		};
 		
@@ -150,20 +192,18 @@ public class UserTest {
 					e1.printStackTrace();
 				}
 				
-				RegistrationMessage registrationMsgBack = null;
+				Basic registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
-					communicator.send(registrationMsg.getMsgBytes());
-					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.send(registrationMsg);
+					registrationMsgBack = communicator.receive();
 					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 
-				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
-				assert(registrationMsgBack.getEmail() ==  null);
-				assert(registrationMsgBack.getPw() == null);
+				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
 			}
 		};
 		regThread.start();
@@ -180,20 +220,18 @@ public class UserTest {
 						e1.printStackTrace();
 					}
 					
-					RegistrationMessage registrationMsgBack = null;
+					Basic registrationMsgBack = null;
 					try {
 						Communication communicator = new Communication(ip, port);
 						communicator.createSocket();
-						communicator.send(registrationMsg.getMsgBytes());
-						registrationMsgBack = new RegistrationMessage(communicator.receive());
+						communicator.send(registrationMsg);
+						registrationMsgBack = communicator.receive();
 						communicator.closeSocket();
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
 
-					assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_FAILED));
-					assert(registrationMsgBack.getEmail() ==  null);
-					assert(registrationMsgBack.getPw() == null);
+					assertThat(registrationMsgBack.getType(), is(Basic.MessageType.ERROR));
 				}
 			};
 			threads[i].start();
@@ -212,20 +250,18 @@ public class UserTest {
 					e1.printStackTrace();
 				}
 				
-				RegistrationMessage registrationMsgBack = null;
+				Basic registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
-					communicator.send(registrationDeleteMsg.getMsgBytes());
-					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.send(registrationDeleteMsg);
+					registrationMsgBack = communicator.receive();
 					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 
-				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
-				assert(registrationMsgBack.getEmail() ==  null);
-				assert(registrationMsgBack.getPw() == null);
+				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
 			}
 		};
 		
@@ -249,20 +285,18 @@ public class UserTest {
 					e1.printStackTrace();
 				}
 				
-				RegistrationMessage registrationMsgBack = null;
+				Basic registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
-					communicator.send(registrationMsg.getMsgBytes());
-					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.send(registrationMsg);
+					registrationMsgBack = communicator.receive();
 					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 
-				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
-				assert(registrationMsgBack.getEmail() ==  null);
-				assert(registrationMsgBack.getPw() == null);
+				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
 			}
 		};
 		regThread.start();
@@ -277,20 +311,18 @@ public class UserTest {
 					e1.printStackTrace();
 				}
 				
-				RegistrationMessage registrationMsgBack = null;
+				Basic registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
-					communicator.send(registrationEmailModificationMsg.getMsgBytes());
-					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.send(registrationEmailModificationMsg);
+					registrationMsgBack = communicator.receive();
 					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 
-				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
-				assert(registrationMsgBack.getEmail() ==  null);
-				assert(registrationMsgBack.getPw() == null);
+				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
 			}
 		};
 		emailModThread.start();
@@ -305,20 +337,18 @@ public class UserTest {
 					e1.printStackTrace();
 				}
 				
-				RegistrationMessage registrationMsgBack = null;
+				Basic registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
-					communicator.send(registrationPwModificationMsg.getMsgBytes());
-					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.send(registrationPwModificationMsg);
+					registrationMsgBack = communicator.receive();
 					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 
-				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
-				assert(registrationMsgBack.getEmail() ==  null);
-				assert(registrationMsgBack.getPw() == null);
+				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
 			}
 		};
 		pwModThread.start();
@@ -333,20 +363,18 @@ public class UserTest {
 					e1.printStackTrace();
 				}
 				
-				RegistrationMessage registrationMsgBack = null;
+				Basic registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
-					communicator.send(registrationDeleteModdedMsg.getMsgBytes());
-					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.send(registrationDeleteModdedMsg);
+					registrationMsgBack = communicator.receive();
 					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 
-				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
-				assert(registrationMsgBack.getEmail() ==  null);
-				assert(registrationMsgBack.getPw() == null);
+				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
 			}
 		};
 		
@@ -369,20 +397,18 @@ public class UserTest {
 					e1.printStackTrace();
 				}
 				
-				RegistrationMessage registrationMsgBack = null;
+				Basic registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
-					communicator.send(registrationMsg.getMsgBytes());
-					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.send(registrationMsg);
+					registrationMsgBack = communicator.receive();
 					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 
-				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
-				assert(registrationMsgBack.getEmail() ==  null);
-				assert(registrationMsgBack.getPw() == null);
+				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
 			}
 		};
 		regThread.start();
@@ -397,20 +423,18 @@ public class UserTest {
 					e1.printStackTrace();
 				}
 				
-				LoginMessage loginMsgBack = null;
+				Basic loginMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
-					communicator.send(loginFailMsg.getMsgBytes());
-					loginMsgBack = new LoginMessage(communicator.receive());
+					communicator.send(loginFailMsg);
+					loginMsgBack = communicator.receive();
 					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 
-				assertThat(loginMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_FAILED));
-				assert(loginMsgBack.getEmail() ==  null);
-				assert(loginMsgBack.getPw() == null);
+				assertThat(loginMsgBack.getType(), is(Basic.MessageType.SUCCESS));
 			}
 		};
 		logFailThread.start();
@@ -425,20 +449,18 @@ public class UserTest {
 					e1.printStackTrace();
 				}
 				
-				LoginMessage loginMsgBack = null;
+				Basic loginMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
-					communicator.send(loginMsg.getMsgBytes());
-					loginMsgBack = new LoginMessage(communicator.receive());
+					communicator.send(loginMsg);
+					loginMsgBack = communicator.receive();
 					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 
-				assertThat(loginMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
-				assert(loginMsgBack.getEmail() ==  null);
-				assert(loginMsgBack.getPw() == null);
+				assertThat(loginMsgBack.getType(), is(Basic.MessageType.SUCCESS));
 			}
 		};
 		logThread.start();
@@ -453,20 +475,18 @@ public class UserTest {
 					e1.printStackTrace();
 				}
 				
-				RegistrationMessage registrationMsgBack = null;
+				Basic registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
-					communicator.send(registrationDeleteMsg.getMsgBytes());
-					registrationMsgBack = new RegistrationMessage(communicator.receive());
+					communicator.send(registrationDeleteMsg);
+					registrationMsgBack = communicator.receive();
 					communicator.closeSocket();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 
-				assertThat(registrationMsgBack.getMessageType(), is(MESSAGETYPE.OPERATION_SUCCESS));
-				assert(registrationMsgBack.getEmail() ==  null);
-				assert(registrationMsgBack.getPw() == null);
+				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
 			}
 		};
 		
