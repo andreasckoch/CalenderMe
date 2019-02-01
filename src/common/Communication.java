@@ -8,7 +8,7 @@ import java.net.UnknownHostException;
 import org.apache.logging.log4j.*;
 
 import common.Constants;
-import message.MessageHelper;
+import proto.CalenderMessagesProto.Basic;
 
 
 /* Does the communication between application and server*/
@@ -42,16 +42,16 @@ public class Communication {
 	 * @param message Message as Byte-Array that has to be sent
 	 */
 
-	public void send(byte[] message) {
+	public void send(Basic message) {
 		try {
 			
-			output.write(message);
+			message.writeDelimitedTo(output);
 			
 			output.flush();
-			logger.info("Message was sent with message type: {}", MessageHelper.byteToMessageType(message[0]));
+			logger.info("Message was sent with message type: {}", message.getType());
 			
 		} catch (IOException io) {
-			logger.error("Error while sending over socket with message type: {}", MessageHelper.byteToMessageType(message[0]), io);
+			logger.error("Error while sending over socket with message type: {}\n{}\n", message.getType(), io);
 		}
 	}
 
@@ -63,24 +63,16 @@ public class Communication {
 	 * @throws Exception
 	 */
 
-	public byte[] receive() throws IOException {
-		int nextByte = input.read();
-		if (nextByte == -1) {
+	public Basic receive() throws IOException {
+		
+		try {
+			return Basic.parseDelimitedFrom(input);			
+		} catch (IOException ioe) {
+			logger.error("Error while parsing message from input stream!");
+			ioe.printStackTrace();
 			return null;
 		}
-		char nextChar = (char) nextByte;
-		String msg = "" + nextChar;
-		
-		// check last read character for END
-		while (nextChar != MessageHelper.END) {
-			
-			// read next char from byte stream
-			nextChar = (char) input.read();
-			msg = msg + nextChar;
-		}
-		
-		logger.info("Received message with message type: {}", MessageHelper.byteToMessageType(msg.getBytes()[0]));
-		return msg.getBytes();
+
 	}
 
 	public void createSocket() throws UnknownHostException, IOException {

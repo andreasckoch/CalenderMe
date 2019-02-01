@@ -1,0 +1,187 @@
+syntax = "proto2";
+
+// using protobuf 3.6.1: "protoc -I=. --java_out=. ./calender_messages.proto" to create java file in same directory
+// in protobuf/java dir: protoc --java_out=core/src/main/java -I../src ../src/google/protobuf/descriptor.proto
+// then copy com dir from core/src/main/java in src dir of this project (if not done already)
+
+package proto;
+option java_outer_classname = "CalenderMessagesProto";
+
+// wrapper message for coherent deciphiring of bytestream on server side
+message Basic {
+	enum MessageType {
+		LOGIN = 0;
+		REGISTRATION = 1;
+		PROFILE = 2;
+		ERROR = 3;
+		SUCCESS = 4;
+		PERSON = 5;
+		CONTACTS = 6;
+		GROUP = 7;
+		GROUPS = 8;
+		CONDITIONS = 9;
+		APPOINTMENT = 10;
+		APPOINTMENTS = 11;
+		TIMESLOT = 12;
+		TIMESLOTS = 13;
+		REQUEST = 14;
+	}
+	required MessageType type = 15;
+	optional Login login = 1;
+	optional Registration registration = 2;
+	optional Profile profile = 3;
+	optional Error error = 4;
+	optional Success sucess = 5;
+	optional Person person = 6;
+	optional Contacts contacts = 7;
+	optional Group group = 8;
+	optional Groups groups = 9;
+	optional Conditions conditions = 10;
+	optional Appointment appointment = 11;
+	optional Appointments appointments = 12;
+	optional TimeSlot timeSlot = 13;
+	optional TimeSlots timeSlots = 14;
+	optional Request request = 16;
+}
+
+
+/*
+ * Messages server might get
+ */
+
+
+message Login {
+	required string email = 1;
+	required string password = 2;
+}
+
+message Registration {
+	required string email = 1;
+	required string password = 2;
+	optional bool change_email = 3;
+	optional bool change_password = 4;
+	optional string changed_field = 5;
+	optional bool delete_account = 6;
+}
+
+message Profile {
+	required string email = 1;
+	optional string name = 2;
+	optional string location = 3;
+	optional string bio = 4;
+	optional string organisation = 5;
+}
+
+
+message Group {
+	required string name = 1;
+	repeated Person admins = 2;
+	repeated Person members = 3;
+	optional string description = 4;
+}
+
+
+message Appointment {
+	optional string email = 1;
+	repeated Person attendants = 2;
+	optional int64 unix_time = 3;
+	optional int32 length = 4;
+	optional float loc_longitude = 5;
+	optional float loc_latitude = 6;
+	optional string descrition = 7;
+	optional int64 deadline_unix_time = 8;
+	optional bool flexible = 9;
+	optional int32 min_attendants = 10;
+	repeated Person key_attendants = 11;
+	optional Group group_for_appointment = 12;
+	optional Conditions conditions = 13;
+	optional Category category = 14;
+	enum Category {
+		UNKNOWN = 0;
+		BUSINESS = 1;
+		SOCIAL = 2;
+		SPORT = 3;
+		HOBBIES = 4;
+		PRIVATE = 5;
+		COMMUTE = 6;
+	}
+}
+
+
+message TimeSlots {
+	required string email = 1;
+	repeated TimeSlot slots = 2;
+}
+
+
+message Request {
+	required Basic basic = 1;
+}
+
+
+message Error {
+	optional string error_message = 1;
+}
+
+
+message Success {
+	optional string success_message = 1;
+}
+
+
+/*
+ * Helper messages for constructing other messages
+ * Server does not get these!
+ * Clients might though (not sure yet)
+ */
+
+
+message Person {
+	required string email = 1;
+	optional Profile profile = 2;
+	optional TimeSlots time_slots = 3;
+	optional Contacts contacts = 4;
+	optional Groups groups = 5;
+	optional Appointments appointments = 6;
+}
+
+
+message Contacts {
+	required string email = 1;
+	repeated Person contacts = 2;
+}
+
+
+message Groups {
+	required string email = 1;
+	repeated Group groups = 2;
+}
+
+
+message Conditions {
+	enum Weather {
+		UNKNOWN = 0;
+		SUNNY = 1;
+		RAIN = 2;
+		HOT = 3;
+		COLD = 4;
+		SNOW = 5;
+		WIND = 6;
+		CLOUDS = 7;
+	}
+	optional Weather weather = 1;
+}
+
+
+message Appointments {
+	required string email = 1;
+	repeated Appointment appointments = 2;
+}
+
+
+message TimeSlot {
+	optional int64 start_unix_time = 1;
+	optional int64 end_unix_time = 2;
+	optional Appointment.Category category = 3;
+}
+

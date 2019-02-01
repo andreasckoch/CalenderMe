@@ -1,5 +1,8 @@
-/server/
 /account/
+/client/
+/com/
 /common/
-/logger/
 /message/
+/proto/
+/server/
+/start/

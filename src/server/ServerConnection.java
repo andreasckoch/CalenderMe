@@ -87,6 +87,7 @@ public class ServerConnection extends Thread {
 		logger.info("Initialize server ...");
 		try {
 			serverSocket = new ServerSocket(port);
+			this.port = serverSocket.getLocalPort(); // if automatically assigned (port = 0)
 			logger.info("Server listening on port: " + serverSocket.getLocalPort());
 			return true;
 

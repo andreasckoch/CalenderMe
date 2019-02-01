@@ -4,7 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import common.Constants;
-import message.*;
+import proto.CalenderMessagesProto.Basic;
 
 public class MessageDecoder {
 
@@ -17,24 +17,34 @@ public class MessageDecoder {
 
 	}
 
-	public MessageInterface processMessage(byte[] msgBytesFromClient) {
+	public Basic processMessage(Basic basic) {
 
-		switch (MessageHelper.byteToMessageType(msgBytesFromClient[0])) {
+		
+		switch (basic.getType()) {
 		// operation success/failure are not processed by server
 		case REGISTRATION:
-		case REGISTRATION_DELETE:
-		case REGISTRATION_MODIFICATION_EMAIL:
-		case REGISTRATION_MODIFICATION_PW:
-			handler = new RegistrationHandler(new RegistrationMessage(msgBytesFromClient));
+			handler = new RegistrationHandler(basic.getRegistration());
 			break;
 		case LOGIN:
-			handler = new LoginHandler(new LoginMessage(msgBytesFromClient));
+			handler = new LoginHandler(basic.getLogin());
 			break;
-		case PROFILE_UPDATE_PRIVATE:
-		case PROFILE_UPDATE_PUBLIC:
-			handler = new ProfileHandler(new ProfileMessage(msgBytesFromClient));
+		case PROFILE:
+			handler = new ProfileHandler(basic.getProfile());
+			break;
+		case GROUP:
+			handler = new GroupHandler(basic.getGroup());
+			break;
+		case APPOINTMENT:
+			handler = new AppointmentHandler(basic.getAppointment());
+			break;
+		case TIMESLOTS:
+			handler = new TimeSlotsHandler(basic.getTimeSlots());
+			break;
+		case REQUEST:
+			handler = new RequestHandler(basic.getRequest());
+			break;
 		default:
-			return new ErrorMessage();
+			return Basic.newBuilder().setType(Basic.MessageType.ERROR).build();
 		}
 		return handler.process();
 	}
