@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-// using protobuf 3.6.1: "protoc -I=. --java_out=. ./calender_messages.proto" to create java file in same directory
+// using protobuf 3.6.1 from src dir: "protoc -I=. --java_out=. ./calender_messages.proto" to create java file
 // in protobuf/java dir: protoc --java_out=core/src/main/java -I../src ../src/google/protobuf/descriptor.proto
 // then copy com dir from core/src/main/java in src dir of this project (if not done already)
 
@@ -72,14 +72,25 @@ message Profile {
 	optional string organisation = 5;
 }
 
-
+/*
+ * Functionality:
+ * 1) Create new group by specifying admins, members, name, description
+ * 2) Quit group (removes only the person the message is from)
+ * 3) As an admin, remove members from group
+ * 4) As an admin, promote members to admins
+ */
 message Group {
-	required string name = 1;
-	repeated Person admins = 2;
-	repeated Person members = 3;
-	optional string description = 4;
+	required string email = 1;
+	optional string id = 2;
+	optional string name = 3;
+	repeated Person admins = 4;
+	repeated Person members = 5;
+	optional string description = 6;
+	optional bool quit = 7;
+	repeated Person remove_members = 8;
+	repeated Person promote_to_admins = 9;
+	optional bool change_info = 10; // name or description
 }
-
 
 message Appointment {
 	optional string email = 1;
@@ -130,13 +141,52 @@ message Success {
 
 
 /*
+ *	Client Messages
+ */
+message ClientBasic {
+	enum MessageType {
+		ERROR = 0;
+		SUCCESS = 1;
+		GROUPRESPONSE = 2;
+		MEMBERGROUPRESPONSE = 3;
+	}
+	required MessageType type = 1;
+	optional Error error = 2;
+	optional Success success = 3;
+	optional ClientGroupResponse groupResponse = 4;
+	optional ClientGroupMemberResponse groupMemberResponse = 5;
+}
+
+
+
+message ClientGroupResponse {
+	optional string id = 1;
+}
+
+message ClientGroupMemberResponse {
+	optional string id = 1;
+	optional string name = 2;
+	repeated Person admins = 3;
+	repeated Person members = 4;
+	optional string description = 5;
+	optional bool admin = 6;
+}
+
+
+
+
+/*
  * Helper messages for constructing other messages
- * Server does not get these!
- * Clients might though (not sure yet)
+ * Server and Client do not get these!
  */
 
 
 message Person {
+	required string email = 1; // not sure whether it's smart to send other stuff to
+}
+
+
+message PersonExtended {
 	required string email = 1;
 	optional Profile profile = 2;
 	optional TimeSlots time_slots = 3;

@@ -1,18 +1,20 @@
 package server;
 
-import proto.CalenderMessagesProto.Basic;
+import proto.CalenderMessagesProto.ClientBasic;
 import proto.CalenderMessagesProto.Request;
 
 public class RequestHandler extends Handler {
 
+	private Request message;
+
 	public RequestHandler(Request request) {
-		// TODO Auto-generated constructor stub
+		database = super.getDatabase();
+		this.message = request;
 	}
 
 	@Override
-	protected Basic process() {
-		// TODO Auto-generated method stub
-		return null;
+	protected ClientBasic process() {
+		return ClientBasic.newBuilder().setType(ClientBasic.MessageType.SUCCESS).build();
 	}
 
 }

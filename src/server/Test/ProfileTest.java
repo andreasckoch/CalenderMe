@@ -99,136 +99,19 @@ public class ProfileTest {
 
 	@Test
 	public void profileTestForServer() throws Exception {
-		Thread regThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					server.join(1000);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic registrationMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(registrationMsg);
-					registrationMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-
-			}
-		};
+		Thread regThread = Helper.createThreadSuccessWaitForServer(registrationMsg, server, ip, port, null);
 		regThread.start();
 		
-		Thread profileThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					regThread.join();
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic profileMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(profileMsg);
-					profileMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(profileMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-			}
-		};
+		Thread profileThread = Helper.createThreadSuccess(profileMsg, regThread, ip, port, null);
 		profileThread.start();
 		
-		Thread profileUpdateThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					profileThread.join();
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic profileMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(profileUpdateMsg);
-					profileMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(profileMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-			}
-		};
+		Thread profileUpdateThread = Helper.createThreadSuccess(profileUpdateMsg, profileThread, ip, port, null);
 		profileUpdateThread.start();
-				
-		Thread profileDeleteThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					profileUpdateThread.join();
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic profileMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(profileDeleteMsg);
-					profileMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(profileMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-			}
-		};
+		
+		Thread profileDeleteThread = Helper.createThreadSuccess(profileDeleteMsg, profileUpdateThread, ip, port, null);
 		profileDeleteThread.start();
 		
-		Thread regDelThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					profileDeleteThread.join();
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic registrationMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(registrationDeleteMsg);
-					registrationMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-			}
-		};
-		
+		Thread regDelThread = Helper.createThreadSuccess(registrationDeleteMsg, profileDeleteThread, ip, port, null);
 		regDelThread.start();
 	
 		regDelThread.join();

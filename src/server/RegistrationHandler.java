@@ -11,6 +11,7 @@ import com.mongodb.client.MongoCollection;
 
 import common.Constants;
 import proto.CalenderMessagesProto.Basic;
+import proto.CalenderMessagesProto.ClientBasic;
 import proto.CalenderMessagesProto.Registration;
 
 public class RegistrationHandler extends Handler {
@@ -32,7 +33,8 @@ public class RegistrationHandler extends Handler {
 		database = super.getDatabase();
 	}
 
-	public Basic process() {
+	@Override
+	protected ClientBasic process() {
 
 		MongoCollection<Document> login = database.getCollection(Constants.LOGIN_COLLECTION);
 		MongoCollection<Document> profile = database.getCollection(Constants.PROFILE_COLLECTION);
@@ -61,7 +63,7 @@ public class RegistrationHandler extends Handler {
 				Document profileEntry = new Document("_id", profileID);
 				profile.insertOne(profileEntry);
 
-				return Basic.newBuilder().setType(Basic.MessageType.SUCCESS).build();
+				return ClientBasic.newBuilder().setType(ClientBasic.MessageType.SUCCESS).build();
 			}
 		}
 		if (this.change_email == false && this.change_password == false
@@ -70,23 +72,24 @@ public class RegistrationHandler extends Handler {
 			Document emailEntry = user.find(eq("email", message.getEmail())).first();
 
 			if (emailEntry != null) {
-
-				logger.debug("Delete: {}", emailEntry);
-				
 				ObjectId loginID = emailEntry.getObjectId("loginID");
 				ObjectId profileID = emailEntry.getObjectId("profileID");
 				
 				Document loginEntry = login.find(eq("_id", loginID)).first();
-				logger.debug("Delete: {}", loginEntry);
-				login.deleteOne(loginEntry);
-				
-				Document profileEntry = profile.find(eq("_id", profileID)).first();
-				logger.debug("Delete: {}", profileEntry);
-				profile.deleteOne(profileEntry);
-				
-				user.deleteOne(emailEntry);
-				
-				return Basic.newBuilder().setType(Basic.MessageType.SUCCESS).build();
+				if (loginEntry.get("password").equals(message.getPassword())) {
+	
+					logger.debug("Delete: {}", emailEntry);
+					user.deleteOne(emailEntry);
+
+					logger.debug("Delete: {}", loginEntry);
+					login.deleteOne(loginEntry);
+					
+					Document profileEntry = profile.find(eq("_id", profileID)).first();
+					logger.debug("Delete: {}", profileEntry);
+					profile.deleteOne(profileEntry);
+					
+					return ClientBasic.newBuilder().setType(ClientBasic.MessageType.SUCCESS).build();
+				}
 			}
 		}
 		
@@ -94,10 +97,10 @@ public class RegistrationHandler extends Handler {
 				&& this.delete_account == false) {
 
 			Document emailEntry = user.find(eq("email", message.getEmail())).first();
-			logger.debug("Email entry before replace: {}, {}, {}", emailEntry.get("_id"), emailEntry.get("email"), emailEntry.get("password"));
 
 			if (emailEntry != null) {
 				
+				logger.debug("Email entry before replace: {}, {}", emailEntry.get("_id"), emailEntry.get("email"));
 				ObjectId loginID = (ObjectId) emailEntry.get("loginID");
 				Document loginEntry = login.find(eq("_id", loginID)).first();
 				
@@ -106,7 +109,7 @@ public class RegistrationHandler extends Handler {
 					emailEntry.replace("email", message.getEmail(), message.getChangedField());
 					user.replaceOne(eq("email", message.getEmail()), emailEntry);
 					
-					return Basic.newBuilder().setType(Basic.MessageType.SUCCESS).build();
+					return ClientBasic.newBuilder().setType(ClientBasic.MessageType.SUCCESS).build();
 				}
 			}
 		}
@@ -114,23 +117,24 @@ public class RegistrationHandler extends Handler {
 		if (this.change_email == false && this.change_password == true
 				&& this.delete_account == false) {
 
-			Document emailEntry = login.find(eq("email", message.getEmail())).first(); 
-	
+			Document emailEntry = user.find(eq("email", message.getEmail())).first(); 
+			
 			if (emailEntry != null) {
 
+				logger.debug("Email entry before pw change: {}, {}", emailEntry.get("_id"), emailEntry.get("email"));
 				ObjectId loginID = (ObjectId) emailEntry.get("loginID");
 				Document loginEntry = login.find(eq("_id", loginID)).first();
 				
 				if (loginEntry.get("password").equals(message.getPassword())) {
 					
 					loginEntry.replace("password", message.getPassword(), message.getChangedField());
-					login.replaceOne(eq("email", message.getEmail()), emailEntry);
+					login.replaceOne(eq("_id", loginID), loginEntry);
 					
-					return Basic.newBuilder().setType(Basic.MessageType.SUCCESS).build();
+					return ClientBasic.newBuilder().setType(ClientBasic.MessageType.SUCCESS).build();
 				}
 			}
 		}
-		return Basic.newBuilder().setType(Basic.MessageType.ERROR).build();
+		return ClientBasic.newBuilder().setType(ClientBasic.MessageType.ERROR).build();
 	}
 
 }

@@ -1,18 +1,20 @@
 package server;
 
-import proto.CalenderMessagesProto.Basic;
+import proto.CalenderMessagesProto.ClientBasic;
 import proto.CalenderMessagesProto.TimeSlots;
 
 public class TimeSlotsHandler extends Handler {
 
+	private TimeSlots message;
+
 	public TimeSlotsHandler(TimeSlots timeSlots) {
-		// TODO Auto-generated constructor stub
+		database = super.getDatabase();
+		this.message = timeSlots;
 	}
 
 	@Override
-	protected Basic process() {
-		// TODO Auto-generated method stub
-		return null;
+	protected ClientBasic process() {
+		return ClientBasic.newBuilder().setType(ClientBasic.MessageType.SUCCESS).build();
 	}
 
 }

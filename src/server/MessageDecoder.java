@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import common.Constants;
 import proto.CalenderMessagesProto.Basic;
+import proto.CalenderMessagesProto.ClientBasic;
 
 public class MessageDecoder {
 
@@ -17,7 +18,7 @@ public class MessageDecoder {
 
 	}
 
-	public Basic processMessage(Basic basic) {
+	public ClientBasic processMessage(Basic basic) {
 
 		
 		switch (basic.getType()) {
@@ -44,7 +45,7 @@ public class MessageDecoder {
 			handler = new RequestHandler(basic.getRequest());
 			break;
 		default:
-			return Basic.newBuilder().setType(Basic.MessageType.ERROR).build();
+			return ClientBasic.newBuilder().setType(ClientBasic.MessageType.ERROR).build();
 		}
 		return handler.process();
 	}

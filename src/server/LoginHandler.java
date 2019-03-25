@@ -11,6 +11,7 @@ import com.mongodb.client.MongoCollection;
 
 import common.Constants;
 import proto.CalenderMessagesProto.Basic;
+import proto.CalenderMessagesProto.ClientBasic;
 import proto.CalenderMessagesProto.Login;
 
 public class LoginHandler extends Handler {
@@ -25,7 +26,8 @@ public class LoginHandler extends Handler {
 		database = super.getDatabase();
 	}
 
-	public Basic process() {
+	@Override
+	protected ClientBasic process() {
 
 		MongoCollection<Document> login = database.getCollection(common.Constants.LOGIN_COLLECTION);
 		MongoCollection<Document> user = database.getCollection(common.Constants.USER_COLLECTION);
@@ -39,11 +41,11 @@ public class LoginHandler extends Handler {
 			Document loginEntry = login.find(eq("_id", loginID)).first();
 			
 			if (loginEntry.get("password").equals(message.getPassword())) {
-				return Basic.newBuilder().setType(Basic.MessageType.SUCCESS).build();
+				return ClientBasic.newBuilder().setType(ClientBasic.MessageType.SUCCESS).build();
 			}
 		}
 
-		return Basic.newBuilder().setType(Basic.MessageType.ERROR).build();
+		return ClientBasic.newBuilder().setType(ClientBasic.MessageType.ERROR).build();
 	}
 
 }

@@ -1,0 +1,100 @@
+syntax = "proto2";
+
+package proto;
+option java_outer_classname = "CalenderMessagesProto";
+
+message Login {
+	required string email = 1;
+	required string password = 2;
+}
+
+message Registration {
+	required string email = 1;
+	required string password = 2;
+	optional bool change_email = 3;
+	optional bool change_password = 4;
+	optional string changed_field = 5;
+}
+
+message Profile {
+	required string email = 1;
+	optional string name = 2;
+	optional int32 age = 3;
+	optional string bio = 4;
+}
+
+message Error {
+	optional string error_message = 1;
+}
+
+
+message Success {
+	optional string success_message = 1;
+}
+
+
+message Person {
+	required string email = 1;
+}
+
+
+message Group {
+	required string name = 1;
+	repeated Person admins = 2;
+	repeated Person members = 3;
+	optional string description = 4;
+}
+
+
+message Conditions {
+	enum weather {
+		UNKNOWN = 0;
+		SUNNY = 1;
+		RAIN = 2;
+		HOT = 3;
+		COLD = 4;
+		SNOW = 5;
+		WIND = 6;
+		CLOUDS = 7;
+	}
+}
+
+
+message Appointment {
+	required string email = 1;
+	repeated Person attendants = 2;
+	optional int64 unix_time = 3;
+	optional int32 length = 4;
+	optional float loc_longitude = 5;
+	optional float loc_latitude = 6;
+	enum category {
+		UNKNOWN = 0;
+		BUSINESS = 1;
+		SOCIAL = 2;
+		SPORT = 3;
+		HOBBIES = 4;
+		PRIVATE = 5;
+		COMMUTE = 6;
+	}
+	optional string descrition = 7;
+	optional int64 deadline_unix_time = 8;
+	optional bool flexible = 9;
+	optional int32 min_attendants = 10;
+	repeated Person key_attendants = 11;
+	optional Group group_for_appointment = 12;
+	optional Conditions conditions = 13;
+}
+
+
+message TimeSlot {
+	optional int64 start_unix_time = 1;
+	optional int64 end_unix_time = 2;
+	optional Appointment.category category = 3;
+}
+
+
+message TimeSlots {
+	required string email = 1;
+	repeated TimeSlot slots = 2;
+}
+

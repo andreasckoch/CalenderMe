@@ -13,6 +13,7 @@ import com.mongodb.client.MongoCollection;
 import common.Constants;
 
 import proto.CalenderMessagesProto.Basic;
+import proto.CalenderMessagesProto.ClientBasic;
 import proto.CalenderMessagesProto.Profile;
 
 
@@ -26,9 +27,10 @@ public class ProfileHandler extends Handler {
 		database = super.getDatabase();
 	}
 
-	public Basic process() {
+	@Override
+	protected ClientBasic process() {
 		
-		MongoCollection<Document> profile = database.getCollection(common.Constants.PROFILE_COLLECTION);
+		MongoCollection<Document> profile = database.getCollection(Constants.PROFILE_COLLECTION);
 		MongoCollection<Document> user = database.getCollection(Constants.USER_COLLECTION);
  
 		Document emailEntry = user.find(eq("email", message.getEmail())).first();
@@ -44,10 +46,10 @@ public class ProfileHandler extends Handler {
 									  Updates.set("bio", this.message.getBio()), 
 									  Updates.set("organisation", this.message.getOrganisation())));
 				
-			return Basic.newBuilder().setType(Basic.MessageType.SUCCESS).build();
+			return ClientBasic.newBuilder().setType(ClientBasic.MessageType.SUCCESS).build();
 		}
 		
-		return Basic.newBuilder().setType(Basic.MessageType.ERROR).build();
+		return ClientBasic.newBuilder().setType(ClientBasic.MessageType.ERROR).build();
 
 	}
 }

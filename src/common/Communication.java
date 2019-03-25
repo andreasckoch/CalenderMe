@@ -9,6 +9,7 @@ import org.apache.logging.log4j.*;
 
 import common.Constants;
 import proto.CalenderMessagesProto.Basic;
+import proto.CalenderMessagesProto.ClientBasic;
 
 
 /* Does the communication between application and server*/
@@ -37,11 +38,29 @@ public class Communication {
 	}
 
 	/**
+	 * To be used by server!
 	 * Method sends a message as byte array over the socket
 	 * 
 	 * @param message Message as Byte-Array that has to be sent
 	 */
 
+	public void send(ClientBasic message) {
+		try {
+			
+			message.writeDelimitedTo(output);
+			
+			output.flush();
+			logger.info("Message was sent with message type: {}", message.getType());
+			
+		} catch (IOException io) {
+			logger.error("Error while sending over socket with message type: {}\n{}\n", message.getType(), io);
+		}
+	}
+	
+	/**
+	 * To be used by client!
+	 * @param message
+	 */
 	public void send(Basic message) {
 		try {
 			
@@ -56,6 +75,7 @@ public class Communication {
 	}
 
 	/**
+	 * To be used by server!
 	 * Method waits for a Message from the Client one the socket and converts the
 	 * input stream to a byte array
 	 * 
@@ -63,7 +83,7 @@ public class Communication {
 	 * @throws Exception
 	 */
 
-	public Basic receive() throws IOException {
+	public Basic serverReceive() throws IOException {
 		
 		try {
 			return Basic.parseDelimitedFrom(input);			
@@ -72,7 +92,22 @@ public class Communication {
 			ioe.printStackTrace();
 			return null;
 		}
-
+	}
+	
+	/**
+	 * To be used by client!
+	 * @throws UnknownHostException
+	 * @throws IOException
+	 */
+	public ClientBasic receive() throws IOException {
+			
+		try {
+			return ClientBasic.parseDelimitedFrom(input);			
+		} catch (IOException ioe) {
+			logger.error("Error while parsing message from input stream!");
+			ioe.printStackTrace();
+			return null;
+		}
 	}
 
 	public void createSocket() throws UnknownHostException, IOException {

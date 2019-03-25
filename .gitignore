@@ -4,3 +4,4 @@
 /.project
 /libs/*
 /logs/*
+/.gradle/

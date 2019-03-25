@@ -33,14 +33,6 @@ public class RegistrationLoginTest {
 	private static Thread server;
 
 
-
-
-
-
-
-
-
-
 	@BeforeClass
 	public static void initialize() {
 		email = "test@totallynotafakemail.com";
@@ -74,7 +66,7 @@ public class RegistrationLoginTest {
 		registrationPwModificationMsg = Basic.newBuilder().setType(Basic.MessageType.REGISTRATION)
 								.setRegistration(
 										Registration.newBuilder()
-										.setEmail(email)
+										.setEmail(fakeemail)
 										.setPassword(pw)
 										.setChangePassword(true)
 										.setChangedField(fakepw).build()
@@ -88,13 +80,13 @@ public class RegistrationLoginTest {
 										).build();
 
 		
-		loginMsg = Basic.newBuilder().setType(Basic.MessageType.REGISTRATION)
+		loginMsg = Basic.newBuilder().setType(Basic.MessageType.LOGIN)
 								.setLogin(
 										Login.newBuilder()
 										.setEmail(email)
 										.setPassword(pw).build()
 										).build();
-		loginFailMsg = Basic.newBuilder().setType(Basic.MessageType.REGISTRATION)
+		loginFailMsg = Basic.newBuilder().setType(Basic.MessageType.LOGIN)
 								.setLogin(
 										Login.newBuilder()
 										.setEmail(email)
@@ -121,59 +113,12 @@ public class RegistrationLoginTest {
 	@Test
 	public void registrationTestForServer() throws Exception {
 		
-		Thread regThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					server.join(1000);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic registrationMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(registrationMsg);
-					registrationMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-			}
-		};
+		Thread regThread = Helper.createThreadSuccessWaitForServer(registrationMsg, server, ip, port, null);
 		regThread.start();
-				
-		Thread regDelThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					regThread.join();
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic registrationMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(registrationDeleteMsg);
-					registrationMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-			}
-		};
-		
+			
+		Thread regDelThread = Helper.createThreadSuccess(registrationDeleteMsg, regThread, ip, port, null);
 		regDelThread.start();
-	
+		
 		regDelThread.join();
 		logger.info("registrationTestForServer successful!");
 	}
@@ -182,30 +127,7 @@ public class RegistrationLoginTest {
 	@Test
 	public void doubleRegistrationTestForServer() throws Exception {
 		
-		Thread regThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					server.join(1000);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic registrationMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(registrationMsg);
-					registrationMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-			}
-		};
+		Thread regThread = Helper.createThreadSuccessWaitForServer(registrationMsg, server, ip, port, null);
 		regThread.start();
 		
 		Thread[] threads = new Thread[10];
@@ -220,7 +142,7 @@ public class RegistrationLoginTest {
 						e1.printStackTrace();
 					}
 					
-					Basic registrationMsgBack = null;
+					ClientBasic registrationMsgBack = null;
 					try {
 						Communication communicator = new Communication(ip, port);
 						communicator.createSocket();
@@ -231,7 +153,7 @@ public class RegistrationLoginTest {
 						e.printStackTrace();
 					}
 
-					assertThat(registrationMsgBack.getType(), is(Basic.MessageType.ERROR));
+					assertThat(registrationMsgBack.getType(), is(ClientBasic.MessageType.ERROR));
 				}
 			};
 			threads[i].start();
@@ -250,7 +172,7 @@ public class RegistrationLoginTest {
 					e1.printStackTrace();
 				}
 				
-				Basic registrationMsgBack = null;
+				ClientBasic registrationMsgBack = null;
 				try {
 					Communication communicator = new Communication(ip, port);
 					communicator.createSocket();
@@ -261,7 +183,7 @@ public class RegistrationLoginTest {
 					e.printStackTrace();
 				}
 
-				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
+				assertThat(registrationMsgBack.getType(), is(ClientBasic.MessageType.SUCCESS));
 			}
 		};
 		
@@ -275,109 +197,16 @@ public class RegistrationLoginTest {
 	@Test
 	public void registrationDataModificationTestForServer() throws Exception {
 		
-		Thread regThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					server.join(1000);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic registrationMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(registrationMsg);
-					registrationMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-			}
-		};
+		Thread regThread = Helper.createThreadSuccessWaitForServer(registrationMsg, server, ip, port, null);
 		regThread.start();
 		
-		Thread emailModThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					regThread.join();
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic registrationMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(registrationEmailModificationMsg);
-					registrationMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-			}
-		};
+		Thread emailModThread = Helper.createThreadSuccess(registrationEmailModificationMsg, regThread, ip, port, null);
 		emailModThread.start();
 		
-		Thread pwModThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					emailModThread.join();
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic registrationMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(registrationPwModificationMsg);
-					registrationMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-			}
-		};
+		Thread pwModThread = Helper.createThreadSuccess(registrationPwModificationMsg, emailModThread, ip, port, null);
 		pwModThread.start();
 				
-		Thread regDelThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					pwModThread.join();
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic registrationMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(registrationDeleteModdedMsg);
-					registrationMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-			}
-		};
-		
+		Thread regDelThread = Helper.createThreadSuccess(registrationDeleteModdedMsg, pwModThread, ip, port, null);
 		regDelThread.start();
 	
 		regDelThread.join();
@@ -387,109 +216,16 @@ public class RegistrationLoginTest {
 	@Test
 	public void loginTestForServer() throws Exception {
 		
-		Thread regThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					server.join(1000);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic registrationMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(registrationMsg);
-					registrationMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-			}
-		};
+		Thread regThread = Helper.createThreadSuccessWaitForServer(registrationMsg, server, ip, port, null);
 		regThread.start();
-		
-		Thread logFailThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					regThread.join();
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic loginMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(loginFailMsg);
-					loginMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(loginMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-			}
-		};
+			
+		Thread logFailThread = Helper.createThreadError(loginFailMsg, regThread, ip, port, null);
 		logFailThread.start();
 		
-		Thread logThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					logFailThread.join();
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic loginMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(loginMsg);
-					loginMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(loginMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-			}
-		};
+		Thread logThread = Helper.createThreadSuccess(loginMsg, logFailThread, ip, port, null);
 		logThread.start();
-				
-		Thread regDelThread = new Thread() {
-			@Override
-			public void run() {
-				try {
-					logThread.join();
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				Basic registrationMsgBack = null;
-				try {
-					Communication communicator = new Communication(ip, port);
-					communicator.createSocket();
-					communicator.send(registrationDeleteMsg);
-					registrationMsgBack = communicator.receive();
-					communicator.closeSocket();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-				assertThat(registrationMsgBack.getType(), is(Basic.MessageType.SUCCESS));
-			}
-		};
-		
+			
+		Thread regDelThread = Helper.createThreadSuccess(registrationDeleteMsg, logThread, ip, port, null);
 		regDelThread.start();
 	
 		regDelThread.join();

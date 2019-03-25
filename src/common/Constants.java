@@ -16,5 +16,6 @@ public class Constants {
 	public final static String USER_COLLECTION = "user";
 	public final static String LOGIN_COLLECTION = "login";
 	public final static String PROFILE_COLLECTION = "profile";
+	public final static String GROUP_COLLECTION = "groups";
 
 }

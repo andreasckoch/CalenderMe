@@ -5,7 +5,7 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoDatabase;
 
 import common.Constants;
-import proto.CalenderMessagesProto.Basic;
+import proto.CalenderMessagesProto.ClientBasic;
 
 public abstract class Handler {
 	
@@ -21,5 +21,5 @@ public abstract class Handler {
 		mongoClient.close();
 	}
 	
-	protected abstract Basic process();
+	protected abstract ClientBasic process();
 }

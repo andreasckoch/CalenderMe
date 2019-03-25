@@ -7068,82 +7068,192 @@ public final class CalenderMessagesProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required string name = 1;</code>
+     * <code>required string email = 1;</code>
+     */
+    boolean hasEmail();
+    /**
+     * <code>required string email = 1;</code>
+     */
+    java.lang.String getEmail();
+    /**
+     * <code>required string email = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
+
+    /**
+     * <code>optional string id = 2;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>optional string id = 2;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <code>optional string id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>optional string name = 3;</code>
      */
     boolean hasName();
     /**
-     * <code>required string name = 1;</code>
+     * <code>optional string name = 3;</code>
      */
     java.lang.String getName();
     /**
-     * <code>required string name = 1;</code>
+     * <code>optional string name = 3;</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>repeated .proto.Person admins = 2;</code>
+     * <code>repeated .proto.Person admins = 4;</code>
      */
     java.util.List<proto.CalenderMessagesProto.Person> 
         getAdminsList();
     /**
-     * <code>repeated .proto.Person admins = 2;</code>
+     * <code>repeated .proto.Person admins = 4;</code>
      */
     proto.CalenderMessagesProto.Person getAdmins(int index);
     /**
-     * <code>repeated .proto.Person admins = 2;</code>
+     * <code>repeated .proto.Person admins = 4;</code>
      */
     int getAdminsCount();
     /**
-     * <code>repeated .proto.Person admins = 2;</code>
+     * <code>repeated .proto.Person admins = 4;</code>
      */
     java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
         getAdminsOrBuilderList();
     /**
-     * <code>repeated .proto.Person admins = 2;</code>
+     * <code>repeated .proto.Person admins = 4;</code>
      */
     proto.CalenderMessagesProto.PersonOrBuilder getAdminsOrBuilder(
         int index);
 
     /**
-     * <code>repeated .proto.Person members = 3;</code>
+     * <code>repeated .proto.Person members = 5;</code>
      */
     java.util.List<proto.CalenderMessagesProto.Person> 
         getMembersList();
     /**
-     * <code>repeated .proto.Person members = 3;</code>
+     * <code>repeated .proto.Person members = 5;</code>
      */
     proto.CalenderMessagesProto.Person getMembers(int index);
     /**
-     * <code>repeated .proto.Person members = 3;</code>
+     * <code>repeated .proto.Person members = 5;</code>
      */
     int getMembersCount();
     /**
-     * <code>repeated .proto.Person members = 3;</code>
+     * <code>repeated .proto.Person members = 5;</code>
      */
     java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
         getMembersOrBuilderList();
     /**
-     * <code>repeated .proto.Person members = 3;</code>
+     * <code>repeated .proto.Person members = 5;</code>
      */
     proto.CalenderMessagesProto.PersonOrBuilder getMembersOrBuilder(
         int index);
 
     /**
-     * <code>optional string description = 4;</code>
+     * <code>optional string description = 6;</code>
      */
     boolean hasDescription();
     /**
-     * <code>optional string description = 4;</code>
+     * <code>optional string description = 6;</code>
      */
     java.lang.String getDescription();
     /**
-     * <code>optional string description = 4;</code>
+     * <code>optional string description = 6;</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <code>optional bool quit = 7;</code>
+     */
+    boolean hasQuit();
+    /**
+     * <code>optional bool quit = 7;</code>
+     */
+    boolean getQuit();
+
+    /**
+     * <code>repeated .proto.Person remove_members = 8;</code>
+     */
+    java.util.List<proto.CalenderMessagesProto.Person> 
+        getRemoveMembersList();
+    /**
+     * <code>repeated .proto.Person remove_members = 8;</code>
+     */
+    proto.CalenderMessagesProto.Person getRemoveMembers(int index);
+    /**
+     * <code>repeated .proto.Person remove_members = 8;</code>
+     */
+    int getRemoveMembersCount();
+    /**
+     * <code>repeated .proto.Person remove_members = 8;</code>
+     */
+    java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
+        getRemoveMembersOrBuilderList();
+    /**
+     * <code>repeated .proto.Person remove_members = 8;</code>
+     */
+    proto.CalenderMessagesProto.PersonOrBuilder getRemoveMembersOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .proto.Person promote_to_admins = 9;</code>
+     */
+    java.util.List<proto.CalenderMessagesProto.Person> 
+        getPromoteToAdminsList();
+    /**
+     * <code>repeated .proto.Person promote_to_admins = 9;</code>
+     */
+    proto.CalenderMessagesProto.Person getPromoteToAdmins(int index);
+    /**
+     * <code>repeated .proto.Person promote_to_admins = 9;</code>
+     */
+    int getPromoteToAdminsCount();
+    /**
+     * <code>repeated .proto.Person promote_to_admins = 9;</code>
+     */
+    java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
+        getPromoteToAdminsOrBuilderList();
+    /**
+     * <code>repeated .proto.Person promote_to_admins = 9;</code>
+     */
+    proto.CalenderMessagesProto.PersonOrBuilder getPromoteToAdminsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * name or description
+     * </pre>
+     *
+     * <code>optional bool change_info = 10;</code>
+     */
+    boolean hasChangeInfo();
+    /**
+     * <pre>
+     * name or description
+     * </pre>
+     *
+     * <code>optional bool change_info = 10;</code>
+     */
+    boolean getChangeInfo();
   }
   /**
+   * <pre>
+   * Functionality:
+   * 1) Create new group by specifying admins, members, name, description
+   * 2) Quit group (removes only the person the message is from)
+   * 3) As an admin, remove members from group
+   * 4) As an admin, promote members to admins
+   * </pre>
+   *
    * Protobuf type {@code proto.Group}
    */
   public  static final class Group extends
@@ -7156,10 +7266,16 @@ public final class CalenderMessagesProto {
       super(builder);
     }
     private Group() {
+      email_ = "";
+      id_ = "";
       name_ = "";
       admins_ = java.util.Collections.emptyList();
       members_ = java.util.Collections.emptyList();
       description_ = "";
+      quit_ = false;
+      removeMembers_ = java.util.Collections.emptyList();
+      promoteToAdmins_ = java.util.Collections.emptyList();
+      changeInfo_ = false;
     }
 
     @java.lang.Override
@@ -7189,31 +7305,71 @@ public final class CalenderMessagesProto {
             case 10: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              name_ = bs;
+              email_ = bs;
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              id_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              name_ = bs;
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 admins_ = new java.util.ArrayList<proto.CalenderMessagesProto.Person>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000008;
               }
               admins_.add(
                   input.readMessage(proto.CalenderMessagesProto.Person.PARSER, extensionRegistry));
               break;
             }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                 members_ = new java.util.ArrayList<proto.CalenderMessagesProto.Person>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000010;
               }
               members_.add(
                   input.readMessage(proto.CalenderMessagesProto.Person.PARSER, extensionRegistry));
               break;
             }
-            case 34: {
+            case 50: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000008;
               description_ = bs;
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000010;
+              quit_ = input.readBool();
+              break;
+            }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                removeMembers_ = new java.util.ArrayList<proto.CalenderMessagesProto.Person>();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              removeMembers_.add(
+                  input.readMessage(proto.CalenderMessagesProto.Person.PARSER, extensionRegistry));
+              break;
+            }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+                promoteToAdmins_ = new java.util.ArrayList<proto.CalenderMessagesProto.Person>();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              promoteToAdmins_.add(
+                  input.readMessage(proto.CalenderMessagesProto.Person.PARSER, extensionRegistry));
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000020;
+              changeInfo_ = input.readBool();
               break;
             }
             default: {
@@ -7231,11 +7387,17 @@ public final class CalenderMessagesProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           admins_ = java.util.Collections.unmodifiableList(admins_);
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           members_ = java.util.Collections.unmodifiableList(members_);
+        }
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+          removeMembers_ = java.util.Collections.unmodifiableList(removeMembers_);
+        }
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+          promoteToAdmins_ = java.util.Collections.unmodifiableList(promoteToAdmins_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -7255,16 +7417,100 @@ public final class CalenderMessagesProto {
     }
 
     private int bitField0_;
-    public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    public static final int EMAIL_FIELD_NUMBER = 1;
+    private volatile java.lang.Object email_;
     /**
-     * <code>required string name = 1;</code>
+     * <code>required string email = 1;</code>
      */
-    public boolean hasName() {
+    public boolean hasEmail() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required string name = 1;</code>
+     * <code>required string email = 1;</code>
+     */
+    public java.lang.String getEmail() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          email_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string email = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>optional string id = 2;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string id = 2;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>optional string name = 3;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string name = 3;</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -7281,7 +7527,7 @@ public final class CalenderMessagesProto {
       }
     }
     /**
-     * <code>required string name = 1;</code>
+     * <code>optional string name = 3;</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -7297,86 +7543,86 @@ public final class CalenderMessagesProto {
       }
     }
 
-    public static final int ADMINS_FIELD_NUMBER = 2;
+    public static final int ADMINS_FIELD_NUMBER = 4;
     private java.util.List<proto.CalenderMessagesProto.Person> admins_;
     /**
-     * <code>repeated .proto.Person admins = 2;</code>
+     * <code>repeated .proto.Person admins = 4;</code>
      */
     public java.util.List<proto.CalenderMessagesProto.Person> getAdminsList() {
       return admins_;
     }
     /**
-     * <code>repeated .proto.Person admins = 2;</code>
+     * <code>repeated .proto.Person admins = 4;</code>
      */
     public java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
         getAdminsOrBuilderList() {
       return admins_;
     }
     /**
-     * <code>repeated .proto.Person admins = 2;</code>
+     * <code>repeated .proto.Person admins = 4;</code>
      */
     public int getAdminsCount() {
       return admins_.size();
     }
     /**
-     * <code>repeated .proto.Person admins = 2;</code>
+     * <code>repeated .proto.Person admins = 4;</code>
      */
     public proto.CalenderMessagesProto.Person getAdmins(int index) {
       return admins_.get(index);
     }
     /**
-     * <code>repeated .proto.Person admins = 2;</code>
+     * <code>repeated .proto.Person admins = 4;</code>
      */
     public proto.CalenderMessagesProto.PersonOrBuilder getAdminsOrBuilder(
         int index) {
       return admins_.get(index);
     }
 
-    public static final int MEMBERS_FIELD_NUMBER = 3;
+    public static final int MEMBERS_FIELD_NUMBER = 5;
     private java.util.List<proto.CalenderMessagesProto.Person> members_;
     /**
-     * <code>repeated .proto.Person members = 3;</code>
+     * <code>repeated .proto.Person members = 5;</code>
      */
     public java.util.List<proto.CalenderMessagesProto.Person> getMembersList() {
       return members_;
     }
     /**
-     * <code>repeated .proto.Person members = 3;</code>
+     * <code>repeated .proto.Person members = 5;</code>
      */
     public java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
         getMembersOrBuilderList() {
       return members_;
     }
     /**
-     * <code>repeated .proto.Person members = 3;</code>
+     * <code>repeated .proto.Person members = 5;</code>
      */
     public int getMembersCount() {
       return members_.size();
     }
     /**
-     * <code>repeated .proto.Person members = 3;</code>
+     * <code>repeated .proto.Person members = 5;</code>
      */
     public proto.CalenderMessagesProto.Person getMembers(int index) {
       return members_.get(index);
     }
     /**
-     * <code>repeated .proto.Person members = 3;</code>
+     * <code>repeated .proto.Person members = 5;</code>
      */
     public proto.CalenderMessagesProto.PersonOrBuilder getMembersOrBuilder(
         int index) {
       return members_.get(index);
     }
 
-    public static final int DESCRIPTION_FIELD_NUMBER = 4;
+    public static final int DESCRIPTION_FIELD_NUMBER = 6;
     private volatile java.lang.Object description_;
     /**
-     * <code>optional string description = 4;</code>
+     * <code>optional string description = 6;</code>
      */
     public boolean hasDescription() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
+      return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional string description = 4;</code>
+     * <code>optional string description = 6;</code>
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
@@ -7393,7 +7639,7 @@ public final class CalenderMessagesProto {
       }
     }
     /**
-     * <code>optional string description = 4;</code>
+     * <code>optional string description = 6;</code>
      */
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
@@ -7409,6 +7655,114 @@ public final class CalenderMessagesProto {
       }
     }
 
+    public static final int QUIT_FIELD_NUMBER = 7;
+    private boolean quit_;
+    /**
+     * <code>optional bool quit = 7;</code>
+     */
+    public boolean hasQuit() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional bool quit = 7;</code>
+     */
+    public boolean getQuit() {
+      return quit_;
+    }
+
+    public static final int REMOVE_MEMBERS_FIELD_NUMBER = 8;
+    private java.util.List<proto.CalenderMessagesProto.Person> removeMembers_;
+    /**
+     * <code>repeated .proto.Person remove_members = 8;</code>
+     */
+    public java.util.List<proto.CalenderMessagesProto.Person> getRemoveMembersList() {
+      return removeMembers_;
+    }
+    /**
+     * <code>repeated .proto.Person remove_members = 8;</code>
+     */
+    public java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
+        getRemoveMembersOrBuilderList() {
+      return removeMembers_;
+    }
+    /**
+     * <code>repeated .proto.Person remove_members = 8;</code>
+     */
+    public int getRemoveMembersCount() {
+      return removeMembers_.size();
+    }
+    /**
+     * <code>repeated .proto.Person remove_members = 8;</code>
+     */
+    public proto.CalenderMessagesProto.Person getRemoveMembers(int index) {
+      return removeMembers_.get(index);
+    }
+    /**
+     * <code>repeated .proto.Person remove_members = 8;</code>
+     */
+    public proto.CalenderMessagesProto.PersonOrBuilder getRemoveMembersOrBuilder(
+        int index) {
+      return removeMembers_.get(index);
+    }
+
+    public static final int PROMOTE_TO_ADMINS_FIELD_NUMBER = 9;
+    private java.util.List<proto.CalenderMessagesProto.Person> promoteToAdmins_;
+    /**
+     * <code>repeated .proto.Person promote_to_admins = 9;</code>
+     */
+    public java.util.List<proto.CalenderMessagesProto.Person> getPromoteToAdminsList() {
+      return promoteToAdmins_;
+    }
+    /**
+     * <code>repeated .proto.Person promote_to_admins = 9;</code>
+     */
+    public java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
+        getPromoteToAdminsOrBuilderList() {
+      return promoteToAdmins_;
+    }
+    /**
+     * <code>repeated .proto.Person promote_to_admins = 9;</code>
+     */
+    public int getPromoteToAdminsCount() {
+      return promoteToAdmins_.size();
+    }
+    /**
+     * <code>repeated .proto.Person promote_to_admins = 9;</code>
+     */
+    public proto.CalenderMessagesProto.Person getPromoteToAdmins(int index) {
+      return promoteToAdmins_.get(index);
+    }
+    /**
+     * <code>repeated .proto.Person promote_to_admins = 9;</code>
+     */
+    public proto.CalenderMessagesProto.PersonOrBuilder getPromoteToAdminsOrBuilder(
+        int index) {
+      return promoteToAdmins_.get(index);
+    }
+
+    public static final int CHANGE_INFO_FIELD_NUMBER = 10;
+    private boolean changeInfo_;
+    /**
+     * <pre>
+     * name or description
+     * </pre>
+     *
+     * <code>optional bool change_info = 10;</code>
+     */
+    public boolean hasChangeInfo() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <pre>
+     * name or description
+     * </pre>
+     *
+     * <code>optional bool change_info = 10;</code>
+     */
+    public boolean getChangeInfo() {
+      return changeInfo_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7416,7 +7770,7 @@ public final class CalenderMessagesProto {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasName()) {
+      if (!hasEmail()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -7432,6 +7786,18 @@ public final class CalenderMessagesProto {
           return false;
         }
       }
+      for (int i = 0; i < getRemoveMembersCount(); i++) {
+        if (!getRemoveMembers(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      for (int i = 0; i < getPromoteToAdminsCount(); i++) {
+        if (!getPromoteToAdmins(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -7440,16 +7806,34 @@ public final class CalenderMessagesProto {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      for (int i = 0; i < admins_.size(); i++) {
-        output.writeMessage(2, admins_.get(i));
-      }
-      for (int i = 0; i < members_.size(); i++) {
-        output.writeMessage(3, members_.get(i));
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, email_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+      }
+      for (int i = 0; i < admins_.size(); i++) {
+        output.writeMessage(4, admins_.get(i));
+      }
+      for (int i = 0; i < members_.size(); i++) {
+        output.writeMessage(5, members_.get(i));
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, description_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBool(7, quit_);
+      }
+      for (int i = 0; i < removeMembers_.size(); i++) {
+        output.writeMessage(8, removeMembers_.get(i));
+      }
+      for (int i = 0; i < promoteToAdmins_.size(); i++) {
+        output.writeMessage(9, promoteToAdmins_.get(i));
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBool(10, changeInfo_);
       }
       unknownFields.writeTo(output);
     }
@@ -7461,18 +7845,40 @@ public final class CalenderMessagesProto {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, email_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       for (int i = 0; i < admins_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, admins_.get(i));
+          .computeMessageSize(4, admins_.get(i));
       }
       for (int i = 0; i < members_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, members_.get(i));
+          .computeMessageSize(5, members_.get(i));
       }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, description_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, quit_);
+      }
+      for (int i = 0; i < removeMembers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, removeMembers_.get(i));
+      }
+      for (int i = 0; i < promoteToAdmins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, promoteToAdmins_.get(i));
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, changeInfo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7490,6 +7896,16 @@ public final class CalenderMessagesProto {
       proto.CalenderMessagesProto.Group other = (proto.CalenderMessagesProto.Group) obj;
 
       boolean result = true;
+      result = result && (hasEmail() == other.hasEmail());
+      if (hasEmail()) {
+        result = result && getEmail()
+            .equals(other.getEmail());
+      }
+      result = result && (hasId() == other.hasId());
+      if (hasId()) {
+        result = result && getId()
+            .equals(other.getId());
+      }
       result = result && (hasName() == other.hasName());
       if (hasName()) {
         result = result && getName()
@@ -7504,6 +7920,20 @@ public final class CalenderMessagesProto {
         result = result && getDescription()
             .equals(other.getDescription());
       }
+      result = result && (hasQuit() == other.hasQuit());
+      if (hasQuit()) {
+        result = result && (getQuit()
+            == other.getQuit());
+      }
+      result = result && getRemoveMembersList()
+          .equals(other.getRemoveMembersList());
+      result = result && getPromoteToAdminsList()
+          .equals(other.getPromoteToAdminsList());
+      result = result && (hasChangeInfo() == other.hasChangeInfo());
+      if (hasChangeInfo()) {
+        result = result && (getChangeInfo()
+            == other.getChangeInfo());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7515,6 +7945,14 @@ public final class CalenderMessagesProto {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEmail()) {
+        hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getEmail().hashCode();
+      }
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
       if (hasName()) {
         hash = (37 * hash) + NAME_FIELD_NUMBER;
         hash = (53 * hash) + getName().hashCode();
@@ -7530,6 +7968,24 @@ public final class CalenderMessagesProto {
       if (hasDescription()) {
         hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
         hash = (53 * hash) + getDescription().hashCode();
+      }
+      if (hasQuit()) {
+        hash = (37 * hash) + QUIT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getQuit());
+      }
+      if (getRemoveMembersCount() > 0) {
+        hash = (37 * hash) + REMOVE_MEMBERS_FIELD_NUMBER;
+        hash = (53 * hash) + getRemoveMembersList().hashCode();
+      }
+      if (getPromoteToAdminsCount() > 0) {
+        hash = (37 * hash) + PROMOTE_TO_ADMINS_FIELD_NUMBER;
+        hash = (53 * hash) + getPromoteToAdminsList().hashCode();
+      }
+      if (hasChangeInfo()) {
+        hash = (37 * hash) + CHANGE_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getChangeInfo());
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7627,6 +8083,14 @@ public final class CalenderMessagesProto {
       return builder;
     }
     /**
+     * <pre>
+     * Functionality:
+     * 1) Create new group by specifying admins, members, name, description
+     * 2) Quit group (removes only the person the message is from)
+     * 3) As an admin, remove members from group
+     * 4) As an admin, promote members to admins
+     * </pre>
+     *
      * Protobuf type {@code proto.Group}
      */
     public static final class Builder extends
@@ -7661,27 +8125,49 @@ public final class CalenderMessagesProto {
                 .alwaysUseFieldBuilders) {
           getAdminsFieldBuilder();
           getMembersFieldBuilder();
+          getRemoveMembersFieldBuilder();
+          getPromoteToAdminsFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        name_ = "";
+        email_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (adminsBuilder_ == null) {
           admins_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           adminsBuilder_.clear();
         }
         if (membersBuilder_ == null) {
           members_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           membersBuilder_.clear();
         }
         description_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000020);
+        quit_ = false;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (removeMembersBuilder_ == null) {
+          removeMembers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+        } else {
+          removeMembersBuilder_.clear();
+        }
+        if (promoteToAdminsBuilder_ == null) {
+          promoteToAdmins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+        } else {
+          promoteToAdminsBuilder_.clear();
+        }
+        changeInfo_ = false;
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -7713,29 +8199,63 @@ public final class CalenderMessagesProto {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
+        result.email_ = email_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
         result.name_ = name_;
         if (adminsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
             admins_ = java.util.Collections.unmodifiableList(admins_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.admins_ = admins_;
         } else {
           result.admins_ = adminsBuilder_.build();
         }
         if (membersBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
             members_ = java.util.Collections.unmodifiableList(members_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.members_ = members_;
         } else {
           result.members_ = membersBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000002;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000008;
         }
         result.description_ = description_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.quit_ = quit_;
+        if (removeMembersBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+            removeMembers_ = java.util.Collections.unmodifiableList(removeMembers_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.removeMembers_ = removeMembers_;
+        } else {
+          result.removeMembers_ = removeMembersBuilder_.build();
+        }
+        if (promoteToAdminsBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) == 0x00000100)) {
+            promoteToAdmins_ = java.util.Collections.unmodifiableList(promoteToAdmins_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.promoteToAdmins_ = promoteToAdmins_;
+        } else {
+          result.promoteToAdmins_ = promoteToAdminsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.changeInfo_ = changeInfo_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7785,8 +8305,18 @@ public final class CalenderMessagesProto {
 
       public Builder mergeFrom(proto.CalenderMessagesProto.Group other) {
         if (other == proto.CalenderMessagesProto.Group.getDefaultInstance()) return this;
-        if (other.hasName()) {
+        if (other.hasEmail()) {
           bitField0_ |= 0x00000001;
+          email_ = other.email_;
+          onChanged();
+        }
+        if (other.hasId()) {
+          bitField0_ |= 0x00000002;
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.hasName()) {
+          bitField0_ |= 0x00000004;
           name_ = other.name_;
           onChanged();
         }
@@ -7794,7 +8324,7 @@ public final class CalenderMessagesProto {
           if (!other.admins_.isEmpty()) {
             if (admins_.isEmpty()) {
               admins_ = other.admins_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureAdminsIsMutable();
               admins_.addAll(other.admins_);
@@ -7807,7 +8337,7 @@ public final class CalenderMessagesProto {
               adminsBuilder_.dispose();
               adminsBuilder_ = null;
               admins_ = other.admins_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000008);
               adminsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getAdminsFieldBuilder() : null;
@@ -7820,7 +8350,7 @@ public final class CalenderMessagesProto {
           if (!other.members_.isEmpty()) {
             if (members_.isEmpty()) {
               members_ = other.members_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureMembersIsMutable();
               members_.addAll(other.members_);
@@ -7833,7 +8363,7 @@ public final class CalenderMessagesProto {
               membersBuilder_.dispose();
               membersBuilder_ = null;
               members_ = other.members_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000010);
               membersBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getMembersFieldBuilder() : null;
@@ -7843,9 +8373,67 @@ public final class CalenderMessagesProto {
           }
         }
         if (other.hasDescription()) {
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000020;
           description_ = other.description_;
           onChanged();
+        }
+        if (other.hasQuit()) {
+          setQuit(other.getQuit());
+        }
+        if (removeMembersBuilder_ == null) {
+          if (!other.removeMembers_.isEmpty()) {
+            if (removeMembers_.isEmpty()) {
+              removeMembers_ = other.removeMembers_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureRemoveMembersIsMutable();
+              removeMembers_.addAll(other.removeMembers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.removeMembers_.isEmpty()) {
+            if (removeMembersBuilder_.isEmpty()) {
+              removeMembersBuilder_.dispose();
+              removeMembersBuilder_ = null;
+              removeMembers_ = other.removeMembers_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              removeMembersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRemoveMembersFieldBuilder() : null;
+            } else {
+              removeMembersBuilder_.addAllMessages(other.removeMembers_);
+            }
+          }
+        }
+        if (promoteToAdminsBuilder_ == null) {
+          if (!other.promoteToAdmins_.isEmpty()) {
+            if (promoteToAdmins_.isEmpty()) {
+              promoteToAdmins_ = other.promoteToAdmins_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensurePromoteToAdminsIsMutable();
+              promoteToAdmins_.addAll(other.promoteToAdmins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.promoteToAdmins_.isEmpty()) {
+            if (promoteToAdminsBuilder_.isEmpty()) {
+              promoteToAdminsBuilder_.dispose();
+              promoteToAdminsBuilder_ = null;
+              promoteToAdmins_ = other.promoteToAdmins_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              promoteToAdminsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPromoteToAdminsFieldBuilder() : null;
+            } else {
+              promoteToAdminsBuilder_.addAllMessages(other.promoteToAdmins_);
+            }
+          }
+        }
+        if (other.hasChangeInfo()) {
+          setChangeInfo(other.getChangeInfo());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7854,7 +8442,7 @@ public final class CalenderMessagesProto {
 
       @java.lang.Override
       public final boolean isInitialized() {
-        if (!hasName()) {
+        if (!hasEmail()) {
           return false;
         }
         for (int i = 0; i < getAdminsCount(); i++) {
@@ -7864,6 +8452,16 @@ public final class CalenderMessagesProto {
         }
         for (int i = 0; i < getMembersCount(); i++) {
           if (!getMembers(i).isInitialized()) {
+            return false;
+          }
+        }
+        for (int i = 0; i < getRemoveMembersCount(); i++) {
+          if (!getRemoveMembers(i).isInitialized()) {
+            return false;
+          }
+        }
+        for (int i = 0; i < getPromoteToAdminsCount(); i++) {
+          if (!getPromoteToAdmins(i).isInitialized()) {
             return false;
           }
         }
@@ -7890,15 +8488,167 @@ public final class CalenderMessagesProto {
       }
       private int bitField0_;
 
-      private java.lang.Object name_ = "";
+      private java.lang.Object email_ = "";
       /**
-       * <code>required string name = 1;</code>
+       * <code>required string email = 1;</code>
        */
-      public boolean hasName() {
+      public boolean hasEmail() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required string name = 1;</code>
+       * <code>required string email = 1;</code>
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            email_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string email = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          email_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string email = 1;</code>
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string email = 1;</code>
+       */
+      public Builder clearEmail() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        email_ = getDefaultInstance().getEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string email = 1;</code>
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        email_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>optional string id = 2;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string id = 2;</code>
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string id = 2;</code>
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string id = 2;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string id = 2;</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 3;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string name = 3;</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7915,7 +8665,7 @@ public final class CalenderMessagesProto {
         }
       }
       /**
-       * <code>required string name = 1;</code>
+       * <code>optional string name = 3;</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -7931,36 +8681,36 @@ public final class CalenderMessagesProto {
         }
       }
       /**
-       * <code>required string name = 1;</code>
+       * <code>optional string name = 3;</code>
        */
       public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000001;
+  bitField0_ |= 0x00000004;
         name_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string name = 1;</code>
+       * <code>optional string name = 3;</code>
        */
       public Builder clearName() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
       /**
-       * <code>required string name = 1;</code>
+       * <code>optional string name = 3;</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000001;
+  bitField0_ |= 0x00000004;
         name_ = value;
         onChanged();
         return this;
@@ -7969,9 +8719,9 @@ public final class CalenderMessagesProto {
       private java.util.List<proto.CalenderMessagesProto.Person> admins_ =
         java.util.Collections.emptyList();
       private void ensureAdminsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           admins_ = new java.util.ArrayList<proto.CalenderMessagesProto.Person>(admins_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -7979,7 +8729,7 @@ public final class CalenderMessagesProto {
           proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder> adminsBuilder_;
 
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public java.util.List<proto.CalenderMessagesProto.Person> getAdminsList() {
         if (adminsBuilder_ == null) {
@@ -7989,7 +8739,7 @@ public final class CalenderMessagesProto {
         }
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public int getAdminsCount() {
         if (adminsBuilder_ == null) {
@@ -7999,7 +8749,7 @@ public final class CalenderMessagesProto {
         }
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public proto.CalenderMessagesProto.Person getAdmins(int index) {
         if (adminsBuilder_ == null) {
@@ -8009,7 +8759,7 @@ public final class CalenderMessagesProto {
         }
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public Builder setAdmins(
           int index, proto.CalenderMessagesProto.Person value) {
@@ -8026,7 +8776,7 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public Builder setAdmins(
           int index, proto.CalenderMessagesProto.Person.Builder builderForValue) {
@@ -8040,7 +8790,7 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public Builder addAdmins(proto.CalenderMessagesProto.Person value) {
         if (adminsBuilder_ == null) {
@@ -8056,7 +8806,7 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public Builder addAdmins(
           int index, proto.CalenderMessagesProto.Person value) {
@@ -8073,7 +8823,7 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public Builder addAdmins(
           proto.CalenderMessagesProto.Person.Builder builderForValue) {
@@ -8087,7 +8837,7 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public Builder addAdmins(
           int index, proto.CalenderMessagesProto.Person.Builder builderForValue) {
@@ -8101,7 +8851,7 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public Builder addAllAdmins(
           java.lang.Iterable<? extends proto.CalenderMessagesProto.Person> values) {
@@ -8116,12 +8866,12 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public Builder clearAdmins() {
         if (adminsBuilder_ == null) {
           admins_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           adminsBuilder_.clear();
@@ -8129,7 +8879,7 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public Builder removeAdmins(int index) {
         if (adminsBuilder_ == null) {
@@ -8142,14 +8892,14 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public proto.CalenderMessagesProto.Person.Builder getAdminsBuilder(
           int index) {
         return getAdminsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public proto.CalenderMessagesProto.PersonOrBuilder getAdminsOrBuilder(
           int index) {
@@ -8159,7 +8909,7 @@ public final class CalenderMessagesProto {
         }
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
            getAdminsOrBuilderList() {
@@ -8170,14 +8920,14 @@ public final class CalenderMessagesProto {
         }
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public proto.CalenderMessagesProto.Person.Builder addAdminsBuilder() {
         return getAdminsFieldBuilder().addBuilder(
             proto.CalenderMessagesProto.Person.getDefaultInstance());
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public proto.CalenderMessagesProto.Person.Builder addAdminsBuilder(
           int index) {
@@ -8185,7 +8935,7 @@ public final class CalenderMessagesProto {
             index, proto.CalenderMessagesProto.Person.getDefaultInstance());
       }
       /**
-       * <code>repeated .proto.Person admins = 2;</code>
+       * <code>repeated .proto.Person admins = 4;</code>
        */
       public java.util.List<proto.CalenderMessagesProto.Person.Builder> 
            getAdminsBuilderList() {
@@ -8198,7 +8948,7 @@ public final class CalenderMessagesProto {
           adminsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder>(
                   admins_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
                   isClean());
           admins_ = null;
@@ -8209,9 +8959,9 @@ public final class CalenderMessagesProto {
       private java.util.List<proto.CalenderMessagesProto.Person> members_ =
         java.util.Collections.emptyList();
       private void ensureMembersIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
           members_ = new java.util.ArrayList<proto.CalenderMessagesProto.Person>(members_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -8219,7 +8969,7 @@ public final class CalenderMessagesProto {
           proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder> membersBuilder_;
 
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public java.util.List<proto.CalenderMessagesProto.Person> getMembersList() {
         if (membersBuilder_ == null) {
@@ -8229,7 +8979,7 @@ public final class CalenderMessagesProto {
         }
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public int getMembersCount() {
         if (membersBuilder_ == null) {
@@ -8239,7 +8989,7 @@ public final class CalenderMessagesProto {
         }
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public proto.CalenderMessagesProto.Person getMembers(int index) {
         if (membersBuilder_ == null) {
@@ -8249,7 +8999,7 @@ public final class CalenderMessagesProto {
         }
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public Builder setMembers(
           int index, proto.CalenderMessagesProto.Person value) {
@@ -8266,7 +9016,7 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public Builder setMembers(
           int index, proto.CalenderMessagesProto.Person.Builder builderForValue) {
@@ -8280,7 +9030,7 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public Builder addMembers(proto.CalenderMessagesProto.Person value) {
         if (membersBuilder_ == null) {
@@ -8296,7 +9046,7 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public Builder addMembers(
           int index, proto.CalenderMessagesProto.Person value) {
@@ -8313,7 +9063,7 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public Builder addMembers(
           proto.CalenderMessagesProto.Person.Builder builderForValue) {
@@ -8327,7 +9077,7 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public Builder addMembers(
           int index, proto.CalenderMessagesProto.Person.Builder builderForValue) {
@@ -8341,7 +9091,7 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public Builder addAllMembers(
           java.lang.Iterable<? extends proto.CalenderMessagesProto.Person> values) {
@@ -8356,12 +9106,12 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public Builder clearMembers() {
         if (membersBuilder_ == null) {
           members_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           membersBuilder_.clear();
@@ -8369,7 +9119,7 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public Builder removeMembers(int index) {
         if (membersBuilder_ == null) {
@@ -8382,14 +9132,14 @@ public final class CalenderMessagesProto {
         return this;
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public proto.CalenderMessagesProto.Person.Builder getMembersBuilder(
           int index) {
         return getMembersFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public proto.CalenderMessagesProto.PersonOrBuilder getMembersOrBuilder(
           int index) {
@@ -8399,7 +9149,7 @@ public final class CalenderMessagesProto {
         }
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
            getMembersOrBuilderList() {
@@ -8410,14 +9160,14 @@ public final class CalenderMessagesProto {
         }
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public proto.CalenderMessagesProto.Person.Builder addMembersBuilder() {
         return getMembersFieldBuilder().addBuilder(
             proto.CalenderMessagesProto.Person.getDefaultInstance());
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public proto.CalenderMessagesProto.Person.Builder addMembersBuilder(
           int index) {
@@ -8425,7 +9175,7 @@ public final class CalenderMessagesProto {
             index, proto.CalenderMessagesProto.Person.getDefaultInstance());
       }
       /**
-       * <code>repeated .proto.Person members = 3;</code>
+       * <code>repeated .proto.Person members = 5;</code>
        */
       public java.util.List<proto.CalenderMessagesProto.Person.Builder> 
            getMembersBuilderList() {
@@ -8438,7 +9188,7 @@ public final class CalenderMessagesProto {
           membersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder>(
                   members_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000010) == 0x00000010),
                   getParentForChildren(),
                   isClean());
           members_ = null;
@@ -8448,13 +9198,13 @@ public final class CalenderMessagesProto {
 
       private java.lang.Object description_ = "";
       /**
-       * <code>optional string description = 4;</code>
+       * <code>optional string description = 6;</code>
        */
       public boolean hasDescription() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional string description = 4;</code>
+       * <code>optional string description = 6;</code>
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -8471,7 +9221,7 @@ public final class CalenderMessagesProto {
         }
       }
       /**
-       * <code>optional string description = 4;</code>
+       * <code>optional string description = 6;</code>
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -8487,37 +9237,597 @@ public final class CalenderMessagesProto {
         }
       }
       /**
-       * <code>optional string description = 4;</code>
+       * <code>optional string description = 6;</code>
        */
       public Builder setDescription(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000020;
         description_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string description = 4;</code>
+       * <code>optional string description = 6;</code>
        */
       public Builder clearDescription() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000020);
         description_ = getDefaultInstance().getDescription();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string description = 4;</code>
+       * <code>optional string description = 6;</code>
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000020;
         description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean quit_ ;
+      /**
+       * <code>optional bool quit = 7;</code>
+       */
+      public boolean hasQuit() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional bool quit = 7;</code>
+       */
+      public boolean getQuit() {
+        return quit_;
+      }
+      /**
+       * <code>optional bool quit = 7;</code>
+       */
+      public Builder setQuit(boolean value) {
+        bitField0_ |= 0x00000040;
+        quit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool quit = 7;</code>
+       */
+      public Builder clearQuit() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        quit_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<proto.CalenderMessagesProto.Person> removeMembers_ =
+        java.util.Collections.emptyList();
+      private void ensureRemoveMembersIsMutable() {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+          removeMembers_ = new java.util.ArrayList<proto.CalenderMessagesProto.Person>(removeMembers_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder> removeMembersBuilder_;
+
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public java.util.List<proto.CalenderMessagesProto.Person> getRemoveMembersList() {
+        if (removeMembersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(removeMembers_);
+        } else {
+          return removeMembersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public int getRemoveMembersCount() {
+        if (removeMembersBuilder_ == null) {
+          return removeMembers_.size();
+        } else {
+          return removeMembersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public proto.CalenderMessagesProto.Person getRemoveMembers(int index) {
+        if (removeMembersBuilder_ == null) {
+          return removeMembers_.get(index);
+        } else {
+          return removeMembersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public Builder setRemoveMembers(
+          int index, proto.CalenderMessagesProto.Person value) {
+        if (removeMembersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemoveMembersIsMutable();
+          removeMembers_.set(index, value);
+          onChanged();
+        } else {
+          removeMembersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public Builder setRemoveMembers(
+          int index, proto.CalenderMessagesProto.Person.Builder builderForValue) {
+        if (removeMembersBuilder_ == null) {
+          ensureRemoveMembersIsMutable();
+          removeMembers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          removeMembersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public Builder addRemoveMembers(proto.CalenderMessagesProto.Person value) {
+        if (removeMembersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemoveMembersIsMutable();
+          removeMembers_.add(value);
+          onChanged();
+        } else {
+          removeMembersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public Builder addRemoveMembers(
+          int index, proto.CalenderMessagesProto.Person value) {
+        if (removeMembersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRemoveMembersIsMutable();
+          removeMembers_.add(index, value);
+          onChanged();
+        } else {
+          removeMembersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public Builder addRemoveMembers(
+          proto.CalenderMessagesProto.Person.Builder builderForValue) {
+        if (removeMembersBuilder_ == null) {
+          ensureRemoveMembersIsMutable();
+          removeMembers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          removeMembersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public Builder addRemoveMembers(
+          int index, proto.CalenderMessagesProto.Person.Builder builderForValue) {
+        if (removeMembersBuilder_ == null) {
+          ensureRemoveMembersIsMutable();
+          removeMembers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          removeMembersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public Builder addAllRemoveMembers(
+          java.lang.Iterable<? extends proto.CalenderMessagesProto.Person> values) {
+        if (removeMembersBuilder_ == null) {
+          ensureRemoveMembersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, removeMembers_);
+          onChanged();
+        } else {
+          removeMembersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public Builder clearRemoveMembers() {
+        if (removeMembersBuilder_ == null) {
+          removeMembers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          removeMembersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public Builder removeRemoveMembers(int index) {
+        if (removeMembersBuilder_ == null) {
+          ensureRemoveMembersIsMutable();
+          removeMembers_.remove(index);
+          onChanged();
+        } else {
+          removeMembersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public proto.CalenderMessagesProto.Person.Builder getRemoveMembersBuilder(
+          int index) {
+        return getRemoveMembersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public proto.CalenderMessagesProto.PersonOrBuilder getRemoveMembersOrBuilder(
+          int index) {
+        if (removeMembersBuilder_ == null) {
+          return removeMembers_.get(index);  } else {
+          return removeMembersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
+           getRemoveMembersOrBuilderList() {
+        if (removeMembersBuilder_ != null) {
+          return removeMembersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(removeMembers_);
+        }
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public proto.CalenderMessagesProto.Person.Builder addRemoveMembersBuilder() {
+        return getRemoveMembersFieldBuilder().addBuilder(
+            proto.CalenderMessagesProto.Person.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public proto.CalenderMessagesProto.Person.Builder addRemoveMembersBuilder(
+          int index) {
+        return getRemoveMembersFieldBuilder().addBuilder(
+            index, proto.CalenderMessagesProto.Person.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .proto.Person remove_members = 8;</code>
+       */
+      public java.util.List<proto.CalenderMessagesProto.Person.Builder> 
+           getRemoveMembersBuilderList() {
+        return getRemoveMembersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder> 
+          getRemoveMembersFieldBuilder() {
+        if (removeMembersBuilder_ == null) {
+          removeMembersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder>(
+                  removeMembers_,
+                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  getParentForChildren(),
+                  isClean());
+          removeMembers_ = null;
+        }
+        return removeMembersBuilder_;
+      }
+
+      private java.util.List<proto.CalenderMessagesProto.Person> promoteToAdmins_ =
+        java.util.Collections.emptyList();
+      private void ensurePromoteToAdminsIsMutable() {
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+          promoteToAdmins_ = new java.util.ArrayList<proto.CalenderMessagesProto.Person>(promoteToAdmins_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder> promoteToAdminsBuilder_;
+
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public java.util.List<proto.CalenderMessagesProto.Person> getPromoteToAdminsList() {
+        if (promoteToAdminsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(promoteToAdmins_);
+        } else {
+          return promoteToAdminsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public int getPromoteToAdminsCount() {
+        if (promoteToAdminsBuilder_ == null) {
+          return promoteToAdmins_.size();
+        } else {
+          return promoteToAdminsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public proto.CalenderMessagesProto.Person getPromoteToAdmins(int index) {
+        if (promoteToAdminsBuilder_ == null) {
+          return promoteToAdmins_.get(index);
+        } else {
+          return promoteToAdminsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public Builder setPromoteToAdmins(
+          int index, proto.CalenderMessagesProto.Person value) {
+        if (promoteToAdminsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePromoteToAdminsIsMutable();
+          promoteToAdmins_.set(index, value);
+          onChanged();
+        } else {
+          promoteToAdminsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public Builder setPromoteToAdmins(
+          int index, proto.CalenderMessagesProto.Person.Builder builderForValue) {
+        if (promoteToAdminsBuilder_ == null) {
+          ensurePromoteToAdminsIsMutable();
+          promoteToAdmins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          promoteToAdminsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public Builder addPromoteToAdmins(proto.CalenderMessagesProto.Person value) {
+        if (promoteToAdminsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePromoteToAdminsIsMutable();
+          promoteToAdmins_.add(value);
+          onChanged();
+        } else {
+          promoteToAdminsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public Builder addPromoteToAdmins(
+          int index, proto.CalenderMessagesProto.Person value) {
+        if (promoteToAdminsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePromoteToAdminsIsMutable();
+          promoteToAdmins_.add(index, value);
+          onChanged();
+        } else {
+          promoteToAdminsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public Builder addPromoteToAdmins(
+          proto.CalenderMessagesProto.Person.Builder builderForValue) {
+        if (promoteToAdminsBuilder_ == null) {
+          ensurePromoteToAdminsIsMutable();
+          promoteToAdmins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          promoteToAdminsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public Builder addPromoteToAdmins(
+          int index, proto.CalenderMessagesProto.Person.Builder builderForValue) {
+        if (promoteToAdminsBuilder_ == null) {
+          ensurePromoteToAdminsIsMutable();
+          promoteToAdmins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          promoteToAdminsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public Builder addAllPromoteToAdmins(
+          java.lang.Iterable<? extends proto.CalenderMessagesProto.Person> values) {
+        if (promoteToAdminsBuilder_ == null) {
+          ensurePromoteToAdminsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, promoteToAdmins_);
+          onChanged();
+        } else {
+          promoteToAdminsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public Builder clearPromoteToAdmins() {
+        if (promoteToAdminsBuilder_ == null) {
+          promoteToAdmins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          promoteToAdminsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public Builder removePromoteToAdmins(int index) {
+        if (promoteToAdminsBuilder_ == null) {
+          ensurePromoteToAdminsIsMutable();
+          promoteToAdmins_.remove(index);
+          onChanged();
+        } else {
+          promoteToAdminsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public proto.CalenderMessagesProto.Person.Builder getPromoteToAdminsBuilder(
+          int index) {
+        return getPromoteToAdminsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public proto.CalenderMessagesProto.PersonOrBuilder getPromoteToAdminsOrBuilder(
+          int index) {
+        if (promoteToAdminsBuilder_ == null) {
+          return promoteToAdmins_.get(index);  } else {
+          return promoteToAdminsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
+           getPromoteToAdminsOrBuilderList() {
+        if (promoteToAdminsBuilder_ != null) {
+          return promoteToAdminsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(promoteToAdmins_);
+        }
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public proto.CalenderMessagesProto.Person.Builder addPromoteToAdminsBuilder() {
+        return getPromoteToAdminsFieldBuilder().addBuilder(
+            proto.CalenderMessagesProto.Person.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public proto.CalenderMessagesProto.Person.Builder addPromoteToAdminsBuilder(
+          int index) {
+        return getPromoteToAdminsFieldBuilder().addBuilder(
+            index, proto.CalenderMessagesProto.Person.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .proto.Person promote_to_admins = 9;</code>
+       */
+      public java.util.List<proto.CalenderMessagesProto.Person.Builder> 
+           getPromoteToAdminsBuilderList() {
+        return getPromoteToAdminsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder> 
+          getPromoteToAdminsFieldBuilder() {
+        if (promoteToAdminsBuilder_ == null) {
+          promoteToAdminsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder>(
+                  promoteToAdmins_,
+                  ((bitField0_ & 0x00000100) == 0x00000100),
+                  getParentForChildren(),
+                  isClean());
+          promoteToAdmins_ = null;
+        }
+        return promoteToAdminsBuilder_;
+      }
+
+      private boolean changeInfo_ ;
+      /**
+       * <pre>
+       * name or description
+       * </pre>
+       *
+       * <code>optional bool change_info = 10;</code>
+       */
+      public boolean hasChangeInfo() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <pre>
+       * name or description
+       * </pre>
+       *
+       * <code>optional bool change_info = 10;</code>
+       */
+      public boolean getChangeInfo() {
+        return changeInfo_;
+      }
+      /**
+       * <pre>
+       * name or description
+       * </pre>
+       *
+       * <code>optional bool change_info = 10;</code>
+       */
+      public Builder setChangeInfo(boolean value) {
+        bitField0_ |= 0x00000200;
+        changeInfo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name or description
+       * </pre>
+       *
+       * <code>optional bool change_info = 10;</code>
+       */
+      public Builder clearChangeInfo() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        changeInfo_ = false;
         onChanged();
         return this;
       }
@@ -14094,8 +15404,4434 @@ public final class CalenderMessagesProto {
 
   }
 
+  public interface ClientBasicOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.ClientBasic)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .proto.ClientBasic.MessageType type = 1;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>required .proto.ClientBasic.MessageType type = 1;</code>
+     */
+    proto.CalenderMessagesProto.ClientBasic.MessageType getType();
+
+    /**
+     * <code>optional .proto.Error error = 2;</code>
+     */
+    boolean hasError();
+    /**
+     * <code>optional .proto.Error error = 2;</code>
+     */
+    proto.CalenderMessagesProto.Error getError();
+    /**
+     * <code>optional .proto.Error error = 2;</code>
+     */
+    proto.CalenderMessagesProto.ErrorOrBuilder getErrorOrBuilder();
+
+    /**
+     * <code>optional .proto.Success success = 3;</code>
+     */
+    boolean hasSuccess();
+    /**
+     * <code>optional .proto.Success success = 3;</code>
+     */
+    proto.CalenderMessagesProto.Success getSuccess();
+    /**
+     * <code>optional .proto.Success success = 3;</code>
+     */
+    proto.CalenderMessagesProto.SuccessOrBuilder getSuccessOrBuilder();
+
+    /**
+     * <code>optional .proto.ClientGroupResponse groupResponse = 4;</code>
+     */
+    boolean hasGroupResponse();
+    /**
+     * <code>optional .proto.ClientGroupResponse groupResponse = 4;</code>
+     */
+    proto.CalenderMessagesProto.ClientGroupResponse getGroupResponse();
+    /**
+     * <code>optional .proto.ClientGroupResponse groupResponse = 4;</code>
+     */
+    proto.CalenderMessagesProto.ClientGroupResponseOrBuilder getGroupResponseOrBuilder();
+
+    /**
+     * <code>optional .proto.ClientGroupMemberResponse groupMemberResponse = 5;</code>
+     */
+    boolean hasGroupMemberResponse();
+    /**
+     * <code>optional .proto.ClientGroupMemberResponse groupMemberResponse = 5;</code>
+     */
+    proto.CalenderMessagesProto.ClientGroupMemberResponse getGroupMemberResponse();
+    /**
+     * <code>optional .proto.ClientGroupMemberResponse groupMemberResponse = 5;</code>
+     */
+    proto.CalenderMessagesProto.ClientGroupMemberResponseOrBuilder getGroupMemberResponseOrBuilder();
+  }
+  /**
+   * <pre>
+   *	Client Messages
+   * </pre>
+   *
+   * Protobuf type {@code proto.ClientBasic}
+   */
+  public  static final class ClientBasic extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:proto.ClientBasic)
+      ClientBasicOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClientBasic.newBuilder() to construct.
+    private ClientBasic(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClientBasic() {
+      type_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ClientBasic(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+              proto.CalenderMessagesProto.ClientBasic.MessageType value = proto.CalenderMessagesProto.ClientBasic.MessageType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                type_ = rawValue;
+              }
+              break;
+            }
+            case 18: {
+              proto.CalenderMessagesProto.Error.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = error_.toBuilder();
+              }
+              error_ = input.readMessage(proto.CalenderMessagesProto.Error.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(error_);
+                error_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            case 26: {
+              proto.CalenderMessagesProto.Success.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = success_.toBuilder();
+              }
+              success_ = input.readMessage(proto.CalenderMessagesProto.Success.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(success_);
+                success_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 34: {
+              proto.CalenderMessagesProto.ClientGroupResponse.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = groupResponse_.toBuilder();
+              }
+              groupResponse_ = input.readMessage(proto.CalenderMessagesProto.ClientGroupResponse.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(groupResponse_);
+                groupResponse_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 42: {
+              proto.CalenderMessagesProto.ClientGroupMemberResponse.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = groupMemberResponse_.toBuilder();
+              }
+              groupMemberResponse_ = input.readMessage(proto.CalenderMessagesProto.ClientGroupMemberResponse.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(groupMemberResponse_);
+                groupMemberResponse_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.CalenderMessagesProto.internal_static_proto_ClientBasic_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.CalenderMessagesProto.internal_static_proto_ClientBasic_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.CalenderMessagesProto.ClientBasic.class, proto.CalenderMessagesProto.ClientBasic.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code proto.ClientBasic.MessageType}
+     */
+    public enum MessageType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>ERROR = 0;</code>
+       */
+      ERROR(0),
+      /**
+       * <code>SUCCESS = 1;</code>
+       */
+      SUCCESS(1),
+      /**
+       * <code>GROUPRESPONSE = 2;</code>
+       */
+      GROUPRESPONSE(2),
+      /**
+       * <code>MEMBERGROUPRESPONSE = 3;</code>
+       */
+      MEMBERGROUPRESPONSE(3),
+      ;
+
+      /**
+       * <code>ERROR = 0;</code>
+       */
+      public static final int ERROR_VALUE = 0;
+      /**
+       * <code>SUCCESS = 1;</code>
+       */
+      public static final int SUCCESS_VALUE = 1;
+      /**
+       * <code>GROUPRESPONSE = 2;</code>
+       */
+      public static final int GROUPRESPONSE_VALUE = 2;
+      /**
+       * <code>MEMBERGROUPRESPONSE = 3;</code>
+       */
+      public static final int MEMBERGROUPRESPONSE_VALUE = 3;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MessageType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static MessageType forNumber(int value) {
+        switch (value) {
+          case 0: return ERROR;
+          case 1: return SUCCESS;
+          case 2: return GROUPRESPONSE;
+          case 3: return MEMBERGROUPRESPONSE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<MessageType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          MessageType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<MessageType>() {
+              public MessageType findValueByNumber(int number) {
+                return MessageType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return proto.CalenderMessagesProto.ClientBasic.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final MessageType[] VALUES = values();
+
+      public static MessageType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private MessageType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:proto.ClientBasic.MessageType)
+    }
+
+    private int bitField0_;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_;
+    /**
+     * <code>required .proto.ClientBasic.MessageType type = 1;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .proto.ClientBasic.MessageType type = 1;</code>
+     */
+    public proto.CalenderMessagesProto.ClientBasic.MessageType getType() {
+      @SuppressWarnings("deprecation")
+      proto.CalenderMessagesProto.ClientBasic.MessageType result = proto.CalenderMessagesProto.ClientBasic.MessageType.valueOf(type_);
+      return result == null ? proto.CalenderMessagesProto.ClientBasic.MessageType.ERROR : result;
+    }
+
+    public static final int ERROR_FIELD_NUMBER = 2;
+    private proto.CalenderMessagesProto.Error error_;
+    /**
+     * <code>optional .proto.Error error = 2;</code>
+     */
+    public boolean hasError() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .proto.Error error = 2;</code>
+     */
+    public proto.CalenderMessagesProto.Error getError() {
+      return error_ == null ? proto.CalenderMessagesProto.Error.getDefaultInstance() : error_;
+    }
+    /**
+     * <code>optional .proto.Error error = 2;</code>
+     */
+    public proto.CalenderMessagesProto.ErrorOrBuilder getErrorOrBuilder() {
+      return error_ == null ? proto.CalenderMessagesProto.Error.getDefaultInstance() : error_;
+    }
+
+    public static final int SUCCESS_FIELD_NUMBER = 3;
+    private proto.CalenderMessagesProto.Success success_;
+    /**
+     * <code>optional .proto.Success success = 3;</code>
+     */
+    public boolean hasSuccess() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .proto.Success success = 3;</code>
+     */
+    public proto.CalenderMessagesProto.Success getSuccess() {
+      return success_ == null ? proto.CalenderMessagesProto.Success.getDefaultInstance() : success_;
+    }
+    /**
+     * <code>optional .proto.Success success = 3;</code>
+     */
+    public proto.CalenderMessagesProto.SuccessOrBuilder getSuccessOrBuilder() {
+      return success_ == null ? proto.CalenderMessagesProto.Success.getDefaultInstance() : success_;
+    }
+
+    public static final int GROUPRESPONSE_FIELD_NUMBER = 4;
+    private proto.CalenderMessagesProto.ClientGroupResponse groupResponse_;
+    /**
+     * <code>optional .proto.ClientGroupResponse groupResponse = 4;</code>
+     */
+    public boolean hasGroupResponse() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .proto.ClientGroupResponse groupResponse = 4;</code>
+     */
+    public proto.CalenderMessagesProto.ClientGroupResponse getGroupResponse() {
+      return groupResponse_ == null ? proto.CalenderMessagesProto.ClientGroupResponse.getDefaultInstance() : groupResponse_;
+    }
+    /**
+     * <code>optional .proto.ClientGroupResponse groupResponse = 4;</code>
+     */
+    public proto.CalenderMessagesProto.ClientGroupResponseOrBuilder getGroupResponseOrBuilder() {
+      return groupResponse_ == null ? proto.CalenderMessagesProto.ClientGroupResponse.getDefaultInstance() : groupResponse_;
+    }
+
+    public static final int GROUPMEMBERRESPONSE_FIELD_NUMBER = 5;
+    private proto.CalenderMessagesProto.ClientGroupMemberResponse groupMemberResponse_;
+    /**
+     * <code>optional .proto.ClientGroupMemberResponse groupMemberResponse = 5;</code>
+     */
+    public boolean hasGroupMemberResponse() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .proto.ClientGroupMemberResponse groupMemberResponse = 5;</code>
+     */
+    public proto.CalenderMessagesProto.ClientGroupMemberResponse getGroupMemberResponse() {
+      return groupMemberResponse_ == null ? proto.CalenderMessagesProto.ClientGroupMemberResponse.getDefaultInstance() : groupMemberResponse_;
+    }
+    /**
+     * <code>optional .proto.ClientGroupMemberResponse groupMemberResponse = 5;</code>
+     */
+    public proto.CalenderMessagesProto.ClientGroupMemberResponseOrBuilder getGroupMemberResponseOrBuilder() {
+      return groupMemberResponse_ == null ? proto.CalenderMessagesProto.ClientGroupMemberResponse.getDefaultInstance() : groupMemberResponse_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasGroupMemberResponse()) {
+        if (!getGroupMemberResponse().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, type_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(2, getError());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, getSuccess());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(4, getGroupResponse());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(5, getGroupMemberResponse());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, type_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getError());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getSuccess());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getGroupResponse());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getGroupMemberResponse());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.CalenderMessagesProto.ClientBasic)) {
+        return super.equals(obj);
+      }
+      proto.CalenderMessagesProto.ClientBasic other = (proto.CalenderMessagesProto.ClientBasic) obj;
+
+      boolean result = true;
+      result = result && (hasType() == other.hasType());
+      if (hasType()) {
+        result = result && type_ == other.type_;
+      }
+      result = result && (hasError() == other.hasError());
+      if (hasError()) {
+        result = result && getError()
+            .equals(other.getError());
+      }
+      result = result && (hasSuccess() == other.hasSuccess());
+      if (hasSuccess()) {
+        result = result && getSuccess()
+            .equals(other.getSuccess());
+      }
+      result = result && (hasGroupResponse() == other.hasGroupResponse());
+      if (hasGroupResponse()) {
+        result = result && getGroupResponse()
+            .equals(other.getGroupResponse());
+      }
+      result = result && (hasGroupMemberResponse() == other.hasGroupMemberResponse());
+      if (hasGroupMemberResponse()) {
+        result = result && getGroupMemberResponse()
+            .equals(other.getGroupMemberResponse());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasType()) {
+        hash = (37 * hash) + TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + type_;
+      }
+      if (hasError()) {
+        hash = (37 * hash) + ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getError().hashCode();
+      }
+      if (hasSuccess()) {
+        hash = (37 * hash) + SUCCESS_FIELD_NUMBER;
+        hash = (53 * hash) + getSuccess().hashCode();
+      }
+      if (hasGroupResponse()) {
+        hash = (37 * hash) + GROUPRESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getGroupResponse().hashCode();
+      }
+      if (hasGroupMemberResponse()) {
+        hash = (37 * hash) + GROUPMEMBERRESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getGroupMemberResponse().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.CalenderMessagesProto.ClientBasic parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.CalenderMessagesProto.ClientBasic parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.ClientBasic parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.CalenderMessagesProto.ClientBasic parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.ClientBasic parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.CalenderMessagesProto.ClientBasic parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.ClientBasic parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.CalenderMessagesProto.ClientBasic parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.ClientBasic parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.CalenderMessagesProto.ClientBasic parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.ClientBasic parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.CalenderMessagesProto.ClientBasic parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.CalenderMessagesProto.ClientBasic prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *	Client Messages
+     * </pre>
+     *
+     * Protobuf type {@code proto.ClientBasic}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.ClientBasic)
+        proto.CalenderMessagesProto.ClientBasicOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.CalenderMessagesProto.internal_static_proto_ClientBasic_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.CalenderMessagesProto.internal_static_proto_ClientBasic_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.CalenderMessagesProto.ClientBasic.class, proto.CalenderMessagesProto.ClientBasic.Builder.class);
+      }
+
+      // Construct using proto.CalenderMessagesProto.ClientBasic.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getErrorFieldBuilder();
+          getSuccessFieldBuilder();
+          getGroupResponseFieldBuilder();
+          getGroupMemberResponseFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (errorBuilder_ == null) {
+          error_ = null;
+        } else {
+          errorBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (successBuilder_ == null) {
+          success_ = null;
+        } else {
+          successBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (groupResponseBuilder_ == null) {
+          groupResponse_ = null;
+        } else {
+          groupResponseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (groupMemberResponseBuilder_ == null) {
+          groupMemberResponse_ = null;
+        } else {
+          groupMemberResponseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.CalenderMessagesProto.internal_static_proto_ClientBasic_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.CalenderMessagesProto.ClientBasic getDefaultInstanceForType() {
+        return proto.CalenderMessagesProto.ClientBasic.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.CalenderMessagesProto.ClientBasic build() {
+        proto.CalenderMessagesProto.ClientBasic result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.CalenderMessagesProto.ClientBasic buildPartial() {
+        proto.CalenderMessagesProto.ClientBasic result = new proto.CalenderMessagesProto.ClientBasic(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (errorBuilder_ == null) {
+          result.error_ = error_;
+        } else {
+          result.error_ = errorBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (successBuilder_ == null) {
+          result.success_ = success_;
+        } else {
+          result.success_ = successBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        if (groupResponseBuilder_ == null) {
+          result.groupResponse_ = groupResponse_;
+        } else {
+          result.groupResponse_ = groupResponseBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (groupMemberResponseBuilder_ == null) {
+          result.groupMemberResponse_ = groupMemberResponse_;
+        } else {
+          result.groupMemberResponse_ = groupMemberResponseBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.CalenderMessagesProto.ClientBasic) {
+          return mergeFrom((proto.CalenderMessagesProto.ClientBasic)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.CalenderMessagesProto.ClientBasic other) {
+        if (other == proto.CalenderMessagesProto.ClientBasic.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        if (other.hasError()) {
+          mergeError(other.getError());
+        }
+        if (other.hasSuccess()) {
+          mergeSuccess(other.getSuccess());
+        }
+        if (other.hasGroupResponse()) {
+          mergeGroupResponse(other.getGroupResponse());
+        }
+        if (other.hasGroupMemberResponse()) {
+          mergeGroupMemberResponse(other.getGroupMemberResponse());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasType()) {
+          return false;
+        }
+        if (hasGroupMemberResponse()) {
+          if (!getGroupMemberResponse().isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.CalenderMessagesProto.ClientBasic parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.CalenderMessagesProto.ClientBasic) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int type_ = 0;
+      /**
+       * <code>required .proto.ClientBasic.MessageType type = 1;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .proto.ClientBasic.MessageType type = 1;</code>
+       */
+      public proto.CalenderMessagesProto.ClientBasic.MessageType getType() {
+        @SuppressWarnings("deprecation")
+        proto.CalenderMessagesProto.ClientBasic.MessageType result = proto.CalenderMessagesProto.ClientBasic.MessageType.valueOf(type_);
+        return result == null ? proto.CalenderMessagesProto.ClientBasic.MessageType.ERROR : result;
+      }
+      /**
+       * <code>required .proto.ClientBasic.MessageType type = 1;</code>
+       */
+      public Builder setType(proto.CalenderMessagesProto.ClientBasic.MessageType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .proto.ClientBasic.MessageType type = 1;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private proto.CalenderMessagesProto.Error error_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.CalenderMessagesProto.Error, proto.CalenderMessagesProto.Error.Builder, proto.CalenderMessagesProto.ErrorOrBuilder> errorBuilder_;
+      /**
+       * <code>optional .proto.Error error = 2;</code>
+       */
+      public boolean hasError() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .proto.Error error = 2;</code>
+       */
+      public proto.CalenderMessagesProto.Error getError() {
+        if (errorBuilder_ == null) {
+          return error_ == null ? proto.CalenderMessagesProto.Error.getDefaultInstance() : error_;
+        } else {
+          return errorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .proto.Error error = 2;</code>
+       */
+      public Builder setError(proto.CalenderMessagesProto.Error value) {
+        if (errorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          error_ = value;
+          onChanged();
+        } else {
+          errorBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .proto.Error error = 2;</code>
+       */
+      public Builder setError(
+          proto.CalenderMessagesProto.Error.Builder builderForValue) {
+        if (errorBuilder_ == null) {
+          error_ = builderForValue.build();
+          onChanged();
+        } else {
+          errorBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .proto.Error error = 2;</code>
+       */
+      public Builder mergeError(proto.CalenderMessagesProto.Error value) {
+        if (errorBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              error_ != null &&
+              error_ != proto.CalenderMessagesProto.Error.getDefaultInstance()) {
+            error_ =
+              proto.CalenderMessagesProto.Error.newBuilder(error_).mergeFrom(value).buildPartial();
+          } else {
+            error_ = value;
+          }
+          onChanged();
+        } else {
+          errorBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .proto.Error error = 2;</code>
+       */
+      public Builder clearError() {
+        if (errorBuilder_ == null) {
+          error_ = null;
+          onChanged();
+        } else {
+          errorBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .proto.Error error = 2;</code>
+       */
+      public proto.CalenderMessagesProto.Error.Builder getErrorBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getErrorFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .proto.Error error = 2;</code>
+       */
+      public proto.CalenderMessagesProto.ErrorOrBuilder getErrorOrBuilder() {
+        if (errorBuilder_ != null) {
+          return errorBuilder_.getMessageOrBuilder();
+        } else {
+          return error_ == null ?
+              proto.CalenderMessagesProto.Error.getDefaultInstance() : error_;
+        }
+      }
+      /**
+       * <code>optional .proto.Error error = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.CalenderMessagesProto.Error, proto.CalenderMessagesProto.Error.Builder, proto.CalenderMessagesProto.ErrorOrBuilder> 
+          getErrorFieldBuilder() {
+        if (errorBuilder_ == null) {
+          errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              proto.CalenderMessagesProto.Error, proto.CalenderMessagesProto.Error.Builder, proto.CalenderMessagesProto.ErrorOrBuilder>(
+                  getError(),
+                  getParentForChildren(),
+                  isClean());
+          error_ = null;
+        }
+        return errorBuilder_;
+      }
+
+      private proto.CalenderMessagesProto.Success success_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.CalenderMessagesProto.Success, proto.CalenderMessagesProto.Success.Builder, proto.CalenderMessagesProto.SuccessOrBuilder> successBuilder_;
+      /**
+       * <code>optional .proto.Success success = 3;</code>
+       */
+      public boolean hasSuccess() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .proto.Success success = 3;</code>
+       */
+      public proto.CalenderMessagesProto.Success getSuccess() {
+        if (successBuilder_ == null) {
+          return success_ == null ? proto.CalenderMessagesProto.Success.getDefaultInstance() : success_;
+        } else {
+          return successBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .proto.Success success = 3;</code>
+       */
+      public Builder setSuccess(proto.CalenderMessagesProto.Success value) {
+        if (successBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          success_ = value;
+          onChanged();
+        } else {
+          successBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .proto.Success success = 3;</code>
+       */
+      public Builder setSuccess(
+          proto.CalenderMessagesProto.Success.Builder builderForValue) {
+        if (successBuilder_ == null) {
+          success_ = builderForValue.build();
+          onChanged();
+        } else {
+          successBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .proto.Success success = 3;</code>
+       */
+      public Builder mergeSuccess(proto.CalenderMessagesProto.Success value) {
+        if (successBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              success_ != null &&
+              success_ != proto.CalenderMessagesProto.Success.getDefaultInstance()) {
+            success_ =
+              proto.CalenderMessagesProto.Success.newBuilder(success_).mergeFrom(value).buildPartial();
+          } else {
+            success_ = value;
+          }
+          onChanged();
+        } else {
+          successBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .proto.Success success = 3;</code>
+       */
+      public Builder clearSuccess() {
+        if (successBuilder_ == null) {
+          success_ = null;
+          onChanged();
+        } else {
+          successBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .proto.Success success = 3;</code>
+       */
+      public proto.CalenderMessagesProto.Success.Builder getSuccessBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getSuccessFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .proto.Success success = 3;</code>
+       */
+      public proto.CalenderMessagesProto.SuccessOrBuilder getSuccessOrBuilder() {
+        if (successBuilder_ != null) {
+          return successBuilder_.getMessageOrBuilder();
+        } else {
+          return success_ == null ?
+              proto.CalenderMessagesProto.Success.getDefaultInstance() : success_;
+        }
+      }
+      /**
+       * <code>optional .proto.Success success = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.CalenderMessagesProto.Success, proto.CalenderMessagesProto.Success.Builder, proto.CalenderMessagesProto.SuccessOrBuilder> 
+          getSuccessFieldBuilder() {
+        if (successBuilder_ == null) {
+          successBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              proto.CalenderMessagesProto.Success, proto.CalenderMessagesProto.Success.Builder, proto.CalenderMessagesProto.SuccessOrBuilder>(
+                  getSuccess(),
+                  getParentForChildren(),
+                  isClean());
+          success_ = null;
+        }
+        return successBuilder_;
+      }
+
+      private proto.CalenderMessagesProto.ClientGroupResponse groupResponse_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.CalenderMessagesProto.ClientGroupResponse, proto.CalenderMessagesProto.ClientGroupResponse.Builder, proto.CalenderMessagesProto.ClientGroupResponseOrBuilder> groupResponseBuilder_;
+      /**
+       * <code>optional .proto.ClientGroupResponse groupResponse = 4;</code>
+       */
+      public boolean hasGroupResponse() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .proto.ClientGroupResponse groupResponse = 4;</code>
+       */
+      public proto.CalenderMessagesProto.ClientGroupResponse getGroupResponse() {
+        if (groupResponseBuilder_ == null) {
+          return groupResponse_ == null ? proto.CalenderMessagesProto.ClientGroupResponse.getDefaultInstance() : groupResponse_;
+        } else {
+          return groupResponseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .proto.ClientGroupResponse groupResponse = 4;</code>
+       */
+      public Builder setGroupResponse(proto.CalenderMessagesProto.ClientGroupResponse value) {
+        if (groupResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          groupResponse_ = value;
+          onChanged();
+        } else {
+          groupResponseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .proto.ClientGroupResponse groupResponse = 4;</code>
+       */
+      public Builder setGroupResponse(
+          proto.CalenderMessagesProto.ClientGroupResponse.Builder builderForValue) {
+        if (groupResponseBuilder_ == null) {
+          groupResponse_ = builderForValue.build();
+          onChanged();
+        } else {
+          groupResponseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .proto.ClientGroupResponse groupResponse = 4;</code>
+       */
+      public Builder mergeGroupResponse(proto.CalenderMessagesProto.ClientGroupResponse value) {
+        if (groupResponseBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              groupResponse_ != null &&
+              groupResponse_ != proto.CalenderMessagesProto.ClientGroupResponse.getDefaultInstance()) {
+            groupResponse_ =
+              proto.CalenderMessagesProto.ClientGroupResponse.newBuilder(groupResponse_).mergeFrom(value).buildPartial();
+          } else {
+            groupResponse_ = value;
+          }
+          onChanged();
+        } else {
+          groupResponseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .proto.ClientGroupResponse groupResponse = 4;</code>
+       */
+      public Builder clearGroupResponse() {
+        if (groupResponseBuilder_ == null) {
+          groupResponse_ = null;
+          onChanged();
+        } else {
+          groupResponseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .proto.ClientGroupResponse groupResponse = 4;</code>
+       */
+      public proto.CalenderMessagesProto.ClientGroupResponse.Builder getGroupResponseBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getGroupResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .proto.ClientGroupResponse groupResponse = 4;</code>
+       */
+      public proto.CalenderMessagesProto.ClientGroupResponseOrBuilder getGroupResponseOrBuilder() {
+        if (groupResponseBuilder_ != null) {
+          return groupResponseBuilder_.getMessageOrBuilder();
+        } else {
+          return groupResponse_ == null ?
+              proto.CalenderMessagesProto.ClientGroupResponse.getDefaultInstance() : groupResponse_;
+        }
+      }
+      /**
+       * <code>optional .proto.ClientGroupResponse groupResponse = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.CalenderMessagesProto.ClientGroupResponse, proto.CalenderMessagesProto.ClientGroupResponse.Builder, proto.CalenderMessagesProto.ClientGroupResponseOrBuilder> 
+          getGroupResponseFieldBuilder() {
+        if (groupResponseBuilder_ == null) {
+          groupResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              proto.CalenderMessagesProto.ClientGroupResponse, proto.CalenderMessagesProto.ClientGroupResponse.Builder, proto.CalenderMessagesProto.ClientGroupResponseOrBuilder>(
+                  getGroupResponse(),
+                  getParentForChildren(),
+                  isClean());
+          groupResponse_ = null;
+        }
+        return groupResponseBuilder_;
+      }
+
+      private proto.CalenderMessagesProto.ClientGroupMemberResponse groupMemberResponse_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.CalenderMessagesProto.ClientGroupMemberResponse, proto.CalenderMessagesProto.ClientGroupMemberResponse.Builder, proto.CalenderMessagesProto.ClientGroupMemberResponseOrBuilder> groupMemberResponseBuilder_;
+      /**
+       * <code>optional .proto.ClientGroupMemberResponse groupMemberResponse = 5;</code>
+       */
+      public boolean hasGroupMemberResponse() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .proto.ClientGroupMemberResponse groupMemberResponse = 5;</code>
+       */
+      public proto.CalenderMessagesProto.ClientGroupMemberResponse getGroupMemberResponse() {
+        if (groupMemberResponseBuilder_ == null) {
+          return groupMemberResponse_ == null ? proto.CalenderMessagesProto.ClientGroupMemberResponse.getDefaultInstance() : groupMemberResponse_;
+        } else {
+          return groupMemberResponseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .proto.ClientGroupMemberResponse groupMemberResponse = 5;</code>
+       */
+      public Builder setGroupMemberResponse(proto.CalenderMessagesProto.ClientGroupMemberResponse value) {
+        if (groupMemberResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          groupMemberResponse_ = value;
+          onChanged();
+        } else {
+          groupMemberResponseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .proto.ClientGroupMemberResponse groupMemberResponse = 5;</code>
+       */
+      public Builder setGroupMemberResponse(
+          proto.CalenderMessagesProto.ClientGroupMemberResponse.Builder builderForValue) {
+        if (groupMemberResponseBuilder_ == null) {
+          groupMemberResponse_ = builderForValue.build();
+          onChanged();
+        } else {
+          groupMemberResponseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .proto.ClientGroupMemberResponse groupMemberResponse = 5;</code>
+       */
+      public Builder mergeGroupMemberResponse(proto.CalenderMessagesProto.ClientGroupMemberResponse value) {
+        if (groupMemberResponseBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              groupMemberResponse_ != null &&
+              groupMemberResponse_ != proto.CalenderMessagesProto.ClientGroupMemberResponse.getDefaultInstance()) {
+            groupMemberResponse_ =
+              proto.CalenderMessagesProto.ClientGroupMemberResponse.newBuilder(groupMemberResponse_).mergeFrom(value).buildPartial();
+          } else {
+            groupMemberResponse_ = value;
+          }
+          onChanged();
+        } else {
+          groupMemberResponseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .proto.ClientGroupMemberResponse groupMemberResponse = 5;</code>
+       */
+      public Builder clearGroupMemberResponse() {
+        if (groupMemberResponseBuilder_ == null) {
+          groupMemberResponse_ = null;
+          onChanged();
+        } else {
+          groupMemberResponseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .proto.ClientGroupMemberResponse groupMemberResponse = 5;</code>
+       */
+      public proto.CalenderMessagesProto.ClientGroupMemberResponse.Builder getGroupMemberResponseBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getGroupMemberResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .proto.ClientGroupMemberResponse groupMemberResponse = 5;</code>
+       */
+      public proto.CalenderMessagesProto.ClientGroupMemberResponseOrBuilder getGroupMemberResponseOrBuilder() {
+        if (groupMemberResponseBuilder_ != null) {
+          return groupMemberResponseBuilder_.getMessageOrBuilder();
+        } else {
+          return groupMemberResponse_ == null ?
+              proto.CalenderMessagesProto.ClientGroupMemberResponse.getDefaultInstance() : groupMemberResponse_;
+        }
+      }
+      /**
+       * <code>optional .proto.ClientGroupMemberResponse groupMemberResponse = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.CalenderMessagesProto.ClientGroupMemberResponse, proto.CalenderMessagesProto.ClientGroupMemberResponse.Builder, proto.CalenderMessagesProto.ClientGroupMemberResponseOrBuilder> 
+          getGroupMemberResponseFieldBuilder() {
+        if (groupMemberResponseBuilder_ == null) {
+          groupMemberResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              proto.CalenderMessagesProto.ClientGroupMemberResponse, proto.CalenderMessagesProto.ClientGroupMemberResponse.Builder, proto.CalenderMessagesProto.ClientGroupMemberResponseOrBuilder>(
+                  getGroupMemberResponse(),
+                  getParentForChildren(),
+                  isClean());
+          groupMemberResponse_ = null;
+        }
+        return groupMemberResponseBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:proto.ClientBasic)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.ClientBasic)
+    private static final proto.CalenderMessagesProto.ClientBasic DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.CalenderMessagesProto.ClientBasic();
+    }
+
+    public static proto.CalenderMessagesProto.ClientBasic getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ClientBasic>
+        PARSER = new com.google.protobuf.AbstractParser<ClientBasic>() {
+      @java.lang.Override
+      public ClientBasic parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ClientBasic(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClientBasic> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClientBasic> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.CalenderMessagesProto.ClientBasic getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClientGroupResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.ClientGroupResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+  }
+  /**
+   * Protobuf type {@code proto.ClientGroupResponse}
+   */
+  public  static final class ClientGroupResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:proto.ClientGroupResponse)
+      ClientGroupResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClientGroupResponse.newBuilder() to construct.
+    private ClientGroupResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClientGroupResponse() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ClientGroupResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              id_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.CalenderMessagesProto.internal_static_proto_ClientGroupResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.CalenderMessagesProto.internal_static_proto_ClientGroupResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.CalenderMessagesProto.ClientGroupResponse.class, proto.CalenderMessagesProto.ClientGroupResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.CalenderMessagesProto.ClientGroupResponse)) {
+        return super.equals(obj);
+      }
+      proto.CalenderMessagesProto.ClientGroupResponse other = (proto.CalenderMessagesProto.ClientGroupResponse) obj;
+
+      boolean result = true;
+      result = result && (hasId() == other.hasId());
+      if (hasId()) {
+        result = result && getId()
+            .equals(other.getId());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.CalenderMessagesProto.ClientGroupResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.CalenderMessagesProto.ClientGroupResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code proto.ClientGroupResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.ClientGroupResponse)
+        proto.CalenderMessagesProto.ClientGroupResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.CalenderMessagesProto.internal_static_proto_ClientGroupResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.CalenderMessagesProto.internal_static_proto_ClientGroupResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.CalenderMessagesProto.ClientGroupResponse.class, proto.CalenderMessagesProto.ClientGroupResponse.Builder.class);
+      }
+
+      // Construct using proto.CalenderMessagesProto.ClientGroupResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.CalenderMessagesProto.internal_static_proto_ClientGroupResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.CalenderMessagesProto.ClientGroupResponse getDefaultInstanceForType() {
+        return proto.CalenderMessagesProto.ClientGroupResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.CalenderMessagesProto.ClientGroupResponse build() {
+        proto.CalenderMessagesProto.ClientGroupResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.CalenderMessagesProto.ClientGroupResponse buildPartial() {
+        proto.CalenderMessagesProto.ClientGroupResponse result = new proto.CalenderMessagesProto.ClientGroupResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.id_ = id_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.CalenderMessagesProto.ClientGroupResponse) {
+          return mergeFrom((proto.CalenderMessagesProto.ClientGroupResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.CalenderMessagesProto.ClientGroupResponse other) {
+        if (other == proto.CalenderMessagesProto.ClientGroupResponse.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          bitField0_ |= 0x00000001;
+          id_ = other.id_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.CalenderMessagesProto.ClientGroupResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.CalenderMessagesProto.ClientGroupResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:proto.ClientGroupResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.ClientGroupResponse)
+    private static final proto.CalenderMessagesProto.ClientGroupResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.CalenderMessagesProto.ClientGroupResponse();
+    }
+
+    public static proto.CalenderMessagesProto.ClientGroupResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ClientGroupResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ClientGroupResponse>() {
+      @java.lang.Override
+      public ClientGroupResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ClientGroupResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClientGroupResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClientGroupResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.CalenderMessagesProto.ClientGroupResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClientGroupMemberResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.ClientGroupMemberResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>repeated .proto.Person admins = 3;</code>
+     */
+    java.util.List<proto.CalenderMessagesProto.Person> 
+        getAdminsList();
+    /**
+     * <code>repeated .proto.Person admins = 3;</code>
+     */
+    proto.CalenderMessagesProto.Person getAdmins(int index);
+    /**
+     * <code>repeated .proto.Person admins = 3;</code>
+     */
+    int getAdminsCount();
+    /**
+     * <code>repeated .proto.Person admins = 3;</code>
+     */
+    java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
+        getAdminsOrBuilderList();
+    /**
+     * <code>repeated .proto.Person admins = 3;</code>
+     */
+    proto.CalenderMessagesProto.PersonOrBuilder getAdminsOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .proto.Person members = 4;</code>
+     */
+    java.util.List<proto.CalenderMessagesProto.Person> 
+        getMembersList();
+    /**
+     * <code>repeated .proto.Person members = 4;</code>
+     */
+    proto.CalenderMessagesProto.Person getMembers(int index);
+    /**
+     * <code>repeated .proto.Person members = 4;</code>
+     */
+    int getMembersCount();
+    /**
+     * <code>repeated .proto.Person members = 4;</code>
+     */
+    java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
+        getMembersOrBuilderList();
+    /**
+     * <code>repeated .proto.Person members = 4;</code>
+     */
+    proto.CalenderMessagesProto.PersonOrBuilder getMembersOrBuilder(
+        int index);
+
+    /**
+     * <code>optional string description = 5;</code>
+     */
+    boolean hasDescription();
+    /**
+     * <code>optional string description = 5;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>optional string description = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>optional bool admin = 6;</code>
+     */
+    boolean hasAdmin();
+    /**
+     * <code>optional bool admin = 6;</code>
+     */
+    boolean getAdmin();
+  }
+  /**
+   * Protobuf type {@code proto.ClientGroupMemberResponse}
+   */
+  public  static final class ClientGroupMemberResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:proto.ClientGroupMemberResponse)
+      ClientGroupMemberResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClientGroupMemberResponse.newBuilder() to construct.
+    private ClientGroupMemberResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClientGroupMemberResponse() {
+      id_ = "";
+      name_ = "";
+      admins_ = java.util.Collections.emptyList();
+      members_ = java.util.Collections.emptyList();
+      description_ = "";
+      admin_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ClientGroupMemberResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              id_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              name_ = bs;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                admins_ = new java.util.ArrayList<proto.CalenderMessagesProto.Person>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              admins_.add(
+                  input.readMessage(proto.CalenderMessagesProto.Person.PARSER, extensionRegistry));
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                members_ = new java.util.ArrayList<proto.CalenderMessagesProto.Person>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              members_.add(
+                  input.readMessage(proto.CalenderMessagesProto.Person.PARSER, extensionRegistry));
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              description_ = bs;
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000008;
+              admin_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          admins_ = java.util.Collections.unmodifiableList(admins_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          members_ = java.util.Collections.unmodifiableList(members_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.CalenderMessagesProto.internal_static_proto_ClientGroupMemberResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.CalenderMessagesProto.internal_static_proto_ClientGroupMemberResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.CalenderMessagesProto.ClientGroupMemberResponse.class, proto.CalenderMessagesProto.ClientGroupMemberResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          id_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADMINS_FIELD_NUMBER = 3;
+    private java.util.List<proto.CalenderMessagesProto.Person> admins_;
+    /**
+     * <code>repeated .proto.Person admins = 3;</code>
+     */
+    public java.util.List<proto.CalenderMessagesProto.Person> getAdminsList() {
+      return admins_;
+    }
+    /**
+     * <code>repeated .proto.Person admins = 3;</code>
+     */
+    public java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
+        getAdminsOrBuilderList() {
+      return admins_;
+    }
+    /**
+     * <code>repeated .proto.Person admins = 3;</code>
+     */
+    public int getAdminsCount() {
+      return admins_.size();
+    }
+    /**
+     * <code>repeated .proto.Person admins = 3;</code>
+     */
+    public proto.CalenderMessagesProto.Person getAdmins(int index) {
+      return admins_.get(index);
+    }
+    /**
+     * <code>repeated .proto.Person admins = 3;</code>
+     */
+    public proto.CalenderMessagesProto.PersonOrBuilder getAdminsOrBuilder(
+        int index) {
+      return admins_.get(index);
+    }
+
+    public static final int MEMBERS_FIELD_NUMBER = 4;
+    private java.util.List<proto.CalenderMessagesProto.Person> members_;
+    /**
+     * <code>repeated .proto.Person members = 4;</code>
+     */
+    public java.util.List<proto.CalenderMessagesProto.Person> getMembersList() {
+      return members_;
+    }
+    /**
+     * <code>repeated .proto.Person members = 4;</code>
+     */
+    public java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
+        getMembersOrBuilderList() {
+      return members_;
+    }
+    /**
+     * <code>repeated .proto.Person members = 4;</code>
+     */
+    public int getMembersCount() {
+      return members_.size();
+    }
+    /**
+     * <code>repeated .proto.Person members = 4;</code>
+     */
+    public proto.CalenderMessagesProto.Person getMembers(int index) {
+      return members_.get(index);
+    }
+    /**
+     * <code>repeated .proto.Person members = 4;</code>
+     */
+    public proto.CalenderMessagesProto.PersonOrBuilder getMembersOrBuilder(
+        int index) {
+      return members_.get(index);
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 5;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>optional string description = 5;</code>
+     */
+    public boolean hasDescription() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string description = 5;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          description_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string description = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADMIN_FIELD_NUMBER = 6;
+    private boolean admin_;
+    /**
+     * <code>optional bool admin = 6;</code>
+     */
+    public boolean hasAdmin() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional bool admin = 6;</code>
+     */
+    public boolean getAdmin() {
+      return admin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      for (int i = 0; i < getAdminsCount(); i++) {
+        if (!getAdmins(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      for (int i = 0; i < getMembersCount(); i++) {
+        if (!getMembers(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      for (int i = 0; i < admins_.size(); i++) {
+        output.writeMessage(3, admins_.get(i));
+      }
+      for (int i = 0; i < members_.size(); i++) {
+        output.writeMessage(4, members_.get(i));
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBool(6, admin_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      for (int i = 0; i < admins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, admins_.get(i));
+      }
+      for (int i = 0; i < members_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, members_.get(i));
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, admin_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.CalenderMessagesProto.ClientGroupMemberResponse)) {
+        return super.equals(obj);
+      }
+      proto.CalenderMessagesProto.ClientGroupMemberResponse other = (proto.CalenderMessagesProto.ClientGroupMemberResponse) obj;
+
+      boolean result = true;
+      result = result && (hasId() == other.hasId());
+      if (hasId()) {
+        result = result && getId()
+            .equals(other.getId());
+      }
+      result = result && (hasName() == other.hasName());
+      if (hasName()) {
+        result = result && getName()
+            .equals(other.getName());
+      }
+      result = result && getAdminsList()
+          .equals(other.getAdminsList());
+      result = result && getMembersList()
+          .equals(other.getMembersList());
+      result = result && (hasDescription() == other.hasDescription());
+      if (hasDescription()) {
+        result = result && getDescription()
+            .equals(other.getDescription());
+      }
+      result = result && (hasAdmin() == other.hasAdmin());
+      if (hasAdmin()) {
+        result = result && (getAdmin()
+            == other.getAdmin());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (getAdminsCount() > 0) {
+        hash = (37 * hash) + ADMINS_FIELD_NUMBER;
+        hash = (53 * hash) + getAdminsList().hashCode();
+      }
+      if (getMembersCount() > 0) {
+        hash = (37 * hash) + MEMBERS_FIELD_NUMBER;
+        hash = (53 * hash) + getMembersList().hashCode();
+      }
+      if (hasDescription()) {
+        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDescription().hashCode();
+      }
+      if (hasAdmin()) {
+        hash = (37 * hash) + ADMIN_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getAdmin());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.CalenderMessagesProto.ClientGroupMemberResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupMemberResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupMemberResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupMemberResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupMemberResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupMemberResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupMemberResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupMemberResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupMemberResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupMemberResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupMemberResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.CalenderMessagesProto.ClientGroupMemberResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.CalenderMessagesProto.ClientGroupMemberResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code proto.ClientGroupMemberResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.ClientGroupMemberResponse)
+        proto.CalenderMessagesProto.ClientGroupMemberResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.CalenderMessagesProto.internal_static_proto_ClientGroupMemberResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.CalenderMessagesProto.internal_static_proto_ClientGroupMemberResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.CalenderMessagesProto.ClientGroupMemberResponse.class, proto.CalenderMessagesProto.ClientGroupMemberResponse.Builder.class);
+      }
+
+      // Construct using proto.CalenderMessagesProto.ClientGroupMemberResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAdminsFieldBuilder();
+          getMembersFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (adminsBuilder_ == null) {
+          admins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          adminsBuilder_.clear();
+        }
+        if (membersBuilder_ == null) {
+          members_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          membersBuilder_.clear();
+        }
+        description_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        admin_ = false;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.CalenderMessagesProto.internal_static_proto_ClientGroupMemberResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.CalenderMessagesProto.ClientGroupMemberResponse getDefaultInstanceForType() {
+        return proto.CalenderMessagesProto.ClientGroupMemberResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.CalenderMessagesProto.ClientGroupMemberResponse build() {
+        proto.CalenderMessagesProto.ClientGroupMemberResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.CalenderMessagesProto.ClientGroupMemberResponse buildPartial() {
+        proto.CalenderMessagesProto.ClientGroupMemberResponse result = new proto.CalenderMessagesProto.ClientGroupMemberResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.name_ = name_;
+        if (adminsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            admins_ = java.util.Collections.unmodifiableList(admins_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.admins_ = admins_;
+        } else {
+          result.admins_ = adminsBuilder_.build();
+        }
+        if (membersBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            members_ = java.util.Collections.unmodifiableList(members_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.members_ = members_;
+        } else {
+          result.members_ = membersBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.description_ = description_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.admin_ = admin_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.CalenderMessagesProto.ClientGroupMemberResponse) {
+          return mergeFrom((proto.CalenderMessagesProto.ClientGroupMemberResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.CalenderMessagesProto.ClientGroupMemberResponse other) {
+        if (other == proto.CalenderMessagesProto.ClientGroupMemberResponse.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          bitField0_ |= 0x00000001;
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.hasName()) {
+          bitField0_ |= 0x00000002;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (adminsBuilder_ == null) {
+          if (!other.admins_.isEmpty()) {
+            if (admins_.isEmpty()) {
+              admins_ = other.admins_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureAdminsIsMutable();
+              admins_.addAll(other.admins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.admins_.isEmpty()) {
+            if (adminsBuilder_.isEmpty()) {
+              adminsBuilder_.dispose();
+              adminsBuilder_ = null;
+              admins_ = other.admins_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              adminsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAdminsFieldBuilder() : null;
+            } else {
+              adminsBuilder_.addAllMessages(other.admins_);
+            }
+          }
+        }
+        if (membersBuilder_ == null) {
+          if (!other.members_.isEmpty()) {
+            if (members_.isEmpty()) {
+              members_ = other.members_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureMembersIsMutable();
+              members_.addAll(other.members_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.members_.isEmpty()) {
+            if (membersBuilder_.isEmpty()) {
+              membersBuilder_.dispose();
+              membersBuilder_ = null;
+              members_ = other.members_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              membersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMembersFieldBuilder() : null;
+            } else {
+              membersBuilder_.addAllMessages(other.members_);
+            }
+          }
+        }
+        if (other.hasDescription()) {
+          bitField0_ |= 0x00000010;
+          description_ = other.description_;
+          onChanged();
+        }
+        if (other.hasAdmin()) {
+          setAdmin(other.getAdmin());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        for (int i = 0; i < getAdminsCount(); i++) {
+          if (!getAdmins(i).isInitialized()) {
+            return false;
+          }
+        }
+        for (int i = 0; i < getMembersCount(); i++) {
+          if (!getMembers(i).isInitialized()) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.CalenderMessagesProto.ClientGroupMemberResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.CalenderMessagesProto.ClientGroupMemberResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            id_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string id = 1;</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<proto.CalenderMessagesProto.Person> admins_ =
+        java.util.Collections.emptyList();
+      private void ensureAdminsIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          admins_ = new java.util.ArrayList<proto.CalenderMessagesProto.Person>(admins_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder> adminsBuilder_;
+
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public java.util.List<proto.CalenderMessagesProto.Person> getAdminsList() {
+        if (adminsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(admins_);
+        } else {
+          return adminsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public int getAdminsCount() {
+        if (adminsBuilder_ == null) {
+          return admins_.size();
+        } else {
+          return adminsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public proto.CalenderMessagesProto.Person getAdmins(int index) {
+        if (adminsBuilder_ == null) {
+          return admins_.get(index);
+        } else {
+          return adminsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public Builder setAdmins(
+          int index, proto.CalenderMessagesProto.Person value) {
+        if (adminsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAdminsIsMutable();
+          admins_.set(index, value);
+          onChanged();
+        } else {
+          adminsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public Builder setAdmins(
+          int index, proto.CalenderMessagesProto.Person.Builder builderForValue) {
+        if (adminsBuilder_ == null) {
+          ensureAdminsIsMutable();
+          admins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          adminsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public Builder addAdmins(proto.CalenderMessagesProto.Person value) {
+        if (adminsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAdminsIsMutable();
+          admins_.add(value);
+          onChanged();
+        } else {
+          adminsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public Builder addAdmins(
+          int index, proto.CalenderMessagesProto.Person value) {
+        if (adminsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAdminsIsMutable();
+          admins_.add(index, value);
+          onChanged();
+        } else {
+          adminsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public Builder addAdmins(
+          proto.CalenderMessagesProto.Person.Builder builderForValue) {
+        if (adminsBuilder_ == null) {
+          ensureAdminsIsMutable();
+          admins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          adminsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public Builder addAdmins(
+          int index, proto.CalenderMessagesProto.Person.Builder builderForValue) {
+        if (adminsBuilder_ == null) {
+          ensureAdminsIsMutable();
+          admins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          adminsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public Builder addAllAdmins(
+          java.lang.Iterable<? extends proto.CalenderMessagesProto.Person> values) {
+        if (adminsBuilder_ == null) {
+          ensureAdminsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, admins_);
+          onChanged();
+        } else {
+          adminsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public Builder clearAdmins() {
+        if (adminsBuilder_ == null) {
+          admins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          adminsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public Builder removeAdmins(int index) {
+        if (adminsBuilder_ == null) {
+          ensureAdminsIsMutable();
+          admins_.remove(index);
+          onChanged();
+        } else {
+          adminsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public proto.CalenderMessagesProto.Person.Builder getAdminsBuilder(
+          int index) {
+        return getAdminsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public proto.CalenderMessagesProto.PersonOrBuilder getAdminsOrBuilder(
+          int index) {
+        if (adminsBuilder_ == null) {
+          return admins_.get(index);  } else {
+          return adminsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
+           getAdminsOrBuilderList() {
+        if (adminsBuilder_ != null) {
+          return adminsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(admins_);
+        }
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public proto.CalenderMessagesProto.Person.Builder addAdminsBuilder() {
+        return getAdminsFieldBuilder().addBuilder(
+            proto.CalenderMessagesProto.Person.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public proto.CalenderMessagesProto.Person.Builder addAdminsBuilder(
+          int index) {
+        return getAdminsFieldBuilder().addBuilder(
+            index, proto.CalenderMessagesProto.Person.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .proto.Person admins = 3;</code>
+       */
+      public java.util.List<proto.CalenderMessagesProto.Person.Builder> 
+           getAdminsBuilderList() {
+        return getAdminsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder> 
+          getAdminsFieldBuilder() {
+        if (adminsBuilder_ == null) {
+          adminsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder>(
+                  admins_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          admins_ = null;
+        }
+        return adminsBuilder_;
+      }
+
+      private java.util.List<proto.CalenderMessagesProto.Person> members_ =
+        java.util.Collections.emptyList();
+      private void ensureMembersIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          members_ = new java.util.ArrayList<proto.CalenderMessagesProto.Person>(members_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder> membersBuilder_;
+
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public java.util.List<proto.CalenderMessagesProto.Person> getMembersList() {
+        if (membersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(members_);
+        } else {
+          return membersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public int getMembersCount() {
+        if (membersBuilder_ == null) {
+          return members_.size();
+        } else {
+          return membersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public proto.CalenderMessagesProto.Person getMembers(int index) {
+        if (membersBuilder_ == null) {
+          return members_.get(index);
+        } else {
+          return membersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public Builder setMembers(
+          int index, proto.CalenderMessagesProto.Person value) {
+        if (membersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMembersIsMutable();
+          members_.set(index, value);
+          onChanged();
+        } else {
+          membersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public Builder setMembers(
+          int index, proto.CalenderMessagesProto.Person.Builder builderForValue) {
+        if (membersBuilder_ == null) {
+          ensureMembersIsMutable();
+          members_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          membersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public Builder addMembers(proto.CalenderMessagesProto.Person value) {
+        if (membersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMembersIsMutable();
+          members_.add(value);
+          onChanged();
+        } else {
+          membersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public Builder addMembers(
+          int index, proto.CalenderMessagesProto.Person value) {
+        if (membersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMembersIsMutable();
+          members_.add(index, value);
+          onChanged();
+        } else {
+          membersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public Builder addMembers(
+          proto.CalenderMessagesProto.Person.Builder builderForValue) {
+        if (membersBuilder_ == null) {
+          ensureMembersIsMutable();
+          members_.add(builderForValue.build());
+          onChanged();
+        } else {
+          membersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public Builder addMembers(
+          int index, proto.CalenderMessagesProto.Person.Builder builderForValue) {
+        if (membersBuilder_ == null) {
+          ensureMembersIsMutable();
+          members_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          membersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public Builder addAllMembers(
+          java.lang.Iterable<? extends proto.CalenderMessagesProto.Person> values) {
+        if (membersBuilder_ == null) {
+          ensureMembersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, members_);
+          onChanged();
+        } else {
+          membersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public Builder clearMembers() {
+        if (membersBuilder_ == null) {
+          members_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          membersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public Builder removeMembers(int index) {
+        if (membersBuilder_ == null) {
+          ensureMembersIsMutable();
+          members_.remove(index);
+          onChanged();
+        } else {
+          membersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public proto.CalenderMessagesProto.Person.Builder getMembersBuilder(
+          int index) {
+        return getMembersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public proto.CalenderMessagesProto.PersonOrBuilder getMembersOrBuilder(
+          int index) {
+        if (membersBuilder_ == null) {
+          return members_.get(index);  } else {
+          return membersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public java.util.List<? extends proto.CalenderMessagesProto.PersonOrBuilder> 
+           getMembersOrBuilderList() {
+        if (membersBuilder_ != null) {
+          return membersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(members_);
+        }
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public proto.CalenderMessagesProto.Person.Builder addMembersBuilder() {
+        return getMembersFieldBuilder().addBuilder(
+            proto.CalenderMessagesProto.Person.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public proto.CalenderMessagesProto.Person.Builder addMembersBuilder(
+          int index) {
+        return getMembersFieldBuilder().addBuilder(
+            index, proto.CalenderMessagesProto.Person.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .proto.Person members = 4;</code>
+       */
+      public java.util.List<proto.CalenderMessagesProto.Person.Builder> 
+           getMembersBuilderList() {
+        return getMembersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder> 
+          getMembersFieldBuilder() {
+        if (membersBuilder_ == null) {
+          membersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              proto.CalenderMessagesProto.Person, proto.CalenderMessagesProto.Person.Builder, proto.CalenderMessagesProto.PersonOrBuilder>(
+                  members_,
+                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  getParentForChildren(),
+                  isClean());
+          members_ = null;
+        }
+        return membersBuilder_;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>optional string description = 5;</code>
+       */
+      public boolean hasDescription() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional string description = 5;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            description_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string description = 5;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 5;</code>
+       */
+      public Builder clearDescription() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string description = 5;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean admin_ ;
+      /**
+       * <code>optional bool admin = 6;</code>
+       */
+      public boolean hasAdmin() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional bool admin = 6;</code>
+       */
+      public boolean getAdmin() {
+        return admin_;
+      }
+      /**
+       * <code>optional bool admin = 6;</code>
+       */
+      public Builder setAdmin(boolean value) {
+        bitField0_ |= 0x00000020;
+        admin_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool admin = 6;</code>
+       */
+      public Builder clearAdmin() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        admin_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:proto.ClientGroupMemberResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.ClientGroupMemberResponse)
+    private static final proto.CalenderMessagesProto.ClientGroupMemberResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.CalenderMessagesProto.ClientGroupMemberResponse();
+    }
+
+    public static proto.CalenderMessagesProto.ClientGroupMemberResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ClientGroupMemberResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ClientGroupMemberResponse>() {
+      @java.lang.Override
+      public ClientGroupMemberResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ClientGroupMemberResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClientGroupMemberResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClientGroupMemberResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.CalenderMessagesProto.ClientGroupMemberResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PersonOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.Person)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * not sure whether it's smart to send other stuff to
+     * </pre>
+     *
+     * <code>required string email = 1;</code>
+     */
+    boolean hasEmail();
+    /**
+     * <pre>
+     * not sure whether it's smart to send other stuff to
+     * </pre>
+     *
+     * <code>required string email = 1;</code>
+     */
+    java.lang.String getEmail();
+    /**
+     * <pre>
+     * not sure whether it's smart to send other stuff to
+     * </pre>
+     *
+     * <code>required string email = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
+  }
+  /**
+   * Protobuf type {@code proto.Person}
+   */
+  public  static final class Person extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:proto.Person)
+      PersonOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Person.newBuilder() to construct.
+    private Person(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Person() {
+      email_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Person(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              email_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.CalenderMessagesProto.internal_static_proto_Person_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.CalenderMessagesProto.internal_static_proto_Person_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.CalenderMessagesProto.Person.class, proto.CalenderMessagesProto.Person.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int EMAIL_FIELD_NUMBER = 1;
+    private volatile java.lang.Object email_;
+    /**
+     * <pre>
+     * not sure whether it's smart to send other stuff to
+     * </pre>
+     *
+     * <code>required string email = 1;</code>
+     */
+    public boolean hasEmail() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <pre>
+     * not sure whether it's smart to send other stuff to
+     * </pre>
+     *
+     * <code>required string email = 1;</code>
+     */
+    public java.lang.String getEmail() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          email_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * not sure whether it's smart to send other stuff to
+     * </pre>
+     *
+     * <code>required string email = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasEmail()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, email_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, email_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.CalenderMessagesProto.Person)) {
+        return super.equals(obj);
+      }
+      proto.CalenderMessagesProto.Person other = (proto.CalenderMessagesProto.Person) obj;
+
+      boolean result = true;
+      result = result && (hasEmail() == other.hasEmail());
+      if (hasEmail()) {
+        result = result && getEmail()
+            .equals(other.getEmail());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEmail()) {
+        hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getEmail().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.CalenderMessagesProto.Person parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.CalenderMessagesProto.Person parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.Person parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.CalenderMessagesProto.Person parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.Person parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.CalenderMessagesProto.Person parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.Person parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.CalenderMessagesProto.Person parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.Person parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.CalenderMessagesProto.Person parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.CalenderMessagesProto.Person parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.CalenderMessagesProto.Person parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.CalenderMessagesProto.Person prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code proto.Person}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:proto.Person)
+        proto.CalenderMessagesProto.PersonOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.CalenderMessagesProto.internal_static_proto_Person_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.CalenderMessagesProto.internal_static_proto_Person_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.CalenderMessagesProto.Person.class, proto.CalenderMessagesProto.Person.Builder.class);
+      }
+
+      // Construct using proto.CalenderMessagesProto.Person.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        email_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.CalenderMessagesProto.internal_static_proto_Person_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.CalenderMessagesProto.Person getDefaultInstanceForType() {
+        return proto.CalenderMessagesProto.Person.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.CalenderMessagesProto.Person build() {
+        proto.CalenderMessagesProto.Person result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.CalenderMessagesProto.Person buildPartial() {
+        proto.CalenderMessagesProto.Person result = new proto.CalenderMessagesProto.Person(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.email_ = email_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.CalenderMessagesProto.Person) {
+          return mergeFrom((proto.CalenderMessagesProto.Person)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.CalenderMessagesProto.Person other) {
+        if (other == proto.CalenderMessagesProto.Person.getDefaultInstance()) return this;
+        if (other.hasEmail()) {
+          bitField0_ |= 0x00000001;
+          email_ = other.email_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasEmail()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.CalenderMessagesProto.Person parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.CalenderMessagesProto.Person) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object email_ = "";
+      /**
+       * <pre>
+       * not sure whether it's smart to send other stuff to
+       * </pre>
+       *
+       * <code>required string email = 1;</code>
+       */
+      public boolean hasEmail() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <pre>
+       * not sure whether it's smart to send other stuff to
+       * </pre>
+       *
+       * <code>required string email = 1;</code>
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            email_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * not sure whether it's smart to send other stuff to
+       * </pre>
+       *
+       * <code>required string email = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          email_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * not sure whether it's smart to send other stuff to
+       * </pre>
+       *
+       * <code>required string email = 1;</code>
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * not sure whether it's smart to send other stuff to
+       * </pre>
+       *
+       * <code>required string email = 1;</code>
+       */
+      public Builder clearEmail() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        email_ = getDefaultInstance().getEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * not sure whether it's smart to send other stuff to
+       * </pre>
+       *
+       * <code>required string email = 1;</code>
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:proto.Person)
+    }
+
+    // @@protoc_insertion_point(class_scope:proto.Person)
+    private static final proto.CalenderMessagesProto.Person DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.CalenderMessagesProto.Person();
+    }
+
+    public static proto.CalenderMessagesProto.Person getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Person>
+        PARSER = new com.google.protobuf.AbstractParser<Person>() {
+      @java.lang.Override
+      public Person parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Person(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Person> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Person> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.CalenderMessagesProto.Person getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PersonExtendedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:proto.PersonExtended)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -14178,18 +19914,18 @@ public final class CalenderMessagesProto {
     proto.CalenderMessagesProto.AppointmentsOrBuilder getAppointmentsOrBuilder();
   }
   /**
-   * Protobuf type {@code proto.Person}
+   * Protobuf type {@code proto.PersonExtended}
    */
-  public  static final class Person extends
+  public  static final class PersonExtended extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:proto.Person)
-      PersonOrBuilder {
+      // @@protoc_insertion_point(message_implements:proto.PersonExtended)
+      PersonExtendedOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Person.newBuilder() to construct.
-    private Person(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use PersonExtended.newBuilder() to construct.
+    private PersonExtended(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Person() {
+    private PersonExtended() {
       email_ = "";
     }
 
@@ -14198,7 +19934,7 @@ public final class CalenderMessagesProto {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Person(
+    private PersonExtended(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -14309,15 +20045,15 @@ public final class CalenderMessagesProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return proto.CalenderMessagesProto.internal_static_proto_Person_descriptor;
+      return proto.CalenderMessagesProto.internal_static_proto_PersonExtended_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return proto.CalenderMessagesProto.internal_static_proto_Person_fieldAccessorTable
+      return proto.CalenderMessagesProto.internal_static_proto_PersonExtended_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              proto.CalenderMessagesProto.Person.class, proto.CalenderMessagesProto.Person.Builder.class);
+              proto.CalenderMessagesProto.PersonExtended.class, proto.CalenderMessagesProto.PersonExtended.Builder.class);
     }
 
     private int bitField0_;
@@ -14576,10 +20312,10 @@ public final class CalenderMessagesProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof proto.CalenderMessagesProto.Person)) {
+      if (!(obj instanceof proto.CalenderMessagesProto.PersonExtended)) {
         return super.equals(obj);
       }
-      proto.CalenderMessagesProto.Person other = (proto.CalenderMessagesProto.Person) obj;
+      proto.CalenderMessagesProto.PersonExtended other = (proto.CalenderMessagesProto.PersonExtended) obj;
 
       boolean result = true;
       result = result && (hasEmail() == other.hasEmail());
@@ -14652,69 +20388,69 @@ public final class CalenderMessagesProto {
       return hash;
     }
 
-    public static proto.CalenderMessagesProto.Person parseFrom(
+    public static proto.CalenderMessagesProto.PersonExtended parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.CalenderMessagesProto.Person parseFrom(
+    public static proto.CalenderMessagesProto.PersonExtended parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.CalenderMessagesProto.Person parseFrom(
+    public static proto.CalenderMessagesProto.PersonExtended parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.CalenderMessagesProto.Person parseFrom(
+    public static proto.CalenderMessagesProto.PersonExtended parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.CalenderMessagesProto.Person parseFrom(byte[] data)
+    public static proto.CalenderMessagesProto.PersonExtended parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.CalenderMessagesProto.Person parseFrom(
+    public static proto.CalenderMessagesProto.PersonExtended parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.CalenderMessagesProto.Person parseFrom(java.io.InputStream input)
+    public static proto.CalenderMessagesProto.PersonExtended parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.CalenderMessagesProto.Person parseFrom(
+    public static proto.CalenderMessagesProto.PersonExtended parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.CalenderMessagesProto.Person parseDelimitedFrom(java.io.InputStream input)
+    public static proto.CalenderMessagesProto.PersonExtended parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static proto.CalenderMessagesProto.Person parseDelimitedFrom(
+    public static proto.CalenderMessagesProto.PersonExtended parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.CalenderMessagesProto.Person parseFrom(
+    public static proto.CalenderMessagesProto.PersonExtended parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.CalenderMessagesProto.Person parseFrom(
+    public static proto.CalenderMessagesProto.PersonExtended parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -14727,7 +20463,7 @@ public final class CalenderMessagesProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(proto.CalenderMessagesProto.Person prototype) {
+    public static Builder newBuilder(proto.CalenderMessagesProto.PersonExtended prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -14743,26 +20479,26 @@ public final class CalenderMessagesProto {
       return builder;
     }
     /**
-     * Protobuf type {@code proto.Person}
+     * Protobuf type {@code proto.PersonExtended}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:proto.Person)
-        proto.CalenderMessagesProto.PersonOrBuilder {
+        // @@protoc_insertion_point(builder_implements:proto.PersonExtended)
+        proto.CalenderMessagesProto.PersonExtendedOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return proto.CalenderMessagesProto.internal_static_proto_Person_descriptor;
+        return proto.CalenderMessagesProto.internal_static_proto_PersonExtended_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return proto.CalenderMessagesProto.internal_static_proto_Person_fieldAccessorTable
+        return proto.CalenderMessagesProto.internal_static_proto_PersonExtended_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                proto.CalenderMessagesProto.Person.class, proto.CalenderMessagesProto.Person.Builder.class);
+                proto.CalenderMessagesProto.PersonExtended.class, proto.CalenderMessagesProto.PersonExtended.Builder.class);
       }
 
-      // Construct using proto.CalenderMessagesProto.Person.newBuilder()
+      // Construct using proto.CalenderMessagesProto.PersonExtended.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -14823,17 +20559,17 @@ public final class CalenderMessagesProto {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return proto.CalenderMessagesProto.internal_static_proto_Person_descriptor;
+        return proto.CalenderMessagesProto.internal_static_proto_PersonExtended_descriptor;
       }
 
       @java.lang.Override
-      public proto.CalenderMessagesProto.Person getDefaultInstanceForType() {
-        return proto.CalenderMessagesProto.Person.getDefaultInstance();
+      public proto.CalenderMessagesProto.PersonExtended getDefaultInstanceForType() {
+        return proto.CalenderMessagesProto.PersonExtended.getDefaultInstance();
       }
 
       @java.lang.Override
-      public proto.CalenderMessagesProto.Person build() {
-        proto.CalenderMessagesProto.Person result = buildPartial();
+      public proto.CalenderMessagesProto.PersonExtended build() {
+        proto.CalenderMessagesProto.PersonExtended result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -14841,8 +20577,8 @@ public final class CalenderMessagesProto {
       }
 
       @java.lang.Override
-      public proto.CalenderMessagesProto.Person buildPartial() {
-        proto.CalenderMessagesProto.Person result = new proto.CalenderMessagesProto.Person(this);
+      public proto.CalenderMessagesProto.PersonExtended buildPartial() {
+        proto.CalenderMessagesProto.PersonExtended result = new proto.CalenderMessagesProto.PersonExtended(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -14928,16 +20664,16 @@ public final class CalenderMessagesProto {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.CalenderMessagesProto.Person) {
-          return mergeFrom((proto.CalenderMessagesProto.Person)other);
+        if (other instanceof proto.CalenderMessagesProto.PersonExtended) {
+          return mergeFrom((proto.CalenderMessagesProto.PersonExtended)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(proto.CalenderMessagesProto.Person other) {
-        if (other == proto.CalenderMessagesProto.Person.getDefaultInstance()) return this;
+      public Builder mergeFrom(proto.CalenderMessagesProto.PersonExtended other) {
+        if (other == proto.CalenderMessagesProto.PersonExtended.getDefaultInstance()) return this;
         if (other.hasEmail()) {
           bitField0_ |= 0x00000001;
           email_ = other.email_;
@@ -15001,11 +20737,11 @@ public final class CalenderMessagesProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.CalenderMessagesProto.Person parsedMessage = null;
+        proto.CalenderMessagesProto.PersonExtended parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.CalenderMessagesProto.Person) e.getUnfinishedMessage();
+          parsedMessage = (proto.CalenderMessagesProto.PersonExtended) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -15694,41 +21430,41 @@ public final class CalenderMessagesProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:proto.Person)
+      // @@protoc_insertion_point(builder_scope:proto.PersonExtended)
     }
 
-    // @@protoc_insertion_point(class_scope:proto.Person)
-    private static final proto.CalenderMessagesProto.Person DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:proto.PersonExtended)
+    private static final proto.CalenderMessagesProto.PersonExtended DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.CalenderMessagesProto.Person();
+      DEFAULT_INSTANCE = new proto.CalenderMessagesProto.PersonExtended();
     }
 
-    public static proto.CalenderMessagesProto.Person getDefaultInstance() {
+    public static proto.CalenderMessagesProto.PersonExtended getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<Person>
-        PARSER = new com.google.protobuf.AbstractParser<Person>() {
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<PersonExtended>
+        PARSER = new com.google.protobuf.AbstractParser<PersonExtended>() {
       @java.lang.Override
-      public Person parsePartialFrom(
+      public PersonExtended parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Person(input, extensionRegistry);
+        return new PersonExtended(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Person> parser() {
+    public static com.google.protobuf.Parser<PersonExtended> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Person> getParserForType() {
+    public com.google.protobuf.Parser<PersonExtended> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public proto.CalenderMessagesProto.Person getDefaultInstanceForType() {
+    public proto.CalenderMessagesProto.PersonExtended getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -20045,10 +25781,30 @@ public final class CalenderMessagesProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_proto_Success_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_ClientBasic_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_proto_ClientBasic_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_ClientGroupResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_proto_ClientGroupResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_ClientGroupMemberResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_proto_ClientGroupMemberResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_proto_Person_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_proto_Person_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_proto_PersonExtended_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_proto_PersonExtended_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_proto_Contacts_descriptor;
   private static final 
@@ -20110,44 +25866,61 @@ public final class CalenderMessagesProto {
       "\004 \001(\010\022\025\n\rchanged_field\030\005 \001(\t\022\026\n\016delete_a" +
       "ccount\030\006 \001(\010\"[\n\007Profile\022\r\n\005email\030\001 \002(\t\022\014" +
       "\n\004name\030\002 \001(\t\022\020\n\010location\030\003 \001(\t\022\013\n\003bio\030\004 " +
-      "\001(\t\022\024\n\014organisation\030\005 \001(\t\"i\n\005Group\022\014\n\004na" +
-      "me\030\001 \002(\t\022\035\n\006admins\030\002 \003(\0132\r.proto.Person\022" +
-      "\036\n\007members\030\003 \003(\0132\r.proto.Person\022\023\n\013descr" +
-      "iption\030\004 \001(\t\"\370\003\n\013Appointment\022\r\n\005email\030\001 " +
-      "\001(\t\022!\n\nattendants\030\002 \003(\0132\r.proto.Person\022\021" +
-      "\n\tunix_time\030\003 \001(\003\022\016\n\006length\030\004 \001(\005\022\025\n\rloc" +
-      "_longitude\030\005 \001(\002\022\024\n\014loc_latitude\030\006 \001(\002\022\022" +
-      "\n\ndescrition\030\007 \001(\t\022\032\n\022deadline_unix_time" +
-      "\030\010 \001(\003\022\020\n\010flexible\030\t \001(\010\022\026\n\016min_attendan" +
-      "ts\030\n \001(\005\022%\n\016key_attendants\030\013 \003(\0132\r.proto" +
-      ".Person\022+\n\025group_for_appointment\030\014 \001(\0132\014" +
-      ".proto.Group\022%\n\nconditions\030\r \001(\0132\021.proto" +
-      ".Conditions\022-\n\010category\030\016 \001(\0162\033.proto.Ap" +
-      "pointment.Category\"c\n\010Category\022\013\n\007UNKNOW" +
-      "N\020\000\022\014\n\010BUSINESS\020\001\022\n\n\006SOCIAL\020\002\022\t\n\005SPORT\020\003" +
-      "\022\013\n\007HOBBIES\020\004\022\013\n\007PRIVATE\020\005\022\013\n\007COMMUTE\020\006\"" +
-      ":\n\tTimeSlots\022\r\n\005email\030\001 \002(\t\022\036\n\005slots\030\002 \003" +
-      "(\0132\017.proto.TimeSlot\"&\n\007Request\022\033\n\005basic\030" +
-      "\001 \002(\0132\014.proto.Basic\"\036\n\005Error\022\025\n\rerror_me" +
-      "ssage\030\001 \001(\t\"\"\n\007Success\022\027\n\017success_messag" +
-      "e\030\001 \001(\t\"\313\001\n\006Person\022\r\n\005email\030\001 \002(\t\022\037\n\007pro" +
-      "file\030\002 \001(\0132\016.proto.Profile\022$\n\ntime_slots" +
-      "\030\003 \001(\0132\020.proto.TimeSlots\022!\n\010contacts\030\004 \001" +
-      "(\0132\017.proto.Contacts\022\035\n\006groups\030\005 \001(\0132\r.pr" +
-      "oto.Groups\022)\n\014appointments\030\006 \001(\0132\023.proto" +
-      ".Appointments\":\n\010Contacts\022\r\n\005email\030\001 \002(\t" +
-      "\022\037\n\010contacts\030\002 \003(\0132\r.proto.Person\"5\n\006Gro" +
-      "ups\022\r\n\005email\030\001 \002(\t\022\034\n\006groups\030\002 \003(\0132\014.pro" +
-      "to.Group\"\230\001\n\nConditions\022*\n\007weather\030\001 \001(\016" +
-      "2\031.proto.Conditions.Weather\"^\n\007Weather\022\013" +
-      "\n\007UNKNOWN\020\000\022\t\n\005SUNNY\020\001\022\010\n\004RAIN\020\002\022\007\n\003HOT\020" +
-      "\003\022\010\n\004COLD\020\004\022\010\n\004SNOW\020\005\022\010\n\004WIND\020\006\022\n\n\006CLOUD" +
-      "S\020\007\"G\n\014Appointments\022\r\n\005email\030\001 \002(\t\022(\n\014ap" +
-      "pointments\030\002 \003(\0132\022.proto.Appointment\"i\n\010" +
-      "TimeSlot\022\027\n\017start_unix_time\030\001 \001(\003\022\025\n\rend" +
-      "_unix_time\030\002 \001(\003\022-\n\010category\030\003 \001(\0162\033.pro" +
-      "to.Appointment.CategoryB\027B\025CalenderMessa" +
-      "gesProto"
+      "\001(\t\022\024\n\014organisation\030\005 \001(\t\"\370\001\n\005Group\022\r\n\005e" +
+      "mail\030\001 \002(\t\022\n\n\002id\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\035\n\006" +
+      "admins\030\004 \003(\0132\r.proto.Person\022\036\n\007members\030\005" +
+      " \003(\0132\r.proto.Person\022\023\n\013description\030\006 \001(\t" +
+      "\022\014\n\004quit\030\007 \001(\010\022%\n\016remove_members\030\010 \003(\0132\r" +
+      ".proto.Person\022(\n\021promote_to_admins\030\t \003(\013" +
+      "2\r.proto.Person\022\023\n\013change_info\030\n \001(\010\"\370\003\n" +
+      "\013Appointment\022\r\n\005email\030\001 \001(\t\022!\n\nattendant" +
+      "s\030\002 \003(\0132\r.proto.Person\022\021\n\tunix_time\030\003 \001(" +
+      "\003\022\016\n\006length\030\004 \001(\005\022\025\n\rloc_longitude\030\005 \001(\002" +
+      "\022\024\n\014loc_latitude\030\006 \001(\002\022\022\n\ndescrition\030\007 \001" +
+      "(\t\022\032\n\022deadline_unix_time\030\010 \001(\003\022\020\n\010flexib" +
+      "le\030\t \001(\010\022\026\n\016min_attendants\030\n \001(\005\022%\n\016key_" +
+      "attendants\030\013 \003(\0132\r.proto.Person\022+\n\025group" +
+      "_for_appointment\030\014 \001(\0132\014.proto.Group\022%\n\n" +
+      "conditions\030\r \001(\0132\021.proto.Conditions\022-\n\010c" +
+      "ategory\030\016 \001(\0162\033.proto.Appointment.Catego" +
+      "ry\"c\n\010Category\022\013\n\007UNKNOWN\020\000\022\014\n\010BUSINESS\020" +
+      "\001\022\n\n\006SOCIAL\020\002\022\t\n\005SPORT\020\003\022\013\n\007HOBBIES\020\004\022\013\n" +
+      "\007PRIVATE\020\005\022\013\n\007COMMUTE\020\006\":\n\tTimeSlots\022\r\n\005" +
+      "email\030\001 \002(\t\022\036\n\005slots\030\002 \003(\0132\017.proto.TimeS" +
+      "lot\"&\n\007Request\022\033\n\005basic\030\001 \002(\0132\014.proto.Ba" +
+      "sic\"\036\n\005Error\022\025\n\rerror_message\030\001 \001(\t\"\"\n\007S" +
+      "uccess\022\027\n\017success_message\030\001 \001(\t\"\276\002\n\013Clie" +
+      "ntBasic\022,\n\004type\030\001 \002(\0162\036.proto.ClientBasi" +
+      "c.MessageType\022\033\n\005error\030\002 \001(\0132\014.proto.Err" +
+      "or\022\037\n\007success\030\003 \001(\0132\016.proto.Success\0221\n\rg" +
+      "roupResponse\030\004 \001(\0132\032.proto.ClientGroupRe" +
+      "sponse\022=\n\023groupMemberResponse\030\005 \001(\0132 .pr" +
+      "oto.ClientGroupMemberResponse\"Q\n\013Message" +
+      "Type\022\t\n\005ERROR\020\000\022\013\n\007SUCCESS\020\001\022\021\n\rGROUPRES" +
+      "PONSE\020\002\022\027\n\023MEMBERGROUPRESPONSE\020\003\"!\n\023Clie" +
+      "ntGroupResponse\022\n\n\002id\030\001 \001(\t\"\230\001\n\031ClientGr" +
+      "oupMemberResponse\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 " +
+      "\001(\t\022\035\n\006admins\030\003 \003(\0132\r.proto.Person\022\036\n\007me" +
+      "mbers\030\004 \003(\0132\r.proto.Person\022\023\n\013descriptio" +
+      "n\030\005 \001(\t\022\r\n\005admin\030\006 \001(\010\"\027\n\006Person\022\r\n\005emai" +
+      "l\030\001 \002(\t\"\323\001\n\016PersonExtended\022\r\n\005email\030\001 \002(" +
+      "\t\022\037\n\007profile\030\002 \001(\0132\016.proto.Profile\022$\n\nti" +
+      "me_slots\030\003 \001(\0132\020.proto.TimeSlots\022!\n\010cont" +
+      "acts\030\004 \001(\0132\017.proto.Contacts\022\035\n\006groups\030\005 " +
+      "\001(\0132\r.proto.Groups\022)\n\014appointments\030\006 \001(\013" +
+      "2\023.proto.Appointments\":\n\010Contacts\022\r\n\005ema" +
+      "il\030\001 \002(\t\022\037\n\010contacts\030\002 \003(\0132\r.proto.Perso" +
+      "n\"5\n\006Groups\022\r\n\005email\030\001 \002(\t\022\034\n\006groups\030\002 \003" +
+      "(\0132\014.proto.Group\"\230\001\n\nConditions\022*\n\007weath" +
+      "er\030\001 \001(\0162\031.proto.Conditions.Weather\"^\n\007W" +
+      "eather\022\013\n\007UNKNOWN\020\000\022\t\n\005SUNNY\020\001\022\010\n\004RAIN\020\002" +
+      "\022\007\n\003HOT\020\003\022\010\n\004COLD\020\004\022\010\n\004SNOW\020\005\022\010\n\004WIND\020\006\022" +
+      "\n\n\006CLOUDS\020\007\"G\n\014Appointments\022\r\n\005email\030\001 \002" +
+      "(\t\022(\n\014appointments\030\002 \003(\0132\022.proto.Appoint" +
+      "ment\"i\n\010TimeSlot\022\027\n\017start_unix_time\030\001 \001(" +
+      "\003\022\025\n\rend_unix_time\030\002 \001(\003\022-\n\010category\030\003 \001" +
+      "(\0162\033.proto.Appointment.CategoryB\027B\025Calen" +
+      "derMessagesProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -20190,7 +25963,7 @@ public final class CalenderMessagesProto {
     internal_static_proto_Group_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_Group_descriptor,
-        new java.lang.String[] { "Name", "Admins", "Members", "Description", });
+        new java.lang.String[] { "Email", "Id", "Name", "Admins", "Members", "Description", "Quit", "RemoveMembers", "PromoteToAdmins", "ChangeInfo", });
     internal_static_proto_Appointment_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_proto_Appointment_fieldAccessorTable = new
@@ -20221,38 +25994,62 @@ public final class CalenderMessagesProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_Success_descriptor,
         new java.lang.String[] { "SuccessMessage", });
-    internal_static_proto_Person_descriptor =
+    internal_static_proto_ClientBasic_descriptor =
       getDescriptor().getMessageTypes().get(10);
+    internal_static_proto_ClientBasic_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_proto_ClientBasic_descriptor,
+        new java.lang.String[] { "Type", "Error", "Success", "GroupResponse", "GroupMemberResponse", });
+    internal_static_proto_ClientGroupResponse_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_proto_ClientGroupResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_proto_ClientGroupResponse_descriptor,
+        new java.lang.String[] { "Id", });
+    internal_static_proto_ClientGroupMemberResponse_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_proto_ClientGroupMemberResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_proto_ClientGroupMemberResponse_descriptor,
+        new java.lang.String[] { "Id", "Name", "Admins", "Members", "Description", "Admin", });
+    internal_static_proto_Person_descriptor =
+      getDescriptor().getMessageTypes().get(13);
     internal_static_proto_Person_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_Person_descriptor,
+        new java.lang.String[] { "Email", });
+    internal_static_proto_PersonExtended_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_proto_PersonExtended_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_proto_PersonExtended_descriptor,
         new java.lang.String[] { "Email", "Profile", "TimeSlots", "Contacts", "Groups", "Appointments", });
     internal_static_proto_Contacts_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_proto_Contacts_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_Contacts_descriptor,
         new java.lang.String[] { "Email", "Contacts", });
     internal_static_proto_Groups_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_proto_Groups_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_Groups_descriptor,
         new java.lang.String[] { "Email", "Groups", });
     internal_static_proto_Conditions_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_proto_Conditions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_Conditions_descriptor,
         new java.lang.String[] { "Weather", });
     internal_static_proto_Appointments_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_proto_Appointments_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_Appointments_descriptor,
         new java.lang.String[] { "Email", "Appointments", });
     internal_static_proto_TimeSlot_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_proto_TimeSlot_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_TimeSlot_descriptor,

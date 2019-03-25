@@ -9,6 +9,7 @@ import org.apache.logging.log4j.*;
 import common.Communication;
 import common.Constants;
 import proto.CalenderMessagesProto.Basic;
+import proto.CalenderMessagesProto.ClientBasic;
 
 public class CalenderServerThread implements Runnable {
 
@@ -37,13 +38,13 @@ public class CalenderServerThread implements Runnable {
 			while (isOpen) {
 				try {
 					Communication communicationWorker = new Communication(clientSocket);
-					Basic message = communicationWorker.receive();
+					Basic message = communicationWorker.serverReceive();
 					
 					// Retrieval of all requests such as RegisterRequest oder LoginRequest
 					if (message != null){
 						logger.info("Received Message. Decoding..");
 						messageDecoder = new MessageDecoder();
-						Basic returnMessage = messageDecoder.processMessage(message);
+						ClientBasic returnMessage = messageDecoder.processMessage(message);
 						communicationWorker.send(returnMessage);
 					}
 				} catch (IOException ioe) {
