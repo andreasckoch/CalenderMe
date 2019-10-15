@@ -13,6 +13,10 @@ import org.bson.types.ObjectId;
 import com.mongodb.client.MongoCollection;
 
 import common.Constants;
+import static common.Constants.Groups.*;
+
+import common.Constants.News;
+import common.Constants.User;
 import proto.CalenderMessagesProto.ClientBasic;
 import proto.CalenderMessagesProto.ClientGroupResponse;
 import proto.CalenderMessagesProto.Error;
@@ -35,10 +39,16 @@ public class GroupHandler extends Handler {
 	private String id;
 	
 	private Document groupEntry;
-
+	
+	MongoCollection<Document> USER;
+	MongoCollection<Document> NEWS;
+	MongoCollection<Document> GROUPS;
 
 	public GroupHandler(Group group) {
 		database = super.getDatabase();
+		USER = database.getCollection(Constants.USER_COLLECTION);
+		NEWS = database.getCollection(Constants.NEWS_COLLECTION);
+		GROUPS = database.getCollection(Constants.GROUP_COLLECTION);
 		this.message = group;
 		this.email = message.getEmail();
 		this.id = message.getId();
@@ -55,10 +65,9 @@ public class GroupHandler extends Handler {
 	@Override
 	protected ClientBasic process() {
 		
-		MongoCollection<Document> user = database.getCollection(Constants.USER_COLLECTION);
-		MongoCollection<Document> groups = database.getCollection(Constants.GROUP_COLLECTION);
+		
 
-		Document emailEntry = user.find(eq("email", email)).first();
+		Document emailEntry = USER.find(eq(User.EMAIL, email)).first();
 
 		if (emailEntry == null || email.isEmpty()) {
 			return ClientBasic.newBuilder().setType(ClientBasic.MessageType.ERROR).build();
@@ -70,47 +79,63 @@ public class GroupHandler extends Handler {
 			
 			// user collection: add ID of new group in list
 			ObjectId groupID = new ObjectId();	
-			addGroupID(user, email, emailEntry, "groups", groupID);
+			addGroupIDToUserColl(email, emailEntry, User.GROUPS, groupID);
 			
 			// group collection: add new Document for group
-			groupEntry = new Document("_id", groupID);
-			groupEntry.append("name", name);
-			groupEntry.append("description", description);
+			groupEntry = new Document(ID, groupID);
+			groupEntry.append(NAME, name);
+			groupEntry.append(DESCRIPTION, description);
 			
 			List<Document> admins_list = new ArrayList<Document>();
-			admins_list.add(new Document("email", email));
+			admins_list.add(new Document(ADMINS_LIST_EMAIL, email));
 			if (!admins.isEmpty()) {
 				for (Person admin : admins) {
-					admins_list.add(new Document("email", admin.getEmail()));
-					Document adminEmailEntry = user.find(eq("email", admin.getEmail())).first();
-					addGroupID(user, admin.getEmail(), adminEmailEntry, "groups", groupID);
+					admins_list.add(new Document(ADMINS_LIST_EMAIL, admin.getEmail()));
+					Document adminEmailEntry = USER.find(eq(User.EMAIL, admin.getEmail())).first();
+					addGroupIDToUserColl(admin.getEmail(), adminEmailEntry, User.GROUPS, groupID);
 					
 					// notify all admins (store id in news list)
-					adminEmailEntry = user.find(eq("email", admin.getEmail())).first();
-					addGroupID(user, admin.getEmail(), adminEmailEntry, "news", groupID);
+					adminEmailEntry = USER.find(eq(User.EMAIL, admin.getEmail())).first();
+					if (!adminEmailEntry.containsKey(User.NEWSID)) {
+						ObjectId newsID = new ObjectId();
+						adminEmailEntry.append(User.NEWSID, newsID);
+						NEWS.insertOne(new Document(News.ID, newsID));
+						USER.replaceOne(eq(User.EMAIL, admin.getEmail()), adminEmailEntry);
+					}
+					ObjectId newsID = adminEmailEntry.getObjectId(User.NEWSID);
+					Document newsEntry = NEWS.find(eq(News.ID, newsID)).first();
+					addGroupIDToNewsColl(newsID, newsEntry, News.GROUPS, groupID);
 					
 				}
 			}
-			groupEntry.append("admins", admins_list);
+			groupEntry.append(ADMINS, admins_list);
 			
+			List<Document> members_list = new ArrayList<Document>();
 			if (!members.isEmpty()) {
-				List<Document> members_list = new ArrayList<Document>();
 				for (Person member : members) {
-					members_list.add(new Document("email", member.getEmail()));
-					Document memberEmailEntry = user.find(eq("email", member.getEmail())).first();
-					addGroupID(user, member.getEmail(), memberEmailEntry, "groups", groupID);
+					members_list.add(new Document(MEMBERS_LIST_EMAIL, member.getEmail()));
+					Document memberEmailEntry = USER.find(eq(User.EMAIL, member.getEmail())).first();
+					addGroupIDToUserColl(member.getEmail(), memberEmailEntry, User.GROUPS, groupID);
 					
 					// notify all members, updated memberEmailEntry required
-					memberEmailEntry = user.find(eq("email", member.getEmail())).first();
-					addGroupID(user, member.getEmail(), memberEmailEntry, "news", groupID);
+					memberEmailEntry = USER.find(eq(User.EMAIL, member.getEmail())).first();
+					if (!memberEmailEntry.containsKey(User.NEWSID)) {
+						ObjectId newsID = new ObjectId();
+						memberEmailEntry.append(User.NEWSID, newsID);
+						NEWS.insertOne(new Document(News.ID, newsID));
+						USER.replaceOne(eq(User.EMAIL, member.getEmail()), memberEmailEntry);
+					}
+					ObjectId newsID = memberEmailEntry.getObjectId(User.NEWSID);
+					Document newsEntry = NEWS.find(eq(News.ID, newsID)).first();
+					addGroupIDToNewsColl(newsID, newsEntry, News.GROUPS, groupID);
 				}
-				groupEntry.append("members", members_list);
 			}
+			groupEntry.append(MEMBERS, members_list);
 			
-			groups.insertOne(groupEntry);
+			GROUPS.insertOne(groupEntry);
 			
 			// send client the id of the group
-			return ClientBasic.newBuilder().setType(ClientBasic.MessageType.GROUPRESPONSE)
+			return ClientBasic.newBuilder().setType(ClientBasic.MessageType.GROUP_RESPONSE)
 					.setGroupResponse(ClientGroupResponse.newBuilder()
 							.setId(groupID.toHexString())).build();
 		}
@@ -120,94 +145,102 @@ public class GroupHandler extends Handler {
 		
 		// check whether id of group is correct and execute instructions
 		if (!id.isEmpty()) {
-			List<Document> groups_list = (List<Document>) emailEntry.get("groups");
+			List<Document> groups_list = (List<Document>) emailEntry.get(User.GROUPS);
 			ObjectId groupID = new ObjectId(id);
-			boolean groupExists = groups_list.contains(new Document("groupID", groupID));
+			boolean groupExists = groups_list.contains(new Document(User.GROUPS_LIST_ID, groupID));
 			if (!groupExists) {
 				return ClientBasic.newBuilder().setType(ClientBasic.MessageType.ERROR)
 						.setError(Error.newBuilder().setErrorMessage("Wrong group ID"))
 						.build();
 			}
-			groupEntry = groups.find(eq("_id", groupID)).first();
+			groupEntry = GROUPS.find(eq(ID, groupID)).first();
 			
 			// Quit group (check members and admins)
 			if (quit) {
 				
 				// user collection
-				groups_list.remove(new Document("groupID", groupID));
-				emailEntry.replace("groups", groups_list);
-				user.replaceOne(eq("email", email), emailEntry);
+				groups_list.remove(new Document(User.GROUPS_LIST_ID, groupID));
+				emailEntry.replace(User.GROUPS, groups_list);
+				USER.replaceOne(eq(User.EMAIL, email), emailEntry);
 				
 				// group collection
-				Document to_be_removed = new Document("email", email);
+				Document to_be_removed = new Document(EMAIL, email);
 									
-				List<Document> members_list = (List<Document>) groupEntry.get("members");
+				List<Document> members_list = (List<Document>) groupEntry.get(MEMBERS);
 				boolean removed = members_list.remove(to_be_removed);
 				
 				if (!removed) {
-					List<Document> admins_list = (List<Document>) groupEntry.get("admins");
+					List<Document> admins_list = (List<Document>) groupEntry.get(ADMINS);
 					admins_list.remove(to_be_removed);
 					
 					// if there are no admins anymore, declare the first member as admin
 					if (admins_list.isEmpty()) {
 						if (members_list.isEmpty()) {
 							// delete this group with no members
-							groups.deleteOne(eq("_id", groupID));
+							GROUPS.deleteOne(eq(ID, groupID));
 							return ClientBasic.newBuilder().setType(ClientBasic.MessageType.SUCCESS).build();
 						}
 						Document new_admin = members_list.get(0);
 						admins_list.add(new_admin);
 						members_list.remove(new_admin);
 					}
-					groupEntry.replace("admins", admins_list);
+					groupEntry.replace(ADMINS, admins_list);
 				}
-				groupEntry.replace("members", members_list);
-				groups.replaceOne(eq("_id", groupID), groupEntry);
+				groupEntry.replace(MEMBERS, members_list);
+				GROUPS.replaceOne(eq(ID, groupID), groupEntry);
 				return ClientBasic.newBuilder().setType(ClientBasic.MessageType.SUCCESS).build();
 			}
 			
 			// change name and description of group
 			if (change_info && !name.isEmpty()) {
-				groupEntry.replace("name", name);
-				groupEntry.replace("description", description);
-				groups.replaceOne(eq("_id", groupID), groupEntry);
+				groupEntry.replace(NAME, name);
+				groupEntry.replace(DESCRIPTION, description);
+				GROUPS.replaceOne(eq(ID, groupID), groupEntry);
 				return ClientBasic.newBuilder().setType(ClientBasic.MessageType.SUCCESS).build();
 			}
 			
 			// As an admin, remove members from group
 			if (!remove_members.isEmpty()) {
-				List<Document> admins_list = (List<Document>) groupEntry.get("admins");
-				if (admins_list.contains(new Document("email", email))) {
-					List<Document> members_list = (List<Document>) groupEntry.get("members");
+				List<Document> admins_list = (List<Document>) groupEntry.get(ADMINS);
+				if (admins_list.contains(new Document(ADMINS_LIST_EMAIL, email))) {
+					List<Document> members_list = (List<Document>) groupEntry.get(MEMBERS);
 					for (Person member : remove_members) {						
-						boolean removed = members_list.remove(new Document("email", member.getEmail()));
+						boolean removed = members_list.remove(new Document(MEMBERS_LIST_EMAIL, member.getEmail()));
 						if (!removed) {
 							return ClientBasic.newBuilder().setType(ClientBasic.MessageType.ERROR).build();
 						}
+						
+						// remove groupID from the removed member's groups_list
+						Document memberEntry = USER.find(eq(User.EMAIL, member.getEmail())).first();
+						List<Document> member_groups_list = (List<Document>) memberEntry.get(User.GROUPS);
+						member_groups_list.remove(new Document(User.GROUPS_LIST_ID, groupID));
+						memberEntry.replace(User.GROUPS, member_groups_list);
+						USER.replaceOne(eq(User.EMAIL, member.getEmail()), memberEntry);
 					}
-					groupEntry.replace("members", members_list);
-					groups.replaceOne(eq("_id", groupID), groupEntry);
+					groupEntry.replace(MEMBERS, members_list);
+					GROUPS.replaceOne(eq(ID, groupID), groupEntry);
 				}
 				return ClientBasic.newBuilder().setType(ClientBasic.MessageType.SUCCESS).build();
 			}
 			
 			// As an admin, promote members to admins
 			if (!promote_to_admins.isEmpty()) {
-				List<Document> admins_list = (List<Document>) groupEntry.get("admins");
-				if (admins_list.contains(new Document("email", email))) {
-					List<Document> members_list = (List<Document>) groupEntry.get("members");
+				List<Document> admins_list = (List<Document>) groupEntry.get(ADMINS);
+				if (admins_list.contains(new Document(ADMINS_LIST_EMAIL, email))) {
+					List<Document> members_list = (List<Document>) groupEntry.get(MEMBERS);
 					for (Person member : promote_to_admins) {
-						Document member_doc = new Document("email", member.getEmail());
+						Document member_doc = new Document(MEMBERS_LIST_EMAIL, member.getEmail());
+						Document admin_doc = new Document(ADMINS_LIST_EMAIL, member.getEmail());
 						if (!members_list.remove(member_doc)) {
 							return ClientBasic.newBuilder().setType(ClientBasic.MessageType.ERROR).build();
 						}
-						if (!admins_list.contains(member_doc)) {
-							admins_list.add(member_doc);							
+						if (!admins_list.contains(admin_doc)) {
+							admins_list.add(admin_doc);							
 						}
 					}
-					groupEntry.replace("members", members_list);
-					groupEntry.replace("admins", admins_list);
-					groups.replaceOne(eq("_id", groupID), groupEntry);
+					groupEntry.replace(MEMBERS, members_list);
+					groupEntry.replace(ADMINS, admins_list);
+					GROUPS.replaceOne(eq(ID, groupID), groupEntry);
 				}
 				return ClientBasic.newBuilder().setType(ClientBasic.MessageType.SUCCESS).build();
 			}
@@ -218,14 +251,24 @@ public class GroupHandler extends Handler {
 		return ClientBasic.newBuilder().setType(ClientBasic.MessageType.ERROR).build();
 	}
 
-	private void addGroupID(MongoCollection<Document> user, String email, Document emailEntry, String emailEntryKey, ObjectId groupID) {
+	private void addGroupIDToUserColl(String email, Document emailEntry, String emailEntryKey, ObjectId groupID) {
 		if (!emailEntry.containsKey(emailEntryKey)) {
 			emailEntry.append(emailEntryKey, new ArrayList<Document>());
 		}
 		List<Document> groups_list = (List<Document>) emailEntry.get(emailEntryKey);
-		groups_list.add(new Document("groupID", groupID));
+		groups_list.add(new Document(User.GROUPS_LIST_ID, groupID));
 		emailEntry.replace(emailEntryKey, groups_list);
-		user.replaceOne(eq("email", email), emailEntry);
+		USER.replaceOne(eq(User.EMAIL, email), emailEntry);
+	}
+	
+	private void addGroupIDToNewsColl(ObjectId newsID, Document newsEntry, String newsEntryKey, ObjectId groupID) {
+		if (!newsEntry.containsKey(newsEntryKey)) {
+			newsEntry.append(newsEntryKey, new ArrayList<Document>());
+		}
+		List<Document> groups_list = (List<Document>) newsEntry.get(newsEntryKey);
+		groups_list.add(new Document(News.GROUPS_LIST_ID, groupID));
+		newsEntry.replace(newsEntryKey, groups_list);
+		NEWS.replaceOne(eq(News.ID, newsID), newsEntry);
 	}
 
 }

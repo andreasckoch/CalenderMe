@@ -10,7 +10,6 @@ import org.bson.types.ObjectId;
 import com.mongodb.client.MongoCollection;
 
 import common.Constants;
-import proto.CalenderMessagesProto.Basic;
 import proto.CalenderMessagesProto.ClientBasic;
 import proto.CalenderMessagesProto.Login;
 

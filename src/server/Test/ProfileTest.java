@@ -1,16 +1,16 @@
 package server.Test;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.fail;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import common.Communication;
 import common.Constants;
-import proto.CalenderMessagesProto.*;
+import proto.CalenderMessagesProto.Basic;
+import proto.CalenderMessagesProto.Profile;
+import proto.CalenderMessagesProto.Registration;
 import server.ServerConnection;
 
 public class ProfileTest {
@@ -35,6 +35,7 @@ public class ProfileTest {
 	private static String ip;
 	private static int port;
 	private static Thread server;
+	private static Helper helper;
 
 	@BeforeClass
 	public static void initialize() {
@@ -95,27 +96,34 @@ public class ProfileTest {
 
 	server = new ServerConnection(port);			
 	port = ((ServerConnection) server).getPort();
+	
+	helper = new Helper();
+	Helper.setIp(ip);
+	Helper.setPort(port);
 	}
 
 	@Test
 	public void profileTestForServer() throws Exception {
-		Thread regThread = Helper.createThreadSuccessWaitForServer(registrationMsg, server, ip, port, null);
+		Thread regThread = helper.createThreadSuccessWaitForServer(registrationMsg, server);
 		regThread.start();
 		
-		Thread profileThread = Helper.createThreadSuccess(profileMsg, regThread, ip, port, null);
+		Thread profileThread = helper.createThreadSuccess(profileMsg, regThread);
 		profileThread.start();
 		
-		Thread profileUpdateThread = Helper.createThreadSuccess(profileUpdateMsg, profileThread, ip, port, null);
+		Thread profileUpdateThread = helper.createThreadSuccess(profileUpdateMsg, profileThread);
 		profileUpdateThread.start();
 		
-		Thread profileDeleteThread = Helper.createThreadSuccess(profileDeleteMsg, profileUpdateThread, ip, port, null);
+		Thread profileDeleteThread = helper.createThreadSuccess(profileDeleteMsg, profileUpdateThread);
 		profileDeleteThread.start();
 		
-		Thread regDelThread = Helper.createThreadSuccess(registrationDeleteMsg, profileDeleteThread, ip, port, null);
+		Thread regDelThread = helper.createThreadSuccess(registrationDeleteMsg, profileDeleteThread);
 		regDelThread.start();
 	
 		regDelThread.join();
 		
+		if (helper.getAssertionError() != null) {
+			fail();
+		}
 		
 		logger.info("profileTestForServer successful!");
 	}

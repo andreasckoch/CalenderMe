@@ -37,7 +37,7 @@ message Basic {
 	optional Group group = 8;
 	optional Groups groups = 9;
 	optional Conditions conditions = 10;
-	optional Appointment appointment = 11;
+	optional AppointmentMsg appointment = 11;
 	optional Appointments appointments = 12;
 	optional TimeSlot timeSlot = 13;
 	optional TimeSlots timeSlots = 14;
@@ -92,21 +92,43 @@ message Group {
 	optional bool change_info = 10; // name or description
 }
 
-message Appointment {
-	optional string email = 1;
+message AppointmentMsg {
+	optional string initiator = 1;
 	repeated Person attendants = 2;
-	optional int64 unix_time = 3;
-	optional int32 length = 4;
-	optional float loc_longitude = 5;
-	optional float loc_latitude = 6;
-	optional string descrition = 7;
+	optional int64 start_unix_time = 3;
+	optional int32 length = 4; // in ms
+	optional string location = 5;
+	optional string name = 6;
+	optional string description = 7;
 	optional int64 deadline_unix_time = 8;
 	optional bool flexible = 9;
 	optional int32 min_attendants = 10;
 	repeated Person key_attendants = 11;
-	optional Group group_for_appointment = 12;
+	optional string group_id = 12;
 	optional Conditions conditions = 13;
 	optional Category category = 14;
+	optional bool only_same_category = 19;
+	optional int64 start_unix_timeframe = 20; // timeframe (max 6 weeks) for consideration for appointment
+	optional int64 end_unix_timeframe = 21;
+
+	// interacting with existing appointment
+	optional string email = 15;
+	optional string id = 16;
+
+	// as attendee
+	optional Answer confirm_appointment = 17;
+
+	// as initiator
+	optional int32 index_of_dates_list = 18; // of list of possible dates calculated by server
+	optional bool add_participants = 25;
+	optional bool remove_participants = 26;
+	repeated Person add_attendants = 22;
+	repeated Person add_key_attendants = 23;
+	repeated Person remove_participant = 24;
+
+	// as both
+	optional bool get_info = 27;
+
 	enum Category {
 		UNKNOWN = 0;
 		BUSINESS = 1;
@@ -116,12 +138,33 @@ message Appointment {
 		PRIVATE = 5;
 		COMMUTE = 6;
 	}
+
+	enum Answer {
+		NONE = 0;
+		CONFIRM = 1;
+		CANCEL = 2;
+		UNDECIDED = 3;
+	}
 }
 
+
+/*
+ * Timeslots msg can either be used for regular timeslots or for a template.
+ * template rules: - time given in milliseconds
+ * 				   - slots are relative to start of first day [10 o'clock on first day is thus 10 * 3600 * 1000 ms]
+ * 				   - templates are always defined for a 2 week time interval
+ * timeslot rules: - server replaces old timeslots with new ones each time they are updated
+ * removing timeslots: - takes one timeslot in timeslots as input
+ * 					   - only timeslots within this sole transmitted timeslot are removed
+ * removing template: - whole template is removed
+ */
 
 message TimeSlots {
 	required string email = 1;
 	repeated TimeSlot slots = 2;
+	optional bool update_template = 3;
+	optional bool remove_timeslots = 4;
+	optional bool remove_template = 5;
 }
 
 
@@ -147,14 +190,18 @@ message ClientBasic {
 	enum MessageType {
 		ERROR = 0;
 		SUCCESS = 1;
-		GROUPRESPONSE = 2;
-		MEMBERGROUPRESPONSE = 3;
-	}
+		GROUP_RESPONSE = 2;
+		MEMBER_GROUP_RESPONSE = 3;
+		APPOINTMENT_INIT_RESPONSE = 4;
+		APPOINTMENT_ATTENDANT_RESPONSE = 5;
+		}
 	required MessageType type = 1;
 	optional Error error = 2;
 	optional Success success = 3;
 	optional ClientGroupResponse groupResponse = 4;
 	optional ClientGroupMemberResponse groupMemberResponse = 5;
+	optional ClientInitAppointment clientInitAppointment = 6;
+	optional ClientAttendantAppointment clientAttendantAppointment = 7;
 }
 
 
@@ -172,6 +219,32 @@ message ClientGroupMemberResponse {
 	optional bool admin = 6;
 }
 
+message ClientInitAppointment {
+	optional string id = 1;
+	repeated int64 possible_dates = 2;
+	}
+
+message ClientAttendantAppointment {
+	optional string id = 1;
+
+	// answer to news update of attendant once initiator decided on a date
+	optional int64 suggested_date = 2;
+
+	// as answer to get_info
+	optional string initiator = 3;
+	repeated Person attendants = 4;
+	optional int64 start_unix_time = 5;
+	optional int32 length = 6; // in ms
+	optional string location = 7;
+	optional string name = 8;
+	optional string description = 9;
+	optional int64 deadline_unix_time = 10;
+	optional bool flexible = 11;
+	optional int32 min_attendants = 12;
+	optional string group_id = 13;
+	optional Conditions conditions = 14;
+	optional AppointmentMsg.Category category = 15;
+	}
 
 
 
@@ -225,13 +298,17 @@ message Conditions {
 
 message Appointments {
 	required string email = 1;
-	repeated Appointment appointments = 2;
+	repeated AppointmentMsg appointments = 2;
 }
 
 
+/*
+ * start- and end-time: unix_time but in milliseconds
+ */
+
 message TimeSlot {
-	optional int64 start_unix_time = 1;
-	optional int64 end_unix_time = 2;
-	optional Appointment.Category category = 3;
+	required int64 start_unix_time = 1;
+	required int64 end_unix_time = 2;
+	optional AppointmentMsg.Category category = 3;
 }
 

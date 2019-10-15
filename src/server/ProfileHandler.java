@@ -7,12 +7,12 @@ import org.apache.logging.log4j.Logger;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
-import com.mongodb.client.model.Updates;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.model.Updates;
 
 import common.Constants;
-
-import proto.CalenderMessagesProto.Basic;
+import common.Constants.ProfileDB;
+import common.Constants.User;
 import proto.CalenderMessagesProto.ClientBasic;
 import proto.CalenderMessagesProto.Profile;
 
@@ -33,18 +33,18 @@ public class ProfileHandler extends Handler {
 		MongoCollection<Document> profile = database.getCollection(Constants.PROFILE_COLLECTION);
 		MongoCollection<Document> user = database.getCollection(Constants.USER_COLLECTION);
  
-		Document emailEntry = user.find(eq("email", message.getEmail())).first();
+		Document emailEntry = user.find(eq(User.EMAIL, message.getEmail())).first();
 
 		if (emailEntry != null) {
 			logger.debug("Update profile for: {}", message.getEmail());
-			ObjectId profileID = (ObjectId) emailEntry.get("profileID");
+			ObjectId profileID = (ObjectId) emailEntry.get(User.PROFILE);
 
-			profile.updateOne(eq("_id", profileID), 
+			profile.updateOne(eq(ProfileDB.ID, profileID), 
 							  Updates.combine(
-									  Updates.set("name", this.message.getName()),  
-									  Updates.set("location", this.message.getLocation()),
-									  Updates.set("bio", this.message.getBio()), 
-									  Updates.set("organisation", this.message.getOrganisation())));
+									  Updates.set(ProfileDB.NAME, this.message.getName()),  
+									  Updates.set(ProfileDB.LOCATION, this.message.getLocation()),
+									  Updates.set(ProfileDB.BIO, this.message.getBio()), 
+									  Updates.set(ProfileDB.ORGANISATION, this.message.getOrganisation())));
 				
 			return ClientBasic.newBuilder().setType(ClientBasic.MessageType.SUCCESS).build();
 		}

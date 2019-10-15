@@ -2,6 +2,7 @@ package server.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.fail;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,7 +14,7 @@ import common.Constants;
 import proto.CalenderMessagesProto.*;
 import server.ServerConnection;
 
-public class RegistrationLoginTest {
+public class RegistrationLoginHandlerTest {
 	
 	private static final Logger logger = LogManager.getLogger(Constants.TEST_NAME);
 	
@@ -31,6 +32,7 @@ public class RegistrationLoginTest {
 	private static String ip;
 	private static int port;
 	private static Thread server;
+	private static Helper helper;
 
 
 	@BeforeClass
@@ -94,7 +96,10 @@ public class RegistrationLoginTest {
 										).build();		
 		server = new ServerConnection(port);			
 		port = ((ServerConnection) server).getPort();
-				
+		
+		helper = new Helper();
+		Helper.setIp(ip);
+		Helper.setPort(port);
 	}	
 	
 	
@@ -113,13 +118,19 @@ public class RegistrationLoginTest {
 	@Test
 	public void registrationTestForServer() throws Exception {
 		
-		Thread regThread = Helper.createThreadSuccessWaitForServer(registrationMsg, server, ip, port, null);
+		Thread regThread = helper.createThreadSuccessWaitForServer(registrationMsg, server);
 		regThread.start();
 			
-		Thread regDelThread = Helper.createThreadSuccess(registrationDeleteMsg, regThread, ip, port, null);
+		Thread regDelThread = helper.createThreadSuccess(registrationDeleteMsg, regThread);
 		regDelThread.start();
 		
 		regDelThread.join();
+		
+		if (helper.getAssertionError() != null) {
+			helper.setAssertionError(null);
+			fail();
+		}
+		
 		logger.info("registrationTestForServer successful!");
 	}
 	
@@ -127,7 +138,7 @@ public class RegistrationLoginTest {
 	@Test
 	public void doubleRegistrationTestForServer() throws Exception {
 		
-		Thread regThread = Helper.createThreadSuccessWaitForServer(registrationMsg, server, ip, port, null);
+		Thread regThread = helper.createThreadSuccessWaitForServer(registrationMsg, server);
 		regThread.start();
 		
 		Thread[] threads = new Thread[10];
@@ -152,8 +163,12 @@ public class RegistrationLoginTest {
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
-
-					assertThat(registrationMsgBack.getType(), is(ClientBasic.MessageType.ERROR));
+					try {
+						assertThat(registrationMsgBack.getType(), is(ClientBasic.MessageType.ERROR));					
+					}
+					catch (AssertionError ae) {
+						helper.setAssertionError(ae);
+					}
 				}
 			};
 			threads[i].start();
@@ -182,14 +197,24 @@ public class RegistrationLoginTest {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-
-				assertThat(registrationMsgBack.getType(), is(ClientBasic.MessageType.SUCCESS));
+				try {
+					assertThat(registrationMsgBack.getType(), is(ClientBasic.MessageType.SUCCESS));
+				}
+				catch (AssertionError ae) {
+					helper.setAssertionError(ae);
+				}
 			}
 		};
 		
 		regDelThread.start();
 	
 		regDelThread.join();
+		
+		if (helper.getAssertionError() != null) {
+			helper.setAssertionError(null);
+			fail();
+		}
+		
 		logger.info("doubleRegistrationTestForServer successful!");
 	}
 	
@@ -197,38 +222,50 @@ public class RegistrationLoginTest {
 	@Test
 	public void registrationDataModificationTestForServer() throws Exception {
 		
-		Thread regThread = Helper.createThreadSuccessWaitForServer(registrationMsg, server, ip, port, null);
+		Thread regThread = helper.createThreadSuccessWaitForServer(registrationMsg, server);
 		regThread.start();
 		
-		Thread emailModThread = Helper.createThreadSuccess(registrationEmailModificationMsg, regThread, ip, port, null);
+		Thread emailModThread = helper.createThreadSuccess(registrationEmailModificationMsg, regThread);
 		emailModThread.start();
 		
-		Thread pwModThread = Helper.createThreadSuccess(registrationPwModificationMsg, emailModThread, ip, port, null);
+		Thread pwModThread = helper.createThreadSuccess(registrationPwModificationMsg, emailModThread);
 		pwModThread.start();
 				
-		Thread regDelThread = Helper.createThreadSuccess(registrationDeleteModdedMsg, pwModThread, ip, port, null);
+		Thread regDelThread = helper.createThreadSuccess(registrationDeleteModdedMsg, pwModThread);
 		regDelThread.start();
 	
 		regDelThread.join();
+		
+		if (helper.getAssertionError() != null) {
+			helper.setAssertionError(null);
+			fail();
+		}
+		
 		logger.info("registrationDataModificationTestForServer successful!");
 	}
 	
 	@Test
 	public void loginTestForServer() throws Exception {
 		
-		Thread regThread = Helper.createThreadSuccessWaitForServer(registrationMsg, server, ip, port, null);
+		Thread regThread = helper.createThreadSuccessWaitForServer(registrationMsg, server);
 		regThread.start();
 			
-		Thread logFailThread = Helper.createThreadError(loginFailMsg, regThread, ip, port, null);
+		Thread logFailThread = helper.createThreadError(loginFailMsg, regThread);
 		logFailThread.start();
 		
-		Thread logThread = Helper.createThreadSuccess(loginMsg, logFailThread, ip, port, null);
+		Thread logThread = helper.createThreadSuccess(loginMsg, logFailThread);
 		logThread.start();
 			
-		Thread regDelThread = Helper.createThreadSuccess(registrationDeleteMsg, logThread, ip, port, null);
+		Thread regDelThread = helper.createThreadSuccess(registrationDeleteMsg, logThread);
 		regDelThread.start();
 	
 		regDelThread.join();
+		
+		if (helper.getAssertionError() != null) {
+			helper.setAssertionError(null);
+			fail();
+		}
+		
 		logger.info("loginTestForServer successful!");
 	}
 	

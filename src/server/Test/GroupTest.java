@@ -41,11 +41,15 @@ public class GroupTest {
 	private static String ip;
 	private static int port;
 	private static Thread server;
+
+	private static Helper helper;
+
+
+
+	// TODO: 1) test case with membership in multiple groups
+	//		 2) remove members that are still in groups
 	
-	private AssertionError exc;
-
-
-
+	
 	@BeforeClass
 	public static void initialize() {
 		email = "test@totallynotafakemail.com";
@@ -130,20 +134,24 @@ public class GroupTest {
 
 	server = new ServerConnection(port);			
 	port = ((ServerConnection) server).getPort();
+	
+	helper = new Helper();
+	Helper.setIp(ip);
+	Helper.setPort(port);
 	}
 
 	@Test
 	public void groupTestForServer() throws Exception {
-		Thread regThread = Helper.createThreadSuccessWaitForServer(registrationMsg, server, ip, port, exc);
+		Thread regThread = helper.createThreadSuccessWaitForServer(registrationMsg, server);
 		regThread.start();
 		
-		Thread regThread2 = Helper.createThreadSuccess(registrationMsg2, regThread, ip, port, exc);
+		Thread regThread2 = helper.createThreadSuccess(registrationMsg2, regThread);
 		regThread2.start();
 		
-		Thread regThread3 = Helper.createThreadSuccess(registrationMsg3, regThread, ip, port, exc);
+		Thread regThread3 = helper.createThreadSuccess(registrationMsg3, regThread);
 		regThread3.start();
 		
-		Thread regThread4 = Helper.createThreadSuccess(registrationMsg4, regThread, ip, port, exc);
+		Thread regThread4 = helper.createThreadSuccess(registrationMsg4, regThread);
 		regThread4.start();
 		
 		Thread groupThread = new Thread() {
@@ -168,10 +176,10 @@ public class GroupTest {
 				}
 
 				try {
-					assertThat(groupMsgBack.getType(), is(ClientBasic.MessageType.GROUPRESPONSE));					
+					assertThat(groupMsgBack.getType(), is(ClientBasic.MessageType.GROUP_RESPONSE));					
 				}
 				catch (AssertionError ae) {
-					exc = ae;
+					helper.setAssertionError(ae);
 				}
 				groupID = groupMsgBack.getGroupResponse().getId();
 				
@@ -191,7 +199,7 @@ public class GroupTest {
 									.setEmail(members[0])).build()
 						).build();
 		
-		Thread groupUpdateThread = Helper.createThreadSuccess(groupUpdateMsg, groupThread, ip, port, exc);
+		Thread groupUpdateThread = helper.createThreadSuccess(groupUpdateMsg, groupThread);
 		groupUpdateThread.start();
 		
 		groupUpdate2Msg = Basic.newBuilder().setType(Basic.MessageType.GROUP)
@@ -207,7 +215,7 @@ public class GroupTest {
 									.setEmail(members[2])).build()
 						).build();
 		
-		Thread groupUpdateThread2 = Helper.createThreadSuccess(groupUpdate2Msg, groupUpdateThread, ip, port, exc);
+		Thread groupUpdateThread2 = helper.createThreadSuccess(groupUpdate2Msg, groupUpdateThread);
 		groupUpdateThread2.start();
 		
 		groupUpdate3Msg = Basic.newBuilder().setType(Basic.MessageType.GROUP)
@@ -220,7 +228,7 @@ public class GroupTest {
 								.setEmail(members[0])).build()
 						).build();
 		
-		Thread groupUpdateThread3 = Helper.createThreadError(groupUpdate3Msg, groupUpdateThread2, ip, port, exc);
+		Thread groupUpdateThread3 = helper.createThreadError(groupUpdate3Msg, groupUpdateThread2);
 		groupUpdateThread3.start();
 		
 		groupDeleteMsg = Basic.newBuilder().setType(Basic.MessageType.GROUP)
@@ -231,7 +239,7 @@ public class GroupTest {
 						.setQuit(true).build()
 						).build();
 		
-		Thread groupDeleteThread = Helper.createThreadSuccess(groupDeleteMsg, groupUpdateThread3, ip, port, exc);
+		Thread groupDeleteThread = helper.createThreadSuccess(groupDeleteMsg, groupUpdateThread3);
 		groupDeleteThread.start();
 		
 		groupDelete2Msg = Basic.newBuilder().setType(Basic.MessageType.GROUP)
@@ -242,24 +250,24 @@ public class GroupTest {
 						.setQuit(true).build()
 						).build();
 		
-		Thread groupDeleteThread2 = Helper.createThreadSuccess(groupDelete2Msg, groupDeleteThread, ip, port, exc);
+		Thread groupDeleteThread2 = helper.createThreadSuccess(groupDelete2Msg, groupDeleteThread);
 		groupDeleteThread2.start();
 		
-		Thread regDelThread = Helper.createThreadSuccess(registrationDeleteMsg, groupDeleteThread2, ip, port, exc);
+		Thread regDelThread = helper.createThreadSuccess(registrationDeleteMsg, groupDeleteThread2);
 		regDelThread.start();
 		
-		Thread regDelThread2 = Helper.createThreadSuccess(registrationDeleteMsg2, regDelThread, ip, port, exc);
+		Thread regDelThread2 = helper.createThreadSuccess(registrationDeleteMsg2, regDelThread);
 		regDelThread2.start();
 		
-		Thread regDelThread3 = Helper.createThreadSuccess(registrationDeleteMsg3, regDelThread2, ip, port, exc);
+		Thread regDelThread3 = helper.createThreadSuccess(registrationDeleteMsg3, regDelThread2);
 		regDelThread3.start();
 	
-		Thread regDelThread4 = Helper.createThreadSuccess(registrationDeleteMsg4, regDelThread3, ip, port, exc);
+		Thread regDelThread4 = helper.createThreadSuccess(registrationDeleteMsg4, regDelThread3);
 		regDelThread4.start();
 	
 		regDelThread4.join();
 		
-		if (exc != null) {
+		if (helper.getAssertionError() != null) {
 			fail();
 		}
 		
